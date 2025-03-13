@@ -7,3 +7,6 @@ Algorithms / Math / Formulas / Differentiation
 Algorithms / Math / Calculate Sums / Harmonic Series
 
 Java / java.base / java.util / concurrent / locks / AbstractQueuedSynchronizer
+
+SpringBoot / org.springframework (spring) / context / annotation / (annotation) / @Bean  {4}
+SpringBoot / org.apache / catalina / core / ApplicationFilterChain {1}

@@ -14,6 +14,8 @@
     - [Node\_v1.1.0.pdf](#node_v110pdf)
     - [Config\_v1.1.0.pdf](#config_v110pdf)
 # Simi
+## Simi Docs 1.4.0 Release 
+
 ## Simi Docs 1.3.0 Release - Document Migration
 Migrated core documents from Simi 1.2.0 Release to Simi Docs 1.3.0 Release.
 ### Linux_v1.1.0
