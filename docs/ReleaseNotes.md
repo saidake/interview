@@ -2,12 +2,17 @@
 [Back to Main Project README](../README.md)
 - [Table of Contents](#table-of-contents)
 - [Simi](#simi)
-  - [Simi Docs 1.3.0 Release - Linux\_v1.1.0.pdf](#simi-docs-130-release---document-migration)
-    - [Linux\_v1.1.0](#linux_v110pdf)
-    - [SpringBoot\_v1.2.0](#springboot_v120pdf)
-    - [Java\_v1.2.0](#java_v120pdf)
-    - [Japanese\_v1.1.0](#japanese_v110pdf)
-    - [Config\_v1.2.0](#config_v120pdf)
+  - [Simi Docs 1.4.0 Release](#simi-docs-140-release)
+    - [Math\_v1.1.0.pdf](#math_v110pdf)
+    - [WebFrameworks\_v1.2.0.pdf](#webframeworks_v120pdf)
+    - [SpringBoot\_v1.3.0.pdf](#springboot_v130pdf)
+  - [Simi Docs 1.3.0 Release - Document Migration](#simi-docs-130-release---document-migration)
+    - [Main Updates](#main-updates)
+    - [Linux\_v1.1.0.pdf](#linux_v110pdf)
+    - [SpringBoot\_v1.2.0.pdf](#springboot_v120pdf)
+    - [Java\_v1.2.0.pdf](#java_v120pdf)
+    - [Japanese\_v1.1.0.pdf](#japanese_v110pdf)
+    - [Config\_v1.2.0.pdf](#config_v120pdf)
   - [Simi 1.2.0 Release - SpringBoot\_v1.1.0.pdf](#simi-120-release---springboot_v110pdf)
     - [SpringBoot\_v1.1.0.pdf](#springboot_v110pdf)
     - [Java\_v1.1.0.pdf](#java_v110pdf)
@@ -24,14 +29,18 @@
 * **WF / Npm Packages / Core / normalize.css**
   * How to install `normalize.css` and import it to your project.
 ### SpringBoot_v1.3.0.pdf
-* **SpringBoot / Third Party Package / spring-boot-starter-security / Core**
+* **SpringBoot / Third Party Package / Core / spring-boot-starter-security / Core**
   * Moved `LogoutSuccessHandler` configuration to *SpringBoot / Third Party Package / spring-boot-starter-security / Configuration*. 
-* **SpringBoot / Third Party Package / spring-boot-starter-security / Core / Components**
+* **SpringBoot / Third Party Package / Core / spring-boot-starter-security / Core / Components**
   * Added usage examples for the four authentication methods in spring security.
-* **SpringBoot / Third Party Package / spring-boot-starter-security / Configuration**
+* **SpringBoot / Third Party Package / Core / spring-boot-starter-security / Configuration**
   * Optimized the heading structure.
-* **SpringBoot / Third Party Package / spring-boot-starter-security / Configuration / SecurityFilterChain (Bean)**
+* **SpringBoot / Third Party Package / Core / spring-boot-starter-security / Configuration / SecurityFilterChain (Bean)**
   * Optimized configuration introduction for the latest spring security.
+* **SpringBoot / Third Party Package / Extensions / junit / \[mockito-core\]**
+  * Provided usage examples for the `OngoingStubbing#thenAnswer` method.
+* **SpringBoot / Third Party Package / Extensions / junit / \[mockito-core\] / (annotation) / InjectMocks**
+  * How to initilaize mock instances without using `@ExtendWith(MockitoExtension.class)`.
 ## Simi Docs 1.3.0 Release - Document Migration
 ### Main Updates
 * Migrated core documents from Simi 1.2.0 Release to Simi Docs 1.3.0 Release.
