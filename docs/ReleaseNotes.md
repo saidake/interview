@@ -45,7 +45,7 @@
 * **SpringBoot / Third Party Package / Extensions / junit / \[mockito-core\]**
   * Provided usage examples for the `OngoingStubbing#thenAnswer` method.
 * **SpringBoot / Third Party Package / Extensions / junit / \[mockito-core\] / (annotation) / InjectMocks**
-  * How to initilaize mock instances without using `@ExtendWith(MockitoExtension.class)`.
+  * How to initialize mock instances without using `@ExtendWith(MockitoExtension.class)`.
 ### Math_v1.1.0.pdf
 * **Math / Calculation / Formulas / Logarithm**
   * Provided examples for the change of base formula.
