@@ -3,11 +3,13 @@
 - [Table of Contents](#table-of-contents)
 - [Simi](#simi)
   - [Simi Docs 1.4.0 Release](#simi-docs-140-release)
+    - [Main Updates](#main-updates)
+    - [Python\_v1.1.0.pdf](#python_v110pdf)
+    - [SpringBoot\_v1.3.0.pdf](#springboot_v130pdf)
     - [Math\_v1.1.0.pdf](#math_v110pdf)
     - [WebFrameworks\_v1.2.0.pdf](#webframeworks_v120pdf)
-    - [SpringBoot\_v1.3.0.pdf](#springboot_v130pdf)
   - [Simi Docs 1.3.0 Release - Document Migration](#simi-docs-130-release---document-migration)
-    - [Main Updates](#main-updates)
+    - [Main Updates](#main-updates-1)
     - [Linux\_v1.1.0.pdf](#linux_v110pdf)
     - [SpringBoot\_v1.2.0.pdf](#springboot_v120pdf)
     - [Java\_v1.2.0.pdf](#java_v120pdf)
@@ -20,14 +22,17 @@
     - [Config\_v1.1.0.pdf](#config_v110pdf)
 # Simi
 ## Simi Docs 1.4.0 Release 
-### Math_v1.1.0.pdf
-* **Math / Calculation / Formulas / Logarithm**
-  * Provided examples for the change of base formula.
-* **Math / Calculation / Function Graph / Log-Linear**
-  * Provide an image of a log-linear function.
-### WebFrameworks_v1.2.0.pdf
-* **WF / Npm Packages / Core / normalize.css**
-  * How to install `normalize.css` and import it to your project.
+### Main Updates
+* Moved markdown files unsuitable for release to the temp folder.
+### Python_v1.1.0.pdf
+* **Python / Core / Constants and Variables**
+  * Refined the introduction.
+* **Python / Core / Data Type Conversion**
+  * Refined the introduction.
+* **Python / Core / Operators**
+  * Refined the introduction.
+* **Python / Features / Function**
+  * Refined the introduction.
 ### SpringBoot_v1.3.0.pdf
 * **SpringBoot / Third Party Package / Core / spring-boot-starter-security / Core**
   * Moved `LogoutSuccessHandler` configuration to *SpringBoot / Third Party Package / spring-boot-starter-security / Configuration*. 
@@ -41,6 +46,14 @@
   * Provided usage examples for the `OngoingStubbing#thenAnswer` method.
 * **SpringBoot / Third Party Package / Extensions / junit / \[mockito-core\] / (annotation) / InjectMocks**
   * How to initilaize mock instances without using `@ExtendWith(MockitoExtension.class)`.
+### Math_v1.1.0.pdf
+* **Math / Calculation / Formulas / Logarithm**
+  * Provided examples for the change of base formula.
+* **Math / Calculation / Function Graph / Log-Linear**
+  * Provide an image of a log-linear function.
+### WebFrameworks_v1.2.0.pdf
+* **WF / Npm Packages / Core / normalize.css**
+  * How to install `normalize.css` and import it to your project.
 ## Simi Docs 1.3.0 Release - Document Migration
 ### Main Updates
 * Migrated core documents from Simi 1.2.0 Release to Simi Docs 1.3.0 Release.
