@@ -23,8 +23,10 @@
 # Simi
 ## Simi Docs 1.4.0 Release 
 ### Main Updates
-* Moved markdown files unsuitable for release to the temp folder.
+* Moved outedated files to the `temp` and `temppdf` folder.
 ### Python_v1.1.0.pdf
+* **Python / Build-in Libraries / collections**
+  * Introduced the usage of `Counter` method.
 * **Python / Core / Constants and Variables**
   * Refined the introduction.
 * **Python / Core / Data Type Conversion**
