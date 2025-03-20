@@ -8,6 +8,7 @@
     - [SpringBoot\_v1.3.0.pdf](#springboot_v130pdf)
     - [Math\_v1.1.0.pdf](#math_v110pdf)
     - [WebFrameworks\_v1.2.0.pdf](#webframeworks_v120pdf)
+    - [Internet\_v1.1.0.pdf](#internet_v110pdf)
   - [Simi Docs 1.3.0 Release - Document Migration](#simi-docs-130-release---document-migration)
     - [Main Updates](#main-updates-1)
     - [Linux\_v1.1.0.pdf](#linux_v110pdf)
@@ -23,39 +24,43 @@
 # Simi
 ## Simi Docs 1.4.0 Release 
 ### Main Updates
-* Moved outedated files to the `temp` and `temppdf` folder.
+* Move outedated files to the `temp` and `temppdf` folder.
 ### Python_v1.1.0.pdf
 * **Python / Build-in Libraries / collections**
-  * Introduced the usage of `Counter` method.
+  * Introduce the usage of `Counter` method.
 * **Python / Core / Constants and Variables**
-  * Refined the introduction.
+  * Refine the introduction.
 * **Python / Core / Data Type Conversion**
-  * Refined the introduction.
+  * Refine the introduction.
 * **Python / Core / Operators**
-  * Refined the introduction.
+  * Refine the introduction.
 * **Python / Features / Function**
-  * Refined the introduction.
+  * Refine the introduction.
 ### SpringBoot_v1.3.0.pdf
 * **SpringBoot / Third Party Package / Core / spring-boot-starter-security / Core**
-  * Moved `LogoutSuccessHandler` configuration to *SpringBoot / Third Party Package / spring-boot-starter-security / Configuration*. 
+  * Move `LogoutSuccessHandler` configuration to *SpringBoot / Third Party Package / spring-boot-starter-security / Configuration*. 
 * **SpringBoot / Third Party Package / Core / spring-boot-starter-security / Core / Components**
-  * Added usage examples for the four authentication methods in spring security.
+  * Adde usage examples for the four authentication methods in spring security.
 * **SpringBoot / Third Party Package / Core / spring-boot-starter-security / Configuration**
-  * Optimized the heading structure.
+  * Optimize the heading structure.
 * **SpringBoot / Third Party Package / Core / spring-boot-starter-security / Configuration / SecurityFilterChain (Bean)**
-  * Optimized configuration introduction for the latest spring security.
+  * Optimize configuration introduction for the latest spring security.
 * **SpringBoot / Third Party Package / Extensions / junit / \[mockito-core\]**
-  * Provided usage examples for the `OngoingStubbing#thenAnswer` method.
+  * Provide usage examples for the `OngoingStubbing#thenAnswer` method.
 * **SpringBoot / Third Party Package / Extensions / junit / \[mockito-core\] / (annotation) / InjectMocks**
-  * How to initialize mock instances without using `@ExtendWith(MockitoExtension.class)`.
+  * Initialize mock instances without using `@ExtendWith(MockitoExtension.class)`.
 ### Math_v1.1.0.pdf
 * **Math / Calculation / Formulas / Logarithm**
-  * Provided examples for the change of base formula.
+  * Provide examples for the change of base formula.
 * **Math / Calculation / Function Graph / Log-Linear**
   * Provide an image of a log-linear function.
 ### WebFrameworks_v1.2.0.pdf
 * **WF / Npm Packages / Core / normalize.css**
-  * How to install `normalize.css` and import it to your project.
+  * Install `normalize.css` and import it to your project.
+### Internet_v1.1.0.pdf
+* **Internet / Network Model / OSI Model / Application Layer / HTTP**
+  * Add clarification that CORS headers must be present in both preflight response and actual response.
+  * Provide a CORS example involving the UI, Nginx and the server-side.
 ## Simi Docs 1.3.0 Release - Document Migration
 ### Main Updates
 * Migrated core documents from Simi 1.2.0 Release to Simi Docs 1.3.0 Release.
@@ -68,7 +73,7 @@
 * **Linux / Bash Script / Statement / Function**
   * Provide usage examples for a bash function. 
 * **Linux / Bash Script / Statement / Control Flow / while**
-  * Provided usage examples for `IFS=`. 
+  * Provide usage examples for `IFS=`. 
 * **Linux / Commands / Service / Service File**
   * Introduce options for configuring a systemctl service file.
 ### SpringBoot_v1.2.0.pdf
@@ -95,15 +100,15 @@
 * **SpringBoot / org.springframework (spring) / web / annotation / RequestMapping**
   * Jackson is used for request bodies (`@RequestBody`) and response serialization (`@ResponseBody`).
 * **SpringBoot / org.springframework (spring) / web / annotation / InitBinder**
-  * Added usage examples for InitBinder annotation. 
+  * Add usage examples for InitBinder annotation. 
 * **SpringBoot_v1.1.0.pdf / Third Party Package / Servers / Temporal**
   * Introduce the core classes in the `temporal-serviceclient` and `temporal-sdk` dependencies.
 * **SpringBoot_v1.1.0.pdf / Third Party Package / Extentions / junit / \[junit-jupiter-api\]**
-  * Using `@ExtendWith` in Junit 5 and `@Rule` in Junit 4.
+  * Use `@ExtendWith` in Junit 5 and `@Rule` in Junit 4.
 
 ### Java_v1.1.0.pdf
 * **Java / Concept / Java Environment / Version Features / Java 16 (March 221)**
-  * Using the `record` operator in Java 16 and later.
+  * Use the `record` operator in Java 16 and later.
 * **Java / java.base / java.time / LocalDate**
   * Introduce the default date string format.
 * **Java / java.base / java.text / SimpleDateFormat**
