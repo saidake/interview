@@ -40,7 +40,7 @@
 * **SpringBoot / Third Party Package / Core / spring-boot-starter-security / Core**
   * Move `LogoutSuccessHandler` configuration to *SpringBoot / Third Party Package / spring-boot-starter-security / Configuration*. 
 * **SpringBoot / Third Party Package / Core / spring-boot-starter-security / Core / Components**
-  * Adde usage examples for the four authentication methods in spring security.
+  * Add usage examples for the four authentication methods in spring security.
 * **SpringBoot / Third Party Package / Core / spring-boot-starter-security / Configuration**
   * Optimize the heading structure.
 * **SpringBoot / Third Party Package / Core / spring-boot-starter-security / Configuration / SecurityFilterChain (Bean)**
@@ -63,10 +63,10 @@
   * Provide a CORS example involving the UI, Nginx and the server-side.
 ## Simi Docs 1.3.0 Release - Document Migration
 ### Main Updates
-* Migrated core documents from Simi 1.2.0 Release to Simi Docs 1.3.0 Release.
-* Renamed `Node_v1.1.0.pdf` to `WebFrameworks_v1.1.0.pdf`.
-* Renamed `Algorithms_v1.1.0.pdf` to `Math_v1.1.0.pdf`.
-* Used abbreviated first-level heading in `DatabaseAndMiddleware_v1.0.0.pdf`, `HTMLAndCSS_v1.0.0.pdf` and `WebFrameworks_v1.1.0.pdf`. 
+* Migrate core documents from Simi 1.2.0 Release to Simi Docs 1.3.0 Release.
+* Rename `Node_v1.1.0.pdf` to `WebFrameworks_v1.1.0.pdf`.
+* Rename `Algorithms_v1.1.0.pdf` to `Math_v1.1.0.pdf`.
+* Use abbreviated first-level heading in `DatabaseAndMiddleware_v1.0.0.pdf`, `HTMLAndCSS_v1.0.0.pdf` and `WebFrameworks_v1.1.0.pdf`. 
 ### Linux_v1.1.0.pdf
 * **Linux / Bash Script / Core**
   * Provide detailed explanation for commands like `make`, `make clean`, `make install` and `set`.
