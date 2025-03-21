@@ -1,31 +1,34 @@
 # Table of Contents
 [Back to Main Project README](../README.md)
 - [Table of Contents](#table-of-contents)
-- [Simi](#simi)
-  - [Simi Docs 1.4.0 Release](#simi-docs-140-release)
+- [Simi Docs 1.4.0 Release - Major Update to `Python_v1.1.0.pdf`](#simi-docs-140-release---major-update-to-python_v110pdf)
     - [Main Updates](#main-updates)
     - [Python\_v1.1.0.pdf](#python_v110pdf)
+    - [Java\_v1.3.0.pdf](#java_v130pdf)
     - [SpringBoot\_v1.3.0.pdf](#springboot_v130pdf)
-    - [Math\_v1.1.0.pdf](#math_v110pdf)
+    - [Math\_v1.2.0.pdf](#math_v120pdf)
     - [WebFrameworks\_v1.2.0.pdf](#webframeworks_v120pdf)
     - [Internet\_v1.1.0.pdf](#internet_v110pdf)
-  - [Simi Docs 1.3.0 Release - Document Migration](#simi-docs-130-release---document-migration)
+- [Simi Docs 1.3.0 Release - Document Migration](#simi-docs-130-release---document-migration)
     - [Main Updates](#main-updates-1)
     - [Linux\_v1.1.0.pdf](#linux_v110pdf)
     - [SpringBoot\_v1.2.0.pdf](#springboot_v120pdf)
     - [Java\_v1.2.0.pdf](#java_v120pdf)
     - [Japanese\_v1.1.0.pdf](#japanese_v110pdf)
     - [Config\_v1.2.0.pdf](#config_v120pdf)
-  - [Simi 1.2.0 Release - SpringBoot\_v1.1.0.pdf](#simi-120-release---springboot_v110pdf)
+- [Simi 1.2.0 Release - Major Update to `SpringBoot_v1.1.0.pdf`](#simi-120-release---major-update-to-springboot_v110pdf)
     - [SpringBoot\_v1.1.0.pdf](#springboot_v110pdf)
     - [Java\_v1.1.0.pdf](#java_v110pdf)
     - [Node\_v1.1.0.pdf](#node_v110pdf)
     - [Config\_v1.1.0.pdf](#config_v110pdf)
-# Simi
-## Simi Docs 1.4.0 Release 
+# Simi Docs 1.4.0 Release - Major Update to `Python_v1.1.0.pdf`
 ### Main Updates
-* Move outedated files to the `temp` and `temppdf` folder.
+* Move outedated PDFs to the `temp` and `temppdf` folders.
+* Rename the image title from *Simi Documentation* to *Simi Docs* for all PDF files.
+* Replace *Author* with *Edited by* to maintain protection for the external sources and AI-generated content.
 ### Python_v1.1.0.pdf
+* **Python / Concept**
+  * Refine the conceptual content.
 * **Python / Build-in Libraries / collections**
   * Introduce the usage of `Counter` method.
 * **Python / Core / Constants and Variables**
@@ -36,6 +39,17 @@
   * Refine the introduction.
 * **Python / Features / Function**
   * Refine the introduction.
+* **Python / Features / Class**
+  * Optimize all content.
+* **Python / Features / Excpetion**
+  * Optimize all content.
+* **Python / Features / Import package**
+  * Optimize all content.
+### Java_v1.3.0.pdf
+* **Java / Features / Class / Usage**
+  * Optmize the hightlight style.
+* **Java / Core / Data Type Conversion / Common Data Type Conversion**
+  * Optimize all content.
 ### SpringBoot_v1.3.0.pdf
 * **SpringBoot / Third Party Package / Core / spring-boot-starter-security / Core**
   * Move `LogoutSuccessHandler` configuration to *SpringBoot / Third Party Package / spring-boot-starter-security / Configuration*. 
@@ -49,7 +63,7 @@
   * Provide usage examples for the `OngoingStubbing#thenAnswer` method.
 * **SpringBoot / Third Party Package / Extensions / junit / \[mockito-core\] / (annotation) / InjectMocks**
   * Initialize mock instances without using `@ExtendWith(MockitoExtension.class)`.
-### Math_v1.1.0.pdf
+### Math_v1.2.0.pdf
 * **Math / Calculation / Formulas / Logarithm**
   * Provide examples for the change of base formula.
 * **Math / Calculation / Function Graph / Log-Linear**
@@ -61,7 +75,7 @@
 * **Internet / Network Model / OSI Model / Application Layer / HTTP**
   * Add clarification that CORS headers must be present in both preflight response and actual response.
   * Provide a CORS example involving the UI, Nginx and the server-side.
-## Simi Docs 1.3.0 Release - Document Migration
+# Simi Docs 1.3.0 Release - Document Migration
 ### Main Updates
 * Migrate core documents from Simi 1.2.0 Release to Simi Docs 1.3.0 Release.
 * Rename `Node_v1.1.0.pdf` to `WebFrameworks_v1.1.0.pdf`.
@@ -93,7 +107,7 @@
 ### Config_v1.2.0.pdf
 **Config / Java Environment / maven / Commands / mvn / Core**
   * How to pass environment variables to a Junit test.
-## Simi 1.2.0 Release - SpringBoot_v1.1.0.pdf
+# Simi 1.2.0 Release - Major Update to `SpringBoot_v1.1.0.pdf`
 ### SpringBoot_v1.1.0.pdf
 * **SpringBoot / Third Party Package / spring-boot-starter-security**
   * Configure SecurityFilterChain for the new version of spring security. 
