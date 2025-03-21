@@ -33,8 +33,10 @@
       - [35. Maximum Multiplication Score](#35-maximum-multiplication-score)
   - HashMap
     - [30. Count Common Words With One Occurrence](#30-count-common-words-with-one-occurrence)
+    - [45. Intersection of Two Arrays II](#45-common-elements-between-two-arrays)
   - Heap
     - [39. Trapping Rain Water II](#39-trapping-rain-water-ii)
+    - [43. Total Cost to Hire K Workers](#43-total-cost-to-hire-k-workers)
   - Fenwick Tree
     - [14. Distribute Elements Into Two Arrays II](#14-distribute-elements-into-two-arrays-ii)
   - Graph 
@@ -61,6 +63,8 @@
       - [22. Find the Longest Equal Subarray](#22-find-the-longest-equal-subarray)
     - Handle the right side separately
       - [40. Count Subarrays Where Max Element Appears at Least K Times](#40-count-subarrays-where-max-element-appears-at-least-k-times)
+    - Fixed-size
+      - [44. Find Indices With Index and Value Difference I](#44-find-indices-with-index-and-value-difference-i) 
   - String
     - [23. License Key Formatting](#23-license-key-formatting)
   - Traversal
@@ -123,7 +127,7 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(n \log n)$
     * `Arrays.sort` has a time complexity of $O(nlogn)$;
     * The loop iterates through the array with a step of 2, so it runs $n/2$ times, resulting a time complexity of $O(n)$.  
@@ -231,20 +235,20 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(m+n)$  (`m` is the length of array `edges`)
     * `Arrays.setAll`   
     
-        Method `Arrays.setAll` takes a time complexiyt of $O(n)$.
+        Method `Arrays.setAll` takes a time complexity of $O(n)$.
     * Record all nodes connected to each node
 
         The `for` loop has a time complexity of $O(m)$ where `m` is the length of `edges` array.
     * Identify all nodes with an odd degree
         
-        The `for` loop takes a time complexiyt of $O(n)$.
-    * Check if there is a third node that can conect to the two nodes
+        The `for` loop takes a time complexity of $O(n)$.
+    * Check if there is a third node that can connect to the two nodes
         
-        The `for` loop takes a time complexiyt of $O(n)$.
+        The `for` loop takes a time complexity of $O(n)$.
 
     Therefore, the overall time complexity is $O(m+n)$.
 * Space Complexity: $O(m+n)$
@@ -368,7 +372,7 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 - Time Complexity: $O(n)$
 
     In the worst case, DFS visits all nodes in the tree, leading to a time complexity of $O(n)$, where $n$ is the number of nodes in the tree.
@@ -447,7 +451,7 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 - Time Complexity: $O(n)$
 
     Similar to the previous solution, visiting all nodes in the tree in the worst case results in a time complexity of $O(n)$, where $n$ is the total number of nodes.
@@ -535,14 +539,14 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
-* Time Complexity: $O(logn)$
+#### Complexity Analysis
+* Time Complexity: $O(\log n)$
 
-    In each recursive call, the array range is split into **two** approximately equal part, resulting in a total recursion time of $O(logn)$.
+    In each recursive call, the array range is split into **two** approximately equal part, resulting in a total recursion time of $O(\log n)$.
 
-* Space Complexity: $O(logn)$
+* Space Complexity: $O(\log n)$
 
-    Each recursive call adds a frame to the recursion stack, with a maximum depth of $O(logn)$, leading to a space complexity of O(logn).
+    Each recursive call adds a frame to the recursion stack, with a maximum depth of $O(\log n)$, leading to a space complexity of $O(\log n)$.
 
 ## 5. Jump Game VII
 [Back to Top](#table-of-contents)  
@@ -632,7 +636,7 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(n)$ 
 
     The `for` loop iterates over each character in the string `s`, resulting in a time complexity of $O(n)$.
@@ -740,7 +744,7 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(n)$ 
     
     The `for` loop iterates from `minJump` to `len` (the length of the string s), resulting in a time complexity of $O(n)$.
@@ -786,10 +790,10 @@ Thus, it follows the Fibonacci sequence.
 
 ### Dynamic Programming Solution
 Fibonacci sequence formula:
-$$ F(n)=F(n-1)+F(n-2) $$
+$$F(n)=F(n-1)+F(n-2)$$
 #### Initialization 
 The number of ways to reach stair `1` is `1` and stair `2` is `2`, so:  
-$$ F(1) = 1,  F(2) = 2 $$
+$$F(1) = 1,  F(2) = 2$$
 #### Filling the DP Table
 Since this process only depends on the previous two stairs, we can just define two variables to store the number of ways for the previous two stairs.
 #### Implementation
@@ -812,7 +816,7 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(n)$
 
     The `for` loop iterate over the stairs starting from `3`, yielding a time complexity of $O(n)$.
@@ -864,14 +868,14 @@ Adding a new `'P'` and `'D'`:
     <> L <> L <> L <> L <>
     ```
     No matter whether it's `'P'` or `'D'` in the above `'L'` location, the number of valid gap positions (`'<>'`) that can be inserted for `'PD'` is: 
-    $$ C(5, 1) $$
+    $$C(5, 1)$$
 
 2. Insert `'PD'` Separately:
     ```text
     <> L <> L <> L <> L <>
     ```
     Select two valid gap positions from 5 gap positions in a fixed order:
-     $$ C(5,2) $$
+     $$C(5,2)$$
 
 Define `F(n)` as the number of valid pickup/delivery possible sequences where `'n'` represents the total number of pickups (`'P'`).  
 The formula is:
@@ -899,7 +903,7 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(n)$
 
     The `for` loop runs in $O(n)$ time.
@@ -927,7 +931,7 @@ In addition to the mapping above, an encoded message may contain the `'*'` chara
 
 Given a string `s` consisting of digits and `'*'` characters, return the **number** of ways to **decode** it.
 
-Since the answer may be very large, return it **modulo** $ 10^9+7 $.
+Since the answer may be very large, return it **modulo** $10^9+7$.
 
 **Example 1:**
 > **Input:** s = "*"  
@@ -1063,7 +1067,7 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(n)$
 
     The `for` loop runs from `i=2` to `i=len`, where `len` is the length of the string `s`, resulting in a time complexity of $O(n)$
@@ -1075,7 +1079,7 @@ class Solution {
 * Calculate the single-digit decoding cases first to avoid redundant calculations.
 * The time complexity of `s.toCharArray()` is O(n), while the `s.charAt()` has a time complexity of O(1), making `charAt()` more efficient.
 * The values in the `dp` array are taken modulo 10<sup>9</sup> + 7, which is still a very large value. long type is required to prevent integer overflow.
-* Using `Character.getNumericValue()` to obtain the nummeric value of `'*'` in string `s` will return `'-1'` and using the `-1` for checking purposes can lead to misleading readability.
+* Using `Character.getNumericValue()` to obtain the numeric value of `'*'` in string `s` will return `'-1'` and using the `-1` for checking purposes can lead to misleading readability.
 
 ## 9. Make the XOR of All Segments Equal to Zero
 [Back to Top](#table-of-contents)  
@@ -1105,14 +1109,14 @@ Return the minimum number of elements to change in the array such that the `XOR`
 
 ### Dynamic Programming Solution
 Since the `XOR` result of any segments with a length `k` equals `0`, for index `i`, the following holds:
-$$ nums[i] \oplus nums[i+1] \oplus ... \oplus nums[i+k-1] =0 $$
+$$nums[i] \oplus nums[i+1] \oplus ... \oplus nums[i+k-1] =0$$
 Additionally, another equation applies:
-$$ nums[i+1] \oplus nums[i+2] \oplus ... \oplus nums[i+k] =0 $$
+$$nums[i+1] \oplus nums[i+2] \oplus ... \oplus nums[i+k] =0$$
 
 The symbol $\oplus$ represents the `XOR` operation. Based on the formula $a \oplus b \oplus b =a$ ,the `XOR` result of the two equations is:  
-$$ nums[i] \oplus nums[i+k]=0 $$
+$$nums[i] \oplus nums[i+k]=0$$
 The equation is equivalent to:
-$$ nums[i]=nums[i+k] $$
+$$nums[i]=nums[i+k]$$
 The `nums` array needs to satisfy:
 $$\forall i \in [0, n-k), nums[i] = nums[i+k]$$
 * $\forall$  
@@ -1191,14 +1195,14 @@ Step 2:
     dp[1][1024^4] = Math.max( dp[1][1024^4], dp[0][1024]+2 )
 ...
 ```
-In the previous analysis , we defined `o` as the `XOR` result of the retainted elements from the previous groups.  
+In the previous analysis , we defined `o` as the `XOR` result of the retained elements from the previous groups.  
 For the example above, The final modified array is `[3,4,7,3,4,7,3,4,7]`, the valid `o` values across all possible `XOR` results at each step will be:
-$$o_0 = 3 \\ o_1=3 \oplus 4 = 7 \\ o_2=3 \oplus 4 \oplus 7 =0 $$
+$$o_0 = 3 \\ o_1=3 \oplus 4 = 7 \\ o_2=3 \oplus 4 \oplus 7 =0$$
 
 Assuming the approach of retaining the element with the highest frequency in each group while modifying only the element with the lowest frequency yields a retained element count of `rnum`.
 
 The maximum number of elements retained in the array `nums` to satisfy the problem's requirements is:
-$$ nums.length - Math.max(rnum, dp[k - 1][0]) $$
+$$nums.length - Math.max(rnum, dp[k - 1][0])$$
 
 #### Implementation
 ```java
@@ -1258,12 +1262,12 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(n)$
 
     * Create a HashMap for each group to store the frequency of each element  
     
-        This loop iterates over all elements in array `nums` , resulting in a time compleixty of $O(n)$ where `n` represents the length of array `nums`.
+        This loop iterates over all elements in array `nums` , resulting in a time complexity of $O(n)$ where `n` represents the length of array `nums`.
     * Traverse the divided groups  
     
         The outer loop iterates through the `k` groups, and the inner loop traverses all unique elements within each group.  
@@ -1281,7 +1285,7 @@ class Solution {
         - The first inner loop iterates over the distinct elements in the current group.
         - The second inner loop iterates over all possible values (bounded by `maxVal` = 1024).
         
-        The total time complexity is $O(\sum_k^{m-1}{d_m} \times 1024 )$, where $d_m$ denote the number of distinct elements in group `m`, simplifing to $O(n)$ since $\sum{d_m} \approx n$.
+        The total time complexity is $O(\sum_k^{m-1}{d_m} \times 1024 )$, where $d_m$ denote the number of distinct elements in group `m`, simplifying to $O(n)$ since $\sum{d_m} \approx n$.
 
     Therefore, the overall time complexity is $O(n)$.
 * Space Complexity: $O(n+k)$
@@ -1348,14 +1352,14 @@ Using simple enumeration, we can calculate the sum at each index and compare the
 However, calculating for each index involves a significant amount of repeat computation, resulting in very low performance, we need to minimize the number of passes and avoid redundant calculations.
 ### Dynamic Programming Solution
 
-Define a two-dimensional array `pa[i][x]` to store the receiver value `x` reached from the initial receiver after $ 2^i $ passings.
+Define a two-dimensional array `pa[i][x]` to store the receiver value `x` reached from the initial receiver after $2^i$ passes.
 Initially, `pa[0][x]` is simply the direct receiver of `x`. 
 
-Similarly, define a two-dimensional array `sum[i][x]` to store the cumulative sum of receiver values when making $ 2^i $ passings from receiver `x`.   
+Similarly, define a two-dimensional array `sum[i][x]` to store the cumulative sum of receiver values when making $2^i$ passes from receiver `x`.   
 `sum[0][x]` is simply the receiver value at `receiver[x]`, as it represents a single passing.
 
-We can pass the ball to a distant receiver by skipping $ 2^n $ passings, 
-instead of passing to the next receiver, as we have stored the cumulative sums for each passing from from each receiver.
+We can pass the ball to a distant receiver by skipping $2^n$ passes, 
+instead of passing to the next receiver, as we have stored the cumulative sums for each passing from each receiver.
 
 #### Precomputation Process
 Since each passing distance doubles the previous one,
@@ -1392,7 +1396,7 @@ pa[2][1] = pa[1][ pa[1][1] ]  = pa[1][3] = 5
 ...
 ```
 Since `pa[i][x]` represents the receiver after $2^i$ passes from receiver `x`, we can substitute this into the calculation for `pa[i+1][x]`:
-$$ pa[i+1][x]=pa[i][pa[i][x]] $$
+$$pa[i+1][x]=pa[i][pa[i][x]]$$
 
 This relation allows us to efficiently compute the receiver after $2^{i+1}$ passes using previously calculated results.
 
@@ -1414,23 +1418,23 @@ Using bitwise operations can significantly improve the efficiency of the passing
         When `k` is a power of two, `k & k -1` will return `0`.
     
     Example 1:  
-    * $ k = 13 $ (binary: `1101`)
-    * $ k-1=12 $ (binary: `1100`) 
+    * $k = 13$ (binary: `1101`)
+    * $k-1=12$ (binary: `1100`) 
     * `k & k-1` = `1101 & 1100 = 1100 ` = `12`
 
     Example 2:  
-    * $ k = 24  $ (binary: `11000`)  
-    * $ k-1=23 $ (binary: `10111`)  
+    * $k = 24$ (binary: `11000`)  
+    * $k-1=23$ (binary: `10111`)  
     * `k & k-1` = `11000 & 10011 = 10000 ` = `16`
 
    Example 3:  
-    * $ k = 12 $ (binary: `1100`)
-    * $ k-1=11 $ (binary: `1011`) 
+    * $k = 12$ (binary: `1100`)
+    * $k-1=11$ (binary: `1011`) 
     * `k & k-1` = `1100 & 1011 = 1000 ` = `8`
 
     Example 4:
-    * $ k = 8 $ (binary: `1000`)
-    * $ k-1=7 $ (binary: `0111`) 
+    * $k = 8$ (binary: `1000`)
+    * $k-1=7$ (binary: `0111`) 
     * `k & k-1` = `1000 & 0111 = 0000 ` = `0`
 
 * `64 - Long.numberOfLeadingZeros(k)`
@@ -1442,7 +1446,7 @@ Using bitwise operations can significantly improve the efficiency of the passing
 
 * `Long.numberOfTrailingZeros(k)`
 
-    Count the trailing zeros of `k`, which corresponds to the exponent of the number $2^n$  substracted from `k` after the oprations `k &= k-1`.
+    Count the trailing zeros of `k`, which corresponds to the exponent of the number $2^n$  subtracted from `k` after the operations `k &= k-1`.
 
 #### Implementation
 ```java
@@ -1486,11 +1490,11 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(n \log k)$
     * Precomputation
 
-        The outer loop takes $O(log k)$ time, as it calcualtes the powers of 2 up to $k$.
+        The outer loop takes $O(log k)$ time, as it calculates the powers of 2 up to $k$.
         The inner loop iterates $O(n)$ times for each outer loop iteration, calculating the receiver and sum for each index, where `n` is the length of the receiver array.
 
         So, the precomputation step takes $O(n \times log k)$ time.
@@ -1564,7 +1568,7 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(n)$
 
     The `for` loop takes $O(n)$ time.
@@ -1641,7 +1645,7 @@ class Solution {
   }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(2^n)$
 
     Alice and Bob can make two possible choices at each step, and the total number of choices is `right-left`,
@@ -1729,11 +1733,11 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(n^2)$ 
 
     The sum of iterations for both loop is:  
-    $$ 1+2+3+...+(n-1) = \frac{(n-1) \times n}{2} =  O(n^2)$$
+    $$1+2+3+...+(n-1) = \frac{(n-1) \times n}{2} =  O(n^2)$$
 * Space Complexity: $O(n^2)$ 
 
     The algorithm uses a two-dimensional array `dp` of size `n×n`, where `n` is the length of the input array `piles`.
@@ -1756,11 +1760,11 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(n^2)$ 
 
     The sum of iterations for both loop is:  
-    $$ 1+2+3+...+(n-1) = \frac{(n-1) \times n}{2} =  O(n^2)$$
+    $$1+2+3+...+(n-1) = \frac{(n-1) \times n}{2} =  O(n^2)$$
 * Space Complexity: $O(n)$  
 
     The size of one-dimensional array `dp` is `n`, corresponding to the length of the input array.
@@ -1828,7 +1832,7 @@ public class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(2^n)$ 
 
     The total number of recursive calls is proportional to $2^n$, 
@@ -1910,7 +1914,7 @@ public class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(2^n)$  
     
     The worst-case time complexity remains the same, but it is faster than the original solution in general cases.
@@ -2044,7 +2048,7 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(n \times neg)$ 
     * Calculate the sum of nums.
 
@@ -2089,7 +2093,7 @@ public class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(n \times neg)$ 
     * Calculate the sum of nums.
 
@@ -2262,18 +2266,19 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
-* Time Complexity: $O(nlogn)$\
-    * Traverse array 'nums'
-        The `for` loop iterates over the array `nums`, taking $O(n)$ time.
-        The `binarySearch` and `prefixSum` methods each contribute $O(logn)$ time complexity.
+#### Complexity Analysis
+* Time Complexity: $O(n\log n)$ 
+    * Traverse array `nums`
+    
+        The `for` loop iterates over the array `nums`, taking $O(n)$ time.  
+        The `binarySearch` and `prefixSum` methods each contribute $O(\log n)$ time complexity.
 
-        Therefore, the overall time complexity for this part is $O(nlogn)$.
+        Therefore, the overall time complexity for this part is $O(n\log n)$.
     * Convert the list into a primitive array
 
         Traversing the array `nums` takes $O(n)$ time.
 
-    Thus, the overall time complexity is $O(nlogn)$.
+    Thus, the overall time complexity is $O(n\log n)$.
 
 * Space Complexity: $O(n)$
 
@@ -2343,7 +2348,7 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(n)$
 
     Since the `replace` method has a time complexity of $O(n)$ and is executed at most twice, while `charAt` and `Integer.parseInt` take $O(1)$ time, the overall time complexity of the `for` is $O(n)$.
@@ -2470,7 +2475,7 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(n)$
 
     The `for` loop has time complexity $O(n)$, resulting in an overall time complexity of $O(n)$.
@@ -2572,7 +2577,7 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(n)$  
 
     The `for` loop takes $O(n)$ time.
@@ -2649,21 +2654,21 @@ Dropping the egg from floor `1` to the top floor `n` is the simplest method, but
 
 Assuming we need to drop the first egg `j` times, we get:
 
-$$ 1+2+3+...+j = n $$
+$$1+2+3+...+j = n$$
 Based on the formula of geometric series:
-$$ \sum_{j=1}^j = 1+2+3+...+j = \frac{j \times (j+1)}{2}   $$
+$$\sum_{j=1}^j = 1+2+3+...+j = \frac{j \times (j+1)}{2}$$
 we have:
-$$ j^2+j = 2n $$
+$$j^2+j = 2n$$
 
 Based on the formula for the sum of a geometric series:
-$$ ax^2+bx+c=0 $$
-$$ x=\frac{-b \plusmn \sqrt{b^2-4ac}}{2a} $$
+$$ax^2+bx+c=0$$
+$$x=\frac{-b \pm \sqrt{b^2-4ac}}{2a}$$
 We have:
-$$ j=\frac{-1 \plusmn \sqrt{1+8n}}{2} $$ 
+$$j=\frac{-1 \pm \sqrt{1+8n}}{2}$$ 
 
 Because we expect a positive number, the formula will be:
 
-$$ j=\frac{-1 + \sqrt{1+8n}}{2} $$ 
+$$j=\frac{-1 + \sqrt{1+8n}}{2}$$ 
 This gives the smallest integer $j$, where the fractional part is treated as a full drop.
 
 #### Implementation
@@ -2676,7 +2681,7 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(1)$
 * Space Complexity: $O(1)$
 
@@ -2690,7 +2695,7 @@ She starts on stair 1 and wants to reach stair `k` using any number of operation
 If she is on stair `i`, in one operation she can:
 
 Go down to stair `i - 1`. This operation cannot be used consecutively or on stair 0.
-Go up to stair $i + 2^{\text{jump}} $. And then, `jump` becomes `jump + 1`.
+Go up to stair $i + 2^{\text{jump}}$. And then, `jump` becomes `jump + 1`.
 Return the total number of ways Alice can reach stair `k`.
 
 Note that it is possible that Alice reaches the stair `k`, and performs some operations to reach the stair `k` again.
@@ -2731,24 +2736,24 @@ Note that it is possible that Alice reaches the stair `k`, and performs some ope
 
 ### Analysis
 Based on the formula for the sum of a geometric series:
-$$ 2^0 + 2^1 + 2^2 + ... + 2^n = 2^{n+1}-1$$
+$$2^0 + 2^1 + 2^2 + ... + 2^n = 2^{n+1}-1$$
 If Alice reaches the stair `k` after `e` upward jumps and `f` downward jumps, then:
-$$ 2^0 + 2^1 + 2^2 + ... + 2^{e-1} = 2^e-1$$
+$$2^0 + 2^1 + 2^2 + ... + 2^{e-1} = 2^e-1$$
 Thus, the relationship is:
-$$ 1 + ( 2^e-1 )- f = k $$
+$$1 + ( 2^e-1 )- f = k$$
 Rearranging gives:
-$$ f = 2^e - k$$ 
+$$f = 2^e - k$$ 
 Since there are `e+1` positions where these downward jumps can occur, the result is:
-$$ C(e+1, 2^e - k) $$
+$$C(e+1, 2^e - k)$$
 Probability Formula:
 * Order doesn't matter (Combinations):
-    $$ C(n,m)= \frac{n!}{m! \times (n-m)!} $$
+    $$C(n,m)= \frac{n!}{m! \times (n-m)!}$$
 * Order matters (Permutations)
-    $$ P(n,m)= \frac{n!}{(n-m)!} $$
+    $$P(n,m)= \frac{n!}{(n-m)!}$$
     
     * **n**: Total number of elements in the set.  
     * **m**: Number of elements to choose.  
-    * **!**: Factorial (e.g. $5!=5 \times 4 \times 3 \times 2 \times 1 $)
+    * **!**: Factorial (e.g. $5!=5 \times 4 \times 3 \times 2 \times 1$)
 
 Using `Integer.highestOneBit(k)` to determine the nearest lower power of two (`nlp`) for `k`, 
 consider the following cases:
@@ -2761,11 +2766,11 @@ $$C(n,m)=C(n-1,m-1)+C(n-1,m)$$
 
 #### Evaluating the Value Range of Combination Probability
 Binomial Theorem:
-$$ (a + b)^n = \sum_{k=0}^n C(n, k) \times a^{n-k} \times b^k $$
+$$(a + b)^n = \sum_{k=0}^n C(n, k) \times a^{n-k} \times b^k$$
 For a=1, b=1, the result becomes:
-$$ (1 + 1)^n = \sum_{k=0}^n C(n, k) = C(n,0)+C(n,1)+C(n,2)+...+C(n,n) $$
+$$(1 + 1)^n = \sum_{k=0}^n C(n, k) = C(n,0)+C(n,1)+C(n,2)+...+C(n,n)$$
 Since $C(n,k)$ is one of these terms, it follows that: 
-$$ C(n,k)<2^n $$
+$$C(n,k)<2^n$$
 
 Let the exponent of the nearest lower power of two for `k` be `ex`,  
 Given the constraint $0 <= k <= 10^9$, 
@@ -2802,10 +2807,10 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(1)$
  
-    The time and space used duiring the precomputation process are not factored into the solution.
+    The time and space used during the precomputation process are not factored into the solution.
 * Space Complexity: $O(1)$
 ## 20. Minimum Moves to Capture The Queen
 [Back to Top](#table-of-contents)  
@@ -2868,19 +2873,19 @@ Cases where the rook can directly capture the queen:
 Cases where the bishop can capture the queen:
 * The bishop and queen on the same diagonal (rook is not in between).  
 
-    Using the equation of a line $ y = ax + b $ (where $a=1$ since the line is diagonal in this problem),
+    Using the equation of a line $y = ax + b$ (where $a=1$ since the line is diagonal in this problem),
     two points $(x_1, y_1)$ and $(x_2, y_2)$ to lie on the same diagonal of a coordinate grid if one of the following conditions is met:
 
-    * They lie on the main diagonal where $ x_1 - x_2 = y_1-y_2 $  (difference of coordinates is equal)
-    * They lie on the anti-diagonal where $ x_1 - x_2 = -(y_1-y_2) $  (sum of coordinates is constant)  
+    * They lie on the main diagonal where $x_1 - x_2 = y_1-y_2$  (difference of coordinates is equal)
+    * They lie on the anti-diagonal where $x_1 - x_2 = -(y_1-y_2)$  (sum of coordinates is constant)  
 
     Combining these two conditions into one equation:
-        $$ | x_1 - x_2 |  = | y_1-y_2 | $$
+        $$| x_1 - x_2 |  = | y_1-y_2 |$$
 
     To determine if the bishop, queen, and rook are collinear, compare the slopes of the lines formed by these points:
-    $$ \frac{y_3-y_1}{x_3-x_1}=\frac{y_2-y_1}{x_2-x_1} $$
+    $$\frac{y_3-y_1}{x_3-x_1}=\frac{y_2-y_1}{x_2-x_1}$$
     If this equation holds, the three pieces are collinear; otherwise, they are not. To avoid division, the equation can be rewritten as:
-    $$ (y_3-y_1)\times(x_2-x_1)=(y_2-y_1)\times(x_3-x_1) $$
+    $$(y_3-y_1)\times(x_2-x_1)=(y_2-y_1)\times(x_3-x_1)$$
 
 Other cases:
 * If a piece blocks the direct capture path, 
@@ -2916,7 +2921,7 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(1)$
 * Space Complexity: $O(1)$
 ## 21. Range Product Queries of Powers
@@ -2924,7 +2929,7 @@ class Solution {
 ### Overview
 Given a positive integer `n`, there exists a **0-indexed** array called `powers`, composed of the **minimum** number of powers of `2` that sum to `n`. The array is sorted in **non-decreasing** order, and there is only one way to form the array.
 
-You are also given a **0-indexed** 2D integer array `queries`, where `queries[i] = [lefti, righti]`. Each `queries[i]` represents a query where you have to find the product of all `powers[j]` with $ left_i <= j <= right_i $.
+You are also given a **0-indexed** 2D integer array `queries`, where `queries[i] = [lefti, righti]`. Each `queries[i]` represents a query where you have to find the product of all `powers[j]` with $left_i <= j <= right_i$.
 
 Return an array `answers`, equal in length to `queries`, where `answers[i]` is the answer to the $i^{th}$ query. Since the answer to the $i^{th}$  query may be too large, each `answers[i]`should be returned modulo $10^9 + 7$.
 
@@ -2997,7 +3002,7 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(bc^2)$
     * Integer.bitCount(n)
     
@@ -3010,14 +3015,14 @@ class Solution {
     * Precompute the product results for all subarrays
         
         The outer `for` loop runs `bc` times, and the number of iterations times of the inner `for` loop depends on the outer loop, so the total number of runs is:
-        $$ \sum_{i=0}^{bc-1} (bc-1-i) = (bc-1) + (bc-2) + (bc-3) + ... + 1 = \frac{(bc-1)\times bc}{2} $$
+        $$\sum_{i=0}^{bc-1} (bc-1-i) = (bc-1) + (bc-2) + (bc-3) + ... + 1 = \frac{(bc-1)\times bc}{2}$$
         Therefore, the time complexity is $O(bc^2)$. 
 
     * Answer each query
 
         The `for` loop runs `queries.length` times, so the time complexity is $O(q)$ for `q` queries.
 
-     Since $O(q)$ grows slower than O(bc^2) and can be omitted, the total time compleixty is $O(bc^2)$
+     Since $O(q)$ grows slower than O(bc^2) and can be omitted, the total time complexity is $O(bc^2)$
 
 * Space Complexity: $O(bc^2)$
     * `powers` array takes $O(bc)$ space.  
@@ -3139,7 +3144,7 @@ class Solution {
   }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(n)$  
     * Traverse array nums
     
@@ -3212,7 +3217,7 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(n)$
 
     The time complexity of methods `toUpperCase, replaceAll, toCharArray` are all $O(n)$.  
@@ -3298,7 +3303,7 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(n^2)$
     * `Arrays.sort` has a time complexity of $O(nlogn)$.
 
@@ -3367,7 +3372,7 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(n)$
 
     The `for` loop iterates `nums.length/2 - 2` times, leading to a time complexity of $O(n)$.
@@ -3428,7 +3433,7 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(nlogn)$
     * `Arrays.sort` has a time complexity of $O(nlogn)$.
     * Traverse the array `people`  using two pointers, left and right.
@@ -3558,7 +3563,7 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(n)$
 
     The `while` loop runs in $O(n)$ time, as index `j` skips over traversed elements in the inner loop, not affecting the total number of iterations.
@@ -3626,7 +3631,7 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(m + n)$
 
     The `Arrays.copyOf` method takes $O(m)$ time and the `for` loop takes $O(n)$ time, 
@@ -3767,7 +3772,7 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(n\times2^n)$
 
     let's use `nums = [1,2,3,4]` as an example:  
@@ -3790,13 +3795,13 @@ class Solution {
         $$1 \times C(n,1) + 2 \times C(n,2) + ... + n \times C(n,n)$$
 
         Use the Binomial Theorem to derive the result of the equation above: 
-        $$ (a + b)^n = \sum_{k=0}^n C(n, k) \times a^{n-k} \times b^k $$
+        $$(a + b)^n = \sum_{k=0}^n C(n, k) \times a^{n-k} \times b^k$$
         Setting `a=1` gives:
         $$ (1 + b)^n = \sum_{k=0}^n C(n, k) \times b^k $$
         Differentiating both sides with respect to `x` and evaluating at `x=1` yields:
-        $$\frac{d}{db}(1+b)^n = \frac{d}{db} \sum_{k=0}^n C(n, k) \times b^k $$
+        $$\frac{d}{db}(1+b)^n = \frac{d}{db} \sum_{k=0}^n C(n, k) \times b^k$$
         Using the derivative rule $\frac{d}{dx}(x^n)=nx^{n-1}$, we get:
-        $$n(1+b)^{n-1} = \sum_{k=0}^n C(n, k) \times kb^{k-1} $$
+        $$n(1+b)^{n-1} = \sum_{k=0}^n C(n, k) \times kb^{k-1}$$
         Setting $b=1$ in both sides:
         $$n \times 2^{n-1} = \sum_{k=1}^n k \times C(n,k) = 1 \times C(n,1) + 2 \times C(n,2) + ... + n \times C(n,n)$$
 
@@ -3850,7 +3855,7 @@ class Solution {
 }
 
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(n\times2^n)$
 
     The recursive call decreases by `1` each time. 
@@ -3898,7 +3903,7 @@ class Solution {
         int n = nums.length;
         // A list containing all subsets.
         List<List<Integer>> ans = new ArrayList<>(1 << n);
-        // Traverse all subset indecies, where `i` represents all combinations in binary.
+        // Traverse all subset indices, where `i` represents all combinations in binary.
         for (int i = 0; i < (1 << n); i++) { 
             // Add the current subset to the list.
             List<Integer> subset = new ArrayList<>();
@@ -3915,13 +3920,13 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(n\times2^n)$
 
-    The outer loop iterates over all subset indices, runing in $O(2^n)$ time.
+    The outer loop iterates over all subset indices, running in $O(2^n)$ time.
     The inner loop traverses the bit indices of the binary representation of $2^n$, with a time complexity of $O(n)$.
 
-    Threrefore, the overall time complexity is $O(n\times2^n)$.
+    Therefore, the overall time complexity is $O(n\times2^n)$.
 * Space Complexity: $O(n\times2^n)$
 
     `ans` array has a space complexity of $O(n\times2^n)$, as explained in the previous Backtracking Solution.
@@ -3983,7 +3988,7 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(m + n)$
     * Count words for `words1` array
     
@@ -4043,7 +4048,7 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(n \log n)$
     * `Arrays.sort` has a time complexity of $O(n \log n)$;
     * The loop traverse the `nums` array with a step size of 2.
@@ -4213,7 +4218,7 @@ class MyCalendarTwo {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(m \times n)$
     * `insertable` method
         This method traverse the tree until a `null` location is found or range overlaps.
@@ -4226,7 +4231,7 @@ class MyCalendarTwo {
 * Space Complexity: $O(n)$
 
     The stack depth depends on the segment tree's depth, requiring $(n)$ space in the worst case when the tree degenerates into a linked list.
-    Thus, the overall space compleixty is $O(n)$.
+    Thus, the overall space complexity is $O(n)$.
 
 ## 33. Graph Connectivity With Threshold
 [Back to Top](#table-of-contents)  
@@ -4402,7 +4407,7 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(n \log n+m)$
     * If `threshold = 0`, set all results to `true` and return.  
 
@@ -4515,12 +4520,12 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(n^2)$
     * Map the elements in the `nums` array to the indices of the frequency array `freq`.
         
         Traversing the `nums` array takes $O(n)$ time.
-    * Filter out elements with a frenquency greater than 0 in descending order.
+    * Filter out elements with a frequency greater than 0 in descending order.
     
         Since `freq` has a fixed size of `201` regardless of the input parameter, this step runs in $O(1)$ time.
     * Sort the `arr` array with insertion sort.
@@ -4535,7 +4540,7 @@ class Solution {
 
     Therefore, the overall time complexity is $O(n^2)$.
 * Space Complexity: $O(n)$
-    * The `freq` array has a fiexed size, resulting in constant space complexity $O(1)$.
+    * The `freq` array has a fixed size, resulting in constant space complexity $O(1)$.
     * The `arr` array has the same size as `num`, leading to space complexity $O(n)$.
     Thus, the total space complexity is $O(n)$.
 #### Consideration
@@ -4576,10 +4581,10 @@ The score expression is:
 ```
 a[0] * b[i0] + a[1] * b[i1] + a[2] * b[i2] + a[3] * b[i3]
 ```
-Define $f(1,i)$ as the maxinum sum of a single product `a[0] * b[i0]`, 
+Define $f(1,i)$ as the maximum sum of a single product `a[0] * b[i0]`, 
 where `b[i0]` is an element in the array `b` from index `0` to `i`.
 
-Similarly, $f(2,i)$ repesents the maxinum sum of the two products `a[0] * b[i0]` and `a[1] * b[i1]`, and this pattern continues for higher values.
+Similarly, $f(2,i)$ represents the maximum sum of the two products `a[0] * b[i0]` and `a[1] * b[i1]`, and this pattern continues for higher values.
 
 At index `i` in the array `b`, the dynamic programming expression is:
 $$
@@ -4678,7 +4683,7 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(n)$ 
 
   The main loop iterates through the array `b`, resulting in a time complexity of $O(n)$.
@@ -4740,7 +4745,7 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(n^2)$ 
 
   The total number of iterations is $\sum_{i=0}^{n}i=\frac{n\times (n+1)}{2}$, resulting in a time complexity of $O(n^2)$
@@ -4838,7 +4843,7 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(n+q)$ 
   * Since every element in `nums` must be traversed, and processed queries do not need to be revisited, the total time complexity is $O(n+q)$, where `n` and `q` are the length of `nums` and `queries` respectively.
 * Space Complexity: $O(n)$
@@ -4954,7 +4959,7 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(n^2)$
     * Count the occurrences of `0` and `1` in the board  
 
@@ -5170,7 +5175,7 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: 
   * Initialize the `boundary` and `visited` array with the first and last columns.
     
@@ -5183,15 +5188,15 @@ class Solution {
 
   * Iterate over `boundary`
     
-    Since visisted units are not traversed while reducing the boundary, the outer loop iterates over all units, taking $O(m\times n)$ time.  
-    The inner loop has has a fixed `4` iterations, and the `offer` method of `PriorityQueue` takes $O(\log m \times n)$ time, 
+    Since visited units are not traversed while reducing the boundary, the outer loop iterates over all units, taking $O(m\times n)$ time.  
+    The inner loop has a fixed `4` iterations, and the `offer` method of `PriorityQueue` takes $O(\log m \times n)$ time, 
      resulting in a total time complexity of $O(m\times n \log m \times n)$.
 
   Therefore, the total time complexity is $O(m\times n \log m \times n)$.
 
 * Space Complexity: 
   * The priority queue `boundary` and array `visited` each take $O(m\times n)$ space.
-  * `dirs` has a fiexed size `4`, taking $O(1)$ space.
+  * `dirs` has a fixed size `4`, taking $O(1)$ space.
   
   Thus, the total space complexity is $O(m\times n)$.
 
@@ -5306,7 +5311,7 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(n)$
   * Find the maximum element in `nums`.
     
@@ -5456,12 +5461,12 @@ class Pair implements Comparable<Pair> {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(m \log n)$
   * Initialize the `graph` array
   
     This step assigned a initial pair array for each graph node, resulting in a time complexity of $O(n)$ where `n` is the number of graph nodes.
-  * Populate `graph` with connected nodes for each gragh node.
+  * Populate `graph` with connected nodes for each graph node.
   
     The population process needs to traverse all `edges`, it has $O(m)$ time complexity where `m` is the length of `edges`.
 
@@ -5471,14 +5476,14 @@ class Pair implements Comparable<Pair> {
 
     There are at most $O(m)$ `offer` operations, each costing $O(\log n)$, provided that each polled `maxPPNode` has a higher path probatility.
 
-    Thus, this step has a time compleixty of $O(m \log n)$.
+    Thus, this step has a time complexity of $O(m \log n)$.
 
   Therefore, the overall time complexity is $O(m \log n)$.
 
 * Space Complexity: $O(m+n)$
   * `graph` stores all connected nodes for each graph node, requiring $O(m)$ space, where `m` is the length of `edges`.
-  * `que` has a worst-case space complexity $O(n)$ when each polled `maxPPNode` has a higher path probatility.
-  * `pathProb` takes $O(n)$ space for each graph node to store path probatility.
+  * `que` has a worst-case space complexity $O(n)$ when each polled `maxPPNode` has a higher path probability.
+  * `pathProb` takes $O(n)$ space for each graph node to store path probability.
  
    Thus, the total space complexity is $O(m+n)$.
 
@@ -5487,7 +5492,7 @@ The Bellman-Ford Algorithm is another algorithm used to find the shortest paths 
 
 In this problem, since the longest possible connected path length is `n`,
  where `n` is the number of graph nodes, 
- all edges need to be travsersed `n` times to converge path probability at points with higher probability, starting from the `start_node`.
+ all edges need to be traversed `n` times to converge path probability at points with higher probability, starting from the `start_node`.
 
 
 Define an array `pathProb` to store the total path probability for each graph node, starting from the `start_node`
@@ -5545,7 +5550,7 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(n\times m)$
   * The outer loop iterates `n` times, and the inner loop iterates `m` times, where `n` is the number of graph nodes and `m` is the length of `edges` array.
   Therefore, the overall time complexity is $O(n\times m)$.
@@ -5609,7 +5614,7 @@ class Solution {
     }
 }
 ```
-#### Time and Space Complexity
+#### Complexity Analysis
 * Time Complexity: $O(n^2)$
 
   The number of iterations of the main loop is $\sum_{i=0}^{i=n}i=\frac{n\times(n+1)}{2}$, resulting in a time complexity of $O(n^2)$.
@@ -5654,34 +5659,372 @@ The total hiring cost is 4.
 * `1 <= costs[i] <= 10^5`
 * `1 <= k, candidates <= costs.length`
 
-### Analysis
+### Heap Solution
+Use two min-heaps, `leftQue` and `rightQue`, to store candidates from the left and right sides.
+
+Since the heap maintains automatic sorting, each poll retrieves the lowest-cost candidate corresponding to each selection.
 
 #### Implementation
 ```java
 class Solution {
     public long totalCost(int[] costs, int k, int candidates) {
-        int[] indecies=new int[costs.length];
-        for(int i=0; i<costs.length; i++){
-            indecies[i]=i;
-            for(int j=i+1; j<costs.length; j++){
-                if(costs[j]<costs[i]){
-                    indecies[i]=j;
-                    indecies[j]=i;
-                }
+        int len = costs.length;
+        long ans = 0;
+
+        // Verify if all elements are the candidates
+        if (candidates * 2 + k > len) {
+            Arrays.sort(costs);
+            for (int i = 0; i < k; i++) {
+                ans += costs[i];
+            }
+            return ans;
+        }
+
+        PriorityQueue<Integer> leftQue = new PriorityQueue<>(candidates);
+        PriorityQueue<Integer> rightQue = new PriorityQueue<>(candidates);
+        // Initialize `leftQue` and `rightQue`
+        for (int i = 0; i < candidates; i++) {
+            leftQue.offer(costs[i]);
+            rightQue.offer(costs[len-1-i]);
+        }
+        int left = candidates;
+        int right = len - 1 - candidates;
+        // Select lower-cost candidates from `leftQue` and `rightQue`
+        while (k-- > 0) {
+            if (leftQue.peek() <= rightQue.peek()) {
+                ans += leftQue.poll();
+                leftQue.offer(costs[left++]);
+            } else {
+                ans += rightQue.poll();
+                rightQue.offer(costs[right--]);
             }
         }
-       long totalCost=0;
-        int prev=1;
-        int num=0;
-        for(num<k){
-            int ind=indecies[0];
-            totalCost+=costs[ind];
-            num++;
-        }
-        return totalCost;
+        return ans;
     }
 }
 ```
+#### Complexity Analysis
+* Time Complexity: $O(n\log n + m \log m + k \log m)$
+    * Verify if all elements are the candidates    
+
+        `Arrays.sort` has a time complexity of $O(n\log n)$ for primitive types, where `n` is the length of `costs`, and since the loop iterates over `k` elements, 
+        the total time complexity of this step is $O(n\log n +k)$.
+
+    * Initialize `leftQue` and `rightQue`  
+        
+        The `offer` method of `PriorityQueue` has a time complexity of $O(\log m)$, where `m` is the number of candidates, , which is also the length of the `PriorityQueue`.
+        Since the loop traverses numbers from `0` to `candidates`, the total time complexity of this step is $O(m \log m)$, .
+
+    * Select lower-cost candidates from `leftQue` and `rightQue`
+
+        The `peek` and `poll` methods of `PriorityQueue` have a time complexity of $O(\log m)$, where `m` is the number of candidates, which is also the length of the `PriorityQueue`.
+        Since the loop only selects the `k` lowest-cost candidates, the total time complexity of this step is $O(k \log m)$.
+
+    Based on the above analysis, the total time complexity is $O(n\log n + k + m \log m + k \log m)$.  
+    The $k+k \log m$ simplifies to $k \log m$ as $k \log m$ dominates $k$ due to the slower growth of $\log m$ compared to $k$.  
+    Thus, the final time complexity is $O(n\log n + m \log m + k \log m)$.
+* Space Complexity: $O(m)$
+
+    The `leftQue` and `rightQue` each take $O(m)$ space where `m` is the number of candidates.
+
+## 44. Find Indices With Index and Value Difference I
+[Back to Top](#table-of-contents)
+### Overview
+You are given a 0-indexed integer array `nums` having length `n`, an integer `indexDifference`, and an integer `valueDifference`.
+
+Your task is to find **two** indices `i` and `j`, both in the range `[0, n - 1]`, that satisfy the following conditions:
+
+* `abs(i - j) >= indexDifference`, and
+* `abs(nums[i] - nums[j]) >= valueDifference`
+Return an integer array `answer`, where `answer = [i, j] if there are two such indices, and answer = [-1, -1] otherwise. If there are multiple choices for the two indices, return any of them.
+
+Note: `i` and `j` may be equal.
+
+**Example 1:**
+> **Input:** nums = [5,1,4,1], indexDifference = 2, valueDifference = 4  
+> **Output:** [0,3]  
+> **Explanation:** In this example, i = 0 and j = 3 can be selected.
+abs(0 - 3) >= 2 and abs(nums[0] - nums[3]) >= 4.
+Hence, a valid answer is [0,3].
+[3,0] is also a valid answer.
+
+**Example 2:**
+> **Input:** nums = [2,1], indexDifference = 0, valueDifference = 0  
+> **Output:** [0,0]  
+> **Explanation:** In this example, i = 0 and j = 0 can be selected.
+abs(0 - 0) >= 0 and abs(nums[0] - nums[0]) >= 0.
+Hence, a valid answer is [0,0].
+Other valid answers are [0,1], [1,0], and [1,1].
+
+**Example 3:**
+> **Input:** nums = [1,2,3], indexDifference = 2, valueDifference = 4  
+> **Output:** [-1,-1]  
+> **Explanation:** In this example, it can be shown that it is impossible to find two indices that satisfy both conditions.
+Hence, [-1,-1] is returned.
+
+**Constraints:**
+* `1 <= n == nums.length <= 100`
+* `0 <= nums[i] <= 50`
+* `0 <= indexDifference <= 100`
+* `0 <= valueDifference <= 50`
+
+### Sliding Window Solution (Fixed-Size)
+To satisfy `abs(i - j) >= indexDifference`, use a fixed-size sliding window of `indexDifference` and slide it to the right across `nums`, with `i` as the left index and `j` as the right index, so that indices from `0` to `i` remain valid for each move in `j`.
+
+To meet the condition `abs(nums[i] - nums[j]) >= valueDifference`, compute the largest difference between `nums[j]` and `nums[0 ~ i]` at each step.  
+This is equivalent to the absolute difference between `nums[j]` and either the **maximum value** or the **minimum value** in the range `nums[0 ~ i]`.
+
+#### Implementation
+```java
+class Solution {
+  public int[] findIndices(int[] nums, int indexDifference, int valueDifference) {
+    int max = 0;
+    int min = 0;
+    // Iterate over `nums` starting form index `indexDifference`
+    for (int j = indexDifference; j < nums.length; j++) {
+      int i = j - indexDifference;
+      if (nums[i] > nums[max]) {
+        max = i;
+      } else if (nums[i] < nums[min]) {
+        min = i;
+      }
+      if (nums[max] - nums[j] >= valueDifference) {
+        return new int[]{max, j};
+      }
+      if (nums[j] - nums[min] >= valueDifference) {
+        return new int[]{min, j};
+      }
+    }
+    return new int[]{-1, -1};
+  }
+}
+```
+#### Complexity Analysis
+* Time Complexity: $O(n-indexDifference)$  
+
+    The main loop runs in $O(n-indexDifference)$ where `n` is the length of `nums`.
+
+* Space Complexity: $O(1)$
+
+## 45. Intersection of Two Arrays II
+[Back to Top](#table-of-contents)
+### Overview
+Given two integer arrays `nums1` and `nums2`, return an array of their common elements, with each element appearing as many times as it does in both arrays.
+The order of the elements in the result does not matter.
+
+**Example 1:**
+> **Input:** nums1 = [1,2,3,2,1], nums2 = [2,2]  
+> **Output:** [2,2]
+
+**Example 2:**
+> **Input:** nums1 = [4,9,5], nums2 = [9,4,9,8,4]  
+> **Output:** [4,9]  
+> **Explanation:** [9,4] is also accepted.
+ 
+
+**Constraints:**
+* `1 <= nums1.length, nums2.length <= 1000`
+* `0 <= nums1[i], nums2[i] <= 1000`
+
+### HashMap Solution
+1. Build a map `freq1` for elements in `nums1`.
+2. Iterate through `nums2` to identify common elements with `nums1`.
+
+#### Python3 implementation
+```python
+class Solution:
+    def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        # Retrieve a frequency map of `nums1`
+        freq1 = Counter(nums1)
+        ans = []
+        # Iterate through `nums2`
+        for x in nums2:
+            if freq1[x] > 0:
+                freq1[x] -= 1
+                ans.append(x)
+        return ans
+```
+#### Complexity Analysis
+* Time Complexity: $O(n+m)$
+  * Retrieve a frequency map of `nums1`
+    
+    The `Counter` method has $O(n)$ time complexity where `n` is the length of `nums1`.
+  * Iterate through `nums2`
+
+    This loop traverses all elements of `nums2`, yielding in a time complexity of $O(m)$, where `m` is the length of `nums2`.
+* Space Complexity: $O(n)$
+  * The `cnt` stores element frequencies in `nums1`, requiring $O(n)$ space in the worst case when all elements are unique.
+
+  * The size of `ans` depends on the smaller of `nums1` and `nums2`, leading to a space complexity of $O(min(m,n))$.
+
+  If $m \le n$, the $min(m,n)=m$, so $n+min(m,n)=n+m$, which is still $O(n)$ since $m\le n$.  
+  If $n<m$, then $min(m,n)=n$, so $n+min(m,n)=n+n=2n$, which is O(n).  
+  Thus, the overall space complexity is $O(n)$.
+
+#### Java Implementation
+```java
+class Solution {
+    public int[] intersect(int[] nums1, int[] nums2) {
+        Map<Integer, Integer> freq1 = new HashMap<>();
+        // Traverse `nums1` to build the frequency map
+        for(int num : nums1) {
+            freq1.put(num, freq1.getOrDefault(num, 0) + 1);
+        }
+        int[] res = new int[nums1.length]; 
+        int index = 0;
+        // Iterate over `nums2`
+        for(int num : nums2) {
+            if(freq1.containsKey(num) && freq1.get(num) > 0) {
+                res[index++] = num;
+                freq1.put(num, freq1.get(num) - 1);
+            }
+        }
+        // Split `res`
+        return Arrays.copyOfRange(res, 0, index);
+    }
+}
+```
+#### Complexity Analysis
+* Time Complexity: $O(m+n)$
+  * Traverse `nums1` to build the frequency map
+    
+    The method `put` and `getOrDefault` of Map run in $O(1)$ time.
+    Iterating through `nums1` resuls in an total time complexity of $O(n)$, where `n` is its length.
+
+  * Iterate over `nums2`
+
+    The method `put` and `containsKey` of Map run in $O(1)$ time.
+    Similar to the previous step, the total time complexity of this step is $O(m)$, where `m` is the length of `nums2`.
+
+  * Split `res`
+
+    `Arrays.copyOfRange` has a time complexity of $O(min(m,n))$ as only the common elements need to be traversed.
+
+  Therefore, the overall time complexity is $O(m+n)$.
+* Space Complexity: $O(n)$
+
+  * The `freq1` stores the frequency of elements in `nums1`, requiring $O(n)$ space in the worst case when all elements are unique.
+  * The `Arrays.copyOfRange` takes $O(min(m,n))$ space to create a result array.
+
+  If $m \le n$, the $min(m,n)=m$, so $n+min(m,n)=n+m$, which is still $O(n)$ since $m\le n$.  
+  If $n<m$, then $min(m,n)=n$, so $n+min(m,n)=n+n=2n$, which is O(n). 
+
+  Thus, the overall space complexity is $O(n)$.
+<!-- 
+## 46. Number of Paths with Max Score
+[Back to Top](#table-of-contents)
+### Overview
+You are given a square `board` of characters. 
+You can move on the board starting at the bottom right square marked with the character `'S'`.
+
+You need to reach the top left square marked with the character `'E'`. 
+The rest of the squares are labeled either with a numeric character `1, 2, ..., 9` or with an obstacle `'X'`. 
+In one move you can go up, left or up-left (diagonally) only if there is no obstacle there.
+
+Return a list of two integers: 
+the first integer is the maximum sum of numeric characters you can collect, and the second is the number of such paths that you can take to get that maximum sum, taken modulo `10^9 + 7`.
+
+In case there is no path, return `[0, 0]`.
+
+**Example 1:**
+> **Input:** board = ["E23","2X2","12S"]  
+> **Output:** [7,1]
+
+**Example 2:**
+> **Input:** board = ["E12","1X1","21S"]  
+> **Output:** [4,2]
+
+**Example 3:**
+> **Input:** board = ["E11","XXX","11S"]  
+> **Output:** [0,0]
+
+**Constraints:**
+* `2 <= board.length == board[i].length <= 100`
+
+### Analysis
+
+#### Java Implementation -->
+<!-- 13 / 25 -->
+<!-- ```java
+class Solution {
+
+    private int maxSum=0;
+    private int pathNum=0;
+    private int MOD = 1000_000_007;
+
+    public int[] pathsWithMaxScore(List<String> board) {
+        int len=board.size();
+        // E 1 1 3 4 5
+        // X 4 5 2 X X
+        // 3 X 4 3 X 4
+        // 4 4[X]3 1 2
+        // 2 3 4 5 2 X
+        // 1 3 4 2 X S
+
+        // E 1 2
+        // 1 X 1
+        // 2 1 5
+
+        
+
+        // Detect impassable area
+        int dx=-1;
+        int dy=-1;
+        for(int y=0; y<len; y++){
+            boolean hasX=false;
+            for(int x=0; x<len; x++){
+                if(board.get(x).charAt(y)=='X' && x>=dx && y>=dy){
+                    dx=x;
+                    dy=y;
+                    hasX=true;
+                }
+            }
+            if(!hasX)break;
+        }
+        // System.out.println(dx);
+        // System.out.println(dy);
+
+        dfs(board, len-1, len-1, 0, dx, dy);
+        return new int[]{maxSum, pathNum};
+    }
+
+    private void dfs(List<String> board, int x, int y, int sum, int dx, int dy) {
+        if(x>=board.size() || x<0 || y>=board.size() || y<0)return;
+        char cur=board.get(x).charAt(y);
+        if(cur=='E'){
+            if(sum==this.maxSum){
+                this.pathNum+=1;
+            }else if(sum>this.maxSum){
+                this.maxSum=sum;
+                this.pathNum=1;
+            }
+            return;
+        }
+        if(cur=='X')return;
+        // System.out.println(x);
+        // System.out.println(y);
+        // System.out.println(dx);
+        // System.out.println(dy);
+        // System.out.println(x>=dx && y<=dy);
+        // E X
+        // X S
+        // System.out.println("-------------");
+        if(x>=dx && y<=dy)return;
+
+        int val=cur=='S'?0:Character.getNumericValue(cur);
+        // System.out.println(cur);
+        // System.out.println(val);
+        // System.out.println("-------------");
+        // go up
+        int newSum=(sum+val)%MOD;
+        dfs(board, x-1, y, newSum, dx, dy);
+        // go left
+        dfs(board, x, y-1, newSum, dx, dy);
+        // go up-left
+        dfs(board, x-1, y-1, newSum, dx, dy);
+    }
+}
+``` -->
 
 
 # SQL Problems
