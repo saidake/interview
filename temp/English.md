@@ -3,6 +3,16 @@
 Listening Section
    Test 01 - [44-46]  19:57
 -->
+## March 23, 2025
+* [44-46]
+  * Why didn't you **take care of** the electricity bill?
+  * I gave you my **share** of the bill and told you to pay it last Wednesday.
+  * I was busy on the day you asked me because I had to run an important **errand** for my boss, so I just couldn't get to the bank on time.
+  * I only remembered it after lunch on Friday and went straight to the
+bank and paid it.
+  * I guess they must have **sent out** the notice before you paid then.
+  * I'll call them and **straighten this out**.
+  * Take care of a **misunderstanding**.
 ## March 20, 2025
 * [41-43]
   * I am wondering if you **carry** men's shirts **in extra large** here. 
