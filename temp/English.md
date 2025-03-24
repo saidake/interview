@@ -1,8 +1,47 @@
 # 2025
 <!-- 
 Listening Section
-   Test 01 - [44-46]  19:57
+   Test 01 - [47-49]  21:18
 -->
+## March 24, 2025
+* [59-61]
+  * Hi, my name is John Smith, and I am here to check in. I made a
+reservation for a single room **for two nights** three days ago.
+  *  I can see here that you requested a non-smoking room **overlooking** Lake Huron.
+  *  You've also asked for your breakfast meal to be served in your room at 7 a.m. **sharp**, right?
+  *  I want to have some time to read over the materials **beforehand**.
+  *  **Room service**.
+  *  **Valet** parking.
+* [56-58]
+  * How is your newest employee **working out**?
+  * **Somewhat**, but he should be rewarded for doing such good work.
+* [53-55]
+  * Well, the main reason is because the airline we deal with has raised
+their **fares**.
+  * On top of that, we had to change the hotel we use because many
+of our staff complained about **being robbed** during their trips.
+  * So, we signed a contract with another **chain**, and they are a bit more expensive.
+  * Well, we are going to have to do something to tighten up **around here**.
+  * Actually, we have been doing that, but it's hard to judge which trips
+should be allowed or not because everyone seems to have **legitimate** reasons
+for taking the trips.
+  * **Discriminate** against those planning to travel.
+  * People tend **to get lazy working** at home.  (to get + adjective + doing something - to become [adjective] while doing [something].)
+* [50-52]
+  * How did your team **make out** in the **baseball tournament** over the weekend?
+  * You're not going to believe this, but we made it **all the way** to the **finals**
+by beating the marketing team and then played the sales team in the finals.
+  * You know, if it **weren't for** John, our best player, leaving the game because
+of **a sprained ankle**, we could've won the whole thing.
+  * I can understand that she is not a big fan of
+baseball, but she should be thinking about the employees' **morale**.
+  * I don't know about you guys, but our guys were all **pumped up** after the weekend game.
+* [47-49]
+  * we probably won't **get much of** a break for the next couple of months.
+  * Everyone has been at the office **long after** normal working hours have finished this week, so I've heard several complaints.
+  * Can't we hire **any more** workers?
+  * I've never seen management work **this fast before**.
+  * Hourly **wages** have been increased.
 ## March 23, 2025
 * [44-46]
   * Why didn't you **take care of** the electricity bill?
