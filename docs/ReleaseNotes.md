@@ -1,6 +1,8 @@
 # Table of Contents
 [Back to Main Project README](../README.md)
 - [Table of Contents](#table-of-contents)
+- [Simi Docs 1.5.0 Release](#simi-docs-150-release)
+    - [Java\_v1.4.0.pdf](#java_v140pdf)
 - [Simi Docs 1.4.0 Release - Major Update to `Python_v1.1.0.pdf`](#simi-docs-140-release---major-update-to-python_v110pdf)
     - [Main Updates](#main-updates)
     - [Python\_v1.1.0.pdf](#python_v110pdf)
@@ -21,6 +23,20 @@
     - [Java\_v1.1.0.pdf](#java_v110pdf)
     - [Node\_v1.1.0.pdf](#node_v110pdf)
     - [Config\_v1.1.0.pdf](#config_v110pdf)
+# Simi Docs 1.5.0 Release
+### Java_v1.4.0.pdf
+* **Java / java.base / java.nio / file / Path**
+  * `Path.of()` automatically handles platform-specific separators
+* **Java / java.base / java.io / (character stream) / FileWriter**
+  * Optimize the introduction.
+* **Java / java.base / java.io / File**
+  * Optimize the introduction.
+* **Java / java.base / java.beans**
+  * Optimize the introductions for all classes under the heading.
+* **Java / java.base / java.awt**
+  * Optimize the introductions for all classes under the heading.
+* **Java / java.util / concurrent / locks / AbstractQueuedSynchronizer**
+  * Simplify the explanation about the Node-based Queuing and Exclusive and Shared Modes mechanism.
 # Simi Docs 1.4.0 Release - Major Update to `Python_v1.1.0.pdf`
 ### Main Updates
 * Move outedated PDFs to the `temp` and `temppdf` folders.
