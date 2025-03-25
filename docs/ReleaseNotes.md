@@ -1,10 +1,13 @@
 # Table of Contents
 [Back to Main Project README](../README.md)
 - [Table of Contents](#table-of-contents)
-- [Simi Docs 1.5.0 Release](#simi-docs-150-release)
-    - [Java\_v1.4.0.pdf](#java_v140pdf)
-- [Simi Docs 1.4.0 Release - Major Update to `Python_v1.1.0.pdf`](#simi-docs-140-release---major-update-to-python_v110pdf)
+- [Simi Docs 1.5.0 Release - Major Update to `Japanese_v1.2.0.pdf`](#simi-docs-150-release---major-update-to-japanese_v120pdf)
     - [Main Updates](#main-updates)
+    - [Japanese\_v1.2.0.pdf](#japanese_v120pdf)
+    - [Java\_v1.4.0.pdf](#java_v140pdf)
+    - [DatabaseAndMiddleware\_v1.1.0.pdf](#databaseandmiddleware_v110pdf)
+- [Simi Docs 1.4.0 Release - Major Update to `Python_v1.1.0.pdf`](#simi-docs-140-release---major-update-to-python_v110pdf)
+    - [Main Updates](#main-updates-1)
     - [Python\_v1.1.0.pdf](#python_v110pdf)
     - [Java\_v1.3.0.pdf](#java_v130pdf)
     - [SpringBoot\_v1.3.0.pdf](#springboot_v130pdf)
@@ -12,7 +15,7 @@
     - [WebFrameworks\_v1.2.0.pdf](#webframeworks_v120pdf)
     - [Internet\_v1.1.0.pdf](#internet_v110pdf)
 - [Simi Docs 1.3.0 Release - Document Migration](#simi-docs-130-release---document-migration)
-    - [Main Updates](#main-updates-1)
+    - [Main Updates](#main-updates-2)
     - [Linux\_v1.1.0.pdf](#linux_v110pdf)
     - [SpringBoot\_v1.2.0.pdf](#springboot_v120pdf)
     - [Java\_v1.2.0.pdf](#java_v120pdf)
@@ -23,7 +26,15 @@
     - [Java\_v1.1.0.pdf](#java_v110pdf)
     - [Node\_v1.1.0.pdf](#node_v110pdf)
     - [Config\_v1.1.0.pdf](#config_v110pdf)
-# Simi Docs 1.5.0 Release
+# Simi Docs 1.5.0 Release - Major Update to `Japanese_v1.2.0.pdf`
+### Main Updates
+  * Algorithms.md
+    * Add new algorithm problem analyses starting from problem `46`.
+  * Questions.md
+    * Add new questions starting from question `3`. 
+### Japanese_v1.2.0.pdf
+* **Japanese / Verb**
+  * Optimize all verb grammar content under this heading.
 ### Java_v1.4.0.pdf
 * **Java / java.base / java.nio / file / Path**
   * `Path.of()` automatically handles platform-specific separators
@@ -37,6 +48,15 @@
   * Optimize the introductions for all classes under the heading.
 * **Java / java.util / concurrent / locks / AbstractQueuedSynchronizer**
   * Simplify the explanation about the Node-based Queuing and Exclusive and Shared Modes mechanism.
+### DatabaseAndMiddleware_v1.1.0.pdf
+* **DAM / SQL / Operators**
+  * Introduce the common operators used in all databases.
+* **DAM / Mysql / Core / Data Types**
+  * Move the heading *DAM / Core SQL / Table Operations / DATA Types* to *DAM / Mysql / Core / Data Types*.
+* **DAM / Mysql / Core SQL / Database**
+  * Reorganize the content for better clarity.
+* **DAM / Mysql / Core SQL / Table**
+  * Reorganize the content for better clarity.
 # Simi Docs 1.4.0 Release - Major Update to `Python_v1.1.0.pdf`
 ### Main Updates
 * Move outedated PDFs to the `temp` and `temppdf` folders.
