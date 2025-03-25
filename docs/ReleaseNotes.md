@@ -57,6 +57,8 @@
   * Reorganize the content for better clarity.
 * **DAM / Mysql / Core SQL / Table**
   * Reorganize the content for better clarity.
+* **DAM / SQL / Statement / CASE WHEN**
+  * Add usage examples.
 # Simi Docs 1.4.0 Release - Major Update to `Python_v1.1.0.pdf`
 ### Main Updates
 * Move outedated PDFs to the `temp` and `temppdf` folders.
