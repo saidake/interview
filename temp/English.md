@@ -1,8 +1,22 @@
 # 2025
 <!-- 
 Listening Section
-   Test 01 - [47-49]  21:18
+   Test 01 - [68-70]  32:53
 -->
+## March 26, 2025
+* [68-70]
+  * As you can see, the numbers are less than stellar.
+  * **conference room**
+  * Let me **grab** a cup of coffee first.
+* [65-67]
+  * **Laurie**, **Mr. Whistler**
+  * Oh, I haven't checked my inbox **all day long**.
+  * we **ought** to finish doing the employee evaluations.
+  * He is coming from **out of town**.
+* [62-64]
+  * Thank you for calling Wendigo **Rental** Cars.
+  * How may I **be of assistance**?
+  * **Sedan**, **SUV**, **Minivan**, **Van**.
 ## March 24, 2025
 * [59-61]
   * Hi, my name is John Smith, and I am here to check in. I made a
