@@ -21,7 +21,7 @@ Math / Calculation / Probability / Binomial Theorem
 Math / Calculation / Formulas / Differentiation
 Math / Calculation / / Core / Calculate Sums / Harmonic Series
 
-Java / java.base / java.util / concurrent / locks / AbstractQueuedSynchronizer
-
 SpringBoot / org.springframework (spring) / context / annotation / (annotation) / @Bean  {4}
 SpringBoot / org.apache / catalina / core / ApplicationFilterChain {1}
+
+DAM / Mysql / Core / Data Types {7}
