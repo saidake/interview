@@ -51,6 +51,10 @@
 ### DatabaseAndMiddleware_v1.1.0.pdf
 * **DAM / SQL / Operators**
   * Introduce the common operators used in all databases.
+* **DAM / SQL / Functions / Mysql**
+  * Move the heading *DAM / Mysql / Build-in functions* to *DAM / SQL / Funcitons / Mysql*.
+* **DAM / SQL / Functions / Oracle**
+  * Remove the `IFNULL` function from this section, as Oracle uses `NVL` instead.
 * **DAM / Mysql / Core / Data Types**
   * Move the heading *DAM / Core SQL / Table Operations / DATA Types* to *DAM / Mysql / Core / Data Types*.
 * **DAM / Mysql / Core SQL / Database**
@@ -59,6 +63,10 @@
   * Reorganize the content for better clarity.
 * **DAM / SQL / Statement / CASE WHEN**
   * Add usage examples.
+* **DAM / SQL / Data manipulation Language (DML) / SELECT / Compatibility**
+  * Oracle does not support `GROUP BY 1`
+* **DAM / SQL / Data manipulation Language (DML) / SELECT / PARTITION BY**
+  * Optimize the SQL execution example.
 # Simi Docs 1.4.0 Release - Major Update to `Python_v1.1.0.pdf`
 ### Main Updates
 * Move outedated PDFs to the `temp` and `temppdf` folders.
