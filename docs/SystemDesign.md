@@ -1,11 +1,17 @@
 # Table of Contents
 [Back to Main Project README](../README.md)
+- [Table of Contents](#table-of-contents)
 - [Code Structure](#code-structure)
-  - [Interface](#interface-)
+  - [Interface](#interface)
   - [Static Inner Class](#static-inner-class)
 - [Development Standards](#development-standards)
   - [Git Commit Type](#git-commit-type)
   - [Comment](#comment)
+    - [Javadoc tags](#javadoc-tags)
+    - [Examples](#examples)
+      - [java.util.Calendar](#javautilcalendar)
+  - [Licence Announcement](#licence-announcement)
+    - [Apache](#apache)
 # Code Structure
 ## Interface 
 * [org.springframework.boot.Banner](https://github.com/spring-projects/spring-boot/blob/main/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/Banner.java)
@@ -123,4 +129,23 @@
  *     Calendar rightNow = Calendar.getInstance();
  * </pre>
  * </blockquote>
+```
+## Licence Announcement
+### Apache
+```text
+/*
+ * Copyright 2012-2024 the original author or authors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 ```
