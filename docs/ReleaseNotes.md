@@ -3,6 +3,7 @@
 - [Table of Contents](#table-of-contents)
 - [Simi Docs 1.5.0 Release - Major Update to `Japanese_v1.2.0.pdf`](#simi-docs-150-release---major-update-to-japanese_v120pdf)
     - [Main Updates](#main-updates)
+    - [Config\_v1.3.0.pdf](#config_v130pdf)
     - [Japanese\_v1.2.0.pdf](#japanese_v120pdf)
     - [Java\_v1.4.0.pdf](#java_v140pdf)
     - [DatabaseAndMiddleware\_v1.1.0.pdf](#databaseandmiddleware_v110pdf)
@@ -32,6 +33,13 @@
     * Add new algorithm problem analyses starting from problem `46`.
   * Questions.md
     * Add new questions starting from question `3`. 
+### Config_v1.3.0.pdf
+* **Config / Java Environment / JDK / Command / java / Garbage Collection**
+  * Move the content under the heading *Config / Java Environment / JDK / Command / java / Parameters Specific to JDK 9 and Higher* to *Config / Java Environment / JDK / Command / java / Garbage Collection*
+* **Config / Java Environment / JDK / Command / java / Security**
+  * Introduce the parameter `--add-opens <source-module>/<package>=<target-module>` and a Databricks initialization error.
+* **Config / Java Environment / gradle / Configuration / setting.gradle**
+  * Introduce the configuration options in the `setting.gralde` file.
 ### Japanese_v1.2.0.pdf
 * **Japanese / Verb**
   * Optimize all verb grammar content under this heading.
