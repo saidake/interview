@@ -3,6 +3,7 @@
 - [Table of Contents](#table-of-contents)
 - [Simi Docs 1.5.0 Release - Major Update to `Japanese_v1.2.0.pdf`](#simi-docs-150-release---major-update-to-japanese_v120pdf)
     - [Main Updates](#main-updates)
+    - [Python\_v1.2.0.pdf](#python_v120pdf)
     - [Config\_v1.3.0.pdf](#config_v130pdf)
     - [Japanese\_v1.2.0.pdf](#japanese_v120pdf)
     - [Java\_v1.4.0.pdf](#java_v140pdf)
@@ -33,13 +34,20 @@
     * Add new algorithm problem analyses starting from problem `46`.
   * Questions.md
     * Add new questions starting from question `3`. 
+### Python_v1.2.0.pdf
+* **Python / Core / Type Hints**
+  * Explain Type Hints in python3.
+* **Python / Build-in Libraries / biset**
+  * Describe the functions in `biset` module.
+* **Python / Build-in Libraries / Global**
+  * Optimize the content under this heading.
 ### Config_v1.3.0.pdf
 * **Config / Java Environment / JDK / Command / java / Garbage Collection**
   * Move the content under the heading *Config / Java Environment / JDK / Command / java / Parameters Specific to JDK 9 and Higher* to *Config / Java Environment / JDK / Command / java / Garbage Collection*
 * **Config / Java Environment / JDK / Command / java / Security**
-  * Introduce the parameter `--add-opens <source-module>/<package>=<target-module>` and a Databricks initialization error.
+  * Describe the parameter `--add-opens <source-module>/<package>=<target-module>` and a Databricks initialization error.
 * **Config / Java Environment / gradle / Configuration / setting.gradle**
-  * Introduce the configuration options in the `setting.gralde` file.
+  * Describe the configuration options in the `setting.gralde` file.
 ### Japanese_v1.2.0.pdf
 * **Japanese / Verb**
   * Optimize all verb grammar content under this heading.
@@ -58,7 +66,7 @@
   * Simplify the explanation about the Node-based Queuing and Exclusive and Shared Modes mechanism.
 ### DatabaseAndMiddleware_v1.1.0.pdf
 * **DAM / SQL / Operators**
-  * Introduce the common operators used in all databases.
+  * Describe the common operators used in all databases.
 * **DAM / SQL / Functions / Mysql**
   * Move the heading *DAM / Mysql / Build-in functions* to *DAM / SQL / Funcitons / Mysql*.
 * **DAM / SQL / Functions / Oracle**
@@ -84,7 +92,7 @@
 * **Python / Concept**
   * Refine the conceptual content.
 * **Python / Build-in Libraries / collections**
-  * Introduce the usage of `Counter` method.
+  * Describe the usage of `Counter` method.
 * **Python / Core / Constants and Variables**
   * Refine the introduction.
 * **Python / Core / Data Type Conversion**
@@ -143,7 +151,7 @@
 * **Linux / Bash Script / Statement / Control Flow / while**
   * Provide usage examples for `IFS=`. 
 * **Linux / Commands / Service / Service File**
-  * Introduce options for configuring a systemctl service file.
+  * Describe options for configuring a systemctl service file.
 ### SpringBoot_v1.2.0.pdf
 * **SpringBoot / Third Party Package / Extensions / junit / \[mockito-core\] / Mockito**
   * Use `doReturn` to return different values on consecutive calls.  
@@ -170,7 +178,7 @@
 * **SpringBoot / org.springframework (spring) / web / annotation / InitBinder**
   * Add usage examples for InitBinder annotation. 
 * **SpringBoot_v1.1.0.pdf / Third Party Package / Servers / Temporal**
-  * Introduce the core classes in the `temporal-serviceclient` and `temporal-sdk` dependencies.
+  * Describe the core classes in the `temporal-serviceclient` and `temporal-sdk` dependencies.
 * **SpringBoot_v1.1.0.pdf / Third Party Package / Extentions / junit / \[junit-jupiter-api\]**
   * Use `@ExtendWith` in Junit 5 and `@Rule` in Junit 4.
 
@@ -178,7 +186,7 @@
 * **Java / Concept / Java Environment / Version Features / Java 16 (March 221)**
   * Use the `record` operator in Java 16 and later.
 * **Java / java.base / java.time / LocalDate**
-  * Introduce the default date string format.
+  * Describe the default date string format.
 * **Java / java.base / java.text / SimpleDateFormat**
   * Add examples for "MM" and "dd" time format.
   * SimpleDateFormat is not thread-safe. 
@@ -191,7 +199,7 @@
 * **Node / React / Core / Import Components**
   * How to import various components in React.
 * **Node / Configuration / tsconfig.json**
-  * Introduce typescript configuration file. 
+  * Describe typescript configuration file. 
 * **Node / Npm Packages / Cli Utils / craco**
   * Use craco to overwrite webpack configurations in a CRA project. 
 * **Node / Npm Packages / Loader / Cli Utils / create-react-app**
