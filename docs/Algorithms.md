@@ -9,11 +9,14 @@
       - [34. Sort Array by Increasing Frequency](#34-sort-array-by-increasing-frequency)
   - Backtracking
     - [29. Power Set LCCI](#29-power-set-lcci)
+  - Binary Search
+    - [32. My Calendar II](#32-my-calendar-ii)
   - Conditional Logic
     - [2. Add Edges to Make Degrees of All Nodes Even](#2-add-edges-to-make-degrees-of-all-nodes-even)
   - Depth-first Search
     - [3. Amount of Time for Binary Tree to Be Infected](#3-amount-of-time-for-binary-tree-to-be-infected)
     - [29. Power Set LCCI](#29-power-set-lcci)
+    - [46. Number of Paths with Max Score](#46-number-of-paths-with-max-score)
   - Dichotomy
     - [4. Search in Rotated Sorted Array](#4-search-in-rotated-sorted-array)
   - Difference Array
@@ -80,7 +83,8 @@
   - Union-Find
     - [33. Graph Connectivity With Threshold](#33-graph-connectivity-with-threshold)
 - [SQL Problems](#sql-problems)
-    - [1. Odd and Even Transactions](#29-odd-and-even-transactions)
+    - [1. Odd and Even Transactions](#1-odd-and-even-transactions)
+    - [2. Find Customer Referee](#2-find-customer-referee)
 # Algorithm Problems
 ## 1. Array Partition
 [Back to Top](#table-of-contents)  
@@ -4093,36 +4097,436 @@ Implement the `MyCalendarTwo` class:
 * `0 <= start < end <= 109`
 * At most `1000` calls will be made to `book`.
 
+### Array Solution
+Define an array `self.cal` to store inserted elements and `self.cnt` to track the overlap count at each `startTime` index.
+ * The value in `self.cnt` at `startTime` represents the total overlap count at that moment.
+ * The value in `self.cnt` at `endTime` indicates the number of events covered the current event.
+
+Solution: 
+1. Insert `endTime`.
+   * if it already exists, ignore it, as the number of overlapping events remain unchanged.
+   * if it doesn't exist, directly copy `self.cnt[r-1]` to `self.cnt[r]`, as explained below:
+      * If `self.cal[r-1]` is a `startTime`, the current event must overlap with the previous one.
+        
+        Copy `self.cnt[r-1]` to `self.cnt[r]` since there are now `self.cnt[r-1]` events now cover the current event.
+      * If `self.cal[r-1]` is an `endTime`, the current event does not overlap with it but overlaps with the events covered by the previous event.
+    
+        Similarly, copy `self.cnt[r-1]` to `self.cnt[r]` since there are now `self.cnt[r-1]` events now cover the current event.
+
+2. Increment the overlap count for the affected range.
+3. Insert `startTime`.
+    * If `startTime` already exists, increment its overlap count.
+    * If `startTime` does not exist, directly copy `self.cnt[l-1]` to `self.cnt[l]` and increase it by `1`, explained as follows:
+
+      * If `self.cal[l-1]` is a startTime, the current event must overlap with the previous one.
+
+        Copy `self.cnt[l-1]` to `self.cnt[l]` and increment it by `1`, as there are `self.cnt[l-1] + 1` events now cover the current event.
+
+      * If `self.cal[l-1]` is an endTime, the current event does not overlap with it but overlaps with the events covered by the previous event.
+
+        Similarly, copy `self.cnt[l-1]` to `self.cnt[l]` and increment it by `1`, as there are `self.cnt[l-1] + 1` events now cover the current event.
+
+
+Example: 
+```
+Input:
+["MyCalendarTwo","book","book","book","book","book"]
+[[],[1,2],[1,3],[3,8],[2,3],[2,4]]
+
+Step 1:
+    Insert [1,2]
+    Before: 
+        self.cal: [0, inf]
+        self.cnt: [0, 0]
+        l: 1 r: 1
+    After:
+        self.cal: [0, 1, 2, inf]
+        self.cnt: [0, 1, 0, 0]
+Step 2:
+    Insert [1,3]
+    Before: 
+        self.cal: [0, 1, 2, inf]
+        self.cnt: [0, 1, 0, 0]
+        l: 2 r: 3
+    After:
+        self.cal: [0, 1, 2, 3, inf]
+        self.cnt: [0, 2, 1, 0, 0]
+Step 3:
+    Insert [3,8]
+    Before: 
+        self.cal: [0, 1, 2, 3, inf]
+        self.cnt: [0, 2, 1, 0, 0]
+        l: 4 r: 4
+    After:
+        self.cal: [0, 1, 2, 3, 8, inf]
+        self.cnt: [0, 2, 1, 1, 0, 0]
+Step 4:
+    Insert [2,3]
+    Before: 
+        self.cal: [0, 1, 2, 3, 8, inf]
+        self.cnt: [0, 2, 1, 1, 0, 0]
+        l: 3 r: 3
+    After:
+        self.cal: [0, 1, 2, 3, 8, inf]
+        self.cnt: [0, 2, 2, 1, 0, 0]
+Step 5:
+    Insert [2,4]
+    Before: 
+        self.cal: [0, 1, 2, 3, 8, inf]
+        self.cnt: [0, 2, 2, 1, 0, 0]
+        l: 3 r: 4
+    Overlap check failed, return false.
+```
+
+Example usage of `bisect_right` and `bisect_left`:
+```
+a = [3, 8]
+b = [3, 3, 8, 8]
+c = [3, 3, 5, 8, 8]
+
+L, R = bisect_right(a, val1), bisect_left(a, val2)
+
+Case 1 (val2 <= 3):
+[3, 8]
+ L
+ R
+[3, 3, 8, 8]
+ L
+ R
+
+Case 2 (val1 >= 3, val2 <=8):
+[3, 8]
+    L
+    R
+[3, 3, 8, 8]
+       L
+       R 
+[3, 3, 5, 8, 8]
+       L  R 
+
+Case 3 (val1 >= 3 and val1 < 8, val2 >=8):
+[3, 8]
+    L
+    R  
+[3, 3, 8, 8]
+       L
+          R 
+[3, 3, 5, 8, 8]
+       L     R 
+
+
+Case 4 (val1 >=8):
+[3, 8]
+    L
+    R
+[3, 3, 8, 8]
+          L
+          R 
+```
+
+#### Pyton3 Implementation
+```python
+class MyCalendarTwo:
+
+    def __init__(self):
+        self.cal, self.cnt = [0, inf], [0, 0]
+
+    def book(self, startTime: int, endTime: int) -> bool:
+        # Find insertion positions for startTime and endTime
+        l, r = bisect_right(self.cal, startTime), bisect_left(self.cal, endTime)
+
+        # print("------------------------------------------")
+        # print(f"Insert [{startTime},{endTime}]") 
+        # print(f"self.cal: {self.cal}") 
+        # print(f"self.cnt: {self.cnt}") 
+        # print(f"l: {l} r: {r}") 
+
+        # Check if the new booking would cause a triple booking
+        if 2 in self.cnt[l-1:r]: 
+            return False
+
+        # Insert `endTime` to `self.cal` and `self.cnt` if it not exists
+        if endTime < self.cal[r]: 
+            self.cal.insert(r, endTime)
+            self.cnt.insert(r, self.cnt[r - 1])
+
+        # Increment overlap count for the affected range
+        for i in range(l, r): 
+            self.cnt[i] += 1
+
+        # Insert `startTime`
+        if startTime == self.cal[l - 1]: 
+            self.cnt[l - 1] += 1
+        else:
+            # If startTime doesn't exist, copy overlap count from index `l-1` and increase it.
+            self.cal.insert(l, startTime)
+            self.cnt.insert(l, self.cnt[l - 1] + 1)
+        # print(f"self.cal: {self.cal}")
+        # print(f"self.cnt: {self.cnt}")
+        return True
+```
+#### Complexity Analysis
+* Time Complexity: 
+  * Find insertion positions for startTime and endTime
+    
+    Both `bisect_right` and `bisect_left` have a time complexity of $O(\log n)$.
+  * Check if the new booking would cause a triple booking
+
+    In the worst case, it traverses all elements in the `self.cnt` array, resulting in a time complexity of $O(n)$.
+  * Insert `endTime` to `self.cal` and `self.cnt` if it not exists  
+
+    If the condition is `true`, the `insert` method takes $O(n)$ time.
+  * Increment overlap count for the affected range
+  
+    In the worst case, it traverses all elements in the `self.cnt` array, resulting in a time complexity of $O(n)$.
+
+  * Insert `startTime`
+  
+    If `startTime` is not found, the `insert` method takes $O(n)$ time.
+    
+  For each booking, the time complexity is $O(n)$ in the worst case due to the insertion and potential shifting of elements in the list dominate the overall time.
+
+  For `n` bookings, the total time complexity would be $O(n^2)$ in the worst case.
+
+* Space Complexity: $O(n)$
+  * Both `self.cal` and `sel.cnt` requires $O(n)$ space where `n` is the number of bookings.
+
+  Thus, the space complexity is $O(n)$.
+
+#### Java Implementation
+```java
+import java.util.ArrayList;
+
+class MyCalendarTwo {
+    private ArrayList<Integer> cal;  // List of event times
+    private ArrayList<Integer> cnt;  // List of overlap counts
+
+    public MyCalendarTwo() {
+        cal = new ArrayList<>();
+        cnt = new ArrayList<>();
+        // Initialize with sentinel values
+        cal.add(0);
+        cal.add(Integer.MAX_VALUE);  // Using MAX_VALUE instead of Python's inf
+        cnt.add(0);
+        cnt.add(0);
+    }
+
+    public boolean book(int startTime, int endTime) {
+        // Find insertion positions for startTime and endTime
+        int l = bisectRight(cal, startTime);  // Position where startTime fits
+        int r = bisectLeft(cal, endTime);     // Position where endTime fits
+
+        // Check if the new booking would cause a triple booking
+        for (int i = l - 1; i < r; i++) {
+            if (cnt.get(i) >= 2) {
+                return false;
+            }
+        }
+
+        // Insert `endTime` to `self.cal` and `self.cnt` if it not exists  
+        if (endTime < cal.get(r)) {
+            cal.add(r, endTime);
+            cnt.add(r, cnt.get(r - 1));
+        }
+
+        // Increment overlap count for the affected range
+        for (int i = l; i < r; i++) {
+            cnt.set(i, cnt.get(i) + 1);
+        }
+
+        // Insert `startTime`
+        if (startTime == cal.get(l - 1)) {
+            cnt.set(l - 1, cnt.get(l - 1) + 1);
+        } else {
+            cal.add(l, startTime);
+            cnt.add(l, cnt.get(l - 1) + 1);
+        }
+
+        return true;
+    }
+
+    // Binary search to find the rightmost insertion point for target
+    private int bisectRight(ArrayList<Integer> list, int target) {
+        int left = 0;
+        int right = list.size();
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            if (list.get(mid) <= target) {
+                left = mid + 1;
+            } else {
+                right = mid;
+            }
+        }
+        return left;
+    }
+
+    // Binary search to find the leftmost insertion point for target
+    private int bisectLeft(ArrayList<Integer> list, int target) {
+        int left = 0;
+        int right = list.size();
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            if (list.get(mid) < target) {
+                left = mid + 1;
+            } else {
+                right = mid;
+            }
+        }
+        return left;
+    }
+}
+```
+#### Complexity Analysis
+* Time Complexity: 
+  * Find insertion positions for startTime and endTime
+    
+    Both `bisectRight` and `bisectLeft` have a time complexity of $O(\log n)$.
+  * Check if the new booking would cause a triple booking
+
+    In the worst case, it traverses all elements in the `cnt` array, resulting in a time complexity of $O(n)$.
+  * Insert `endTime` to `cal` and `cnt` if it not exists  
+
+    If the condition is `true`, the `insert` method takes $O(n)$ time.
+  * Increment overlap count for the affected range
+  
+    In the worst case, it traverses all elements in the `cnt` array, resulting in a time complexity of $O(n)$.
+
+  * Insert `startTime`
+  
+    If `startTime` is not found, the `insert` method takes $O(n)$ time.
+    
+  For each booking, the time complexity is $O(n)$ in the worst case due to the insertion and potential shifting of elements in the list dominate the overall time.
+
+  For `n` bookings, the total time complexity would be $O(n^2)$ in the worst case.
+
+* Space Complexity: $O(n)$
+  * Both `cal` and `cnt` requires $O(n)$ space where `n` is the number of bookings.
+
+  Thus, the space complexity is $O(n)$.
+
 ### Segment Tree Solution
-A segment tree is used to store ranges efficiently. Below is the process to insert a new range node into the tree.
+Use a segment tree to efficiently store events. 
 
-Use `O` to indicate the presence of a range to the left or right of the current node, 
-`X` to indicate no range to the left or right, 
-`start` for the start of new range, and `end` for the end of the new range.
+Define a fixed node `root` to represent the root event in the tree.
+* Use `O` to denote the presence of a range to the left or right of the current node, 
+`X` to denote the absence of such a range, 
+* Use `start` for the start of a new range, and `end` for the end of the new range.
 
-* If the new range does not overlap with the current node `cur`, continue comparing it with `cur.left` or `cur.right` until a `null` location is found for insertion or further overlap occurs, requiring another split.  
+Solution:  
+
+When a new booking event arrives, recursively check the left and right nodes from `root`.
+
+  * If the new range does not overlap with the current node `node`, continue comparing it with `node.left` or `node.right` until a `null` location is found for insertion or further overlap occurs, requiring another split.  
     Example:   
-    * If the new range is to the left of `cur`, and `cur.left` exits, continue comparing 
+    * If the new range is to the left of `node`, and `node.left` exits, continue comparing 
         ```
-                        O [cur.start, cur.end] X   
+                        O [node.start, node.end] X   
         [start, end]  
         ```
-    * If the new range is to the left of `cur`, and `cur.left` is `null`, insert `[start, end]` there.
+    * If the new range is to the left of `node`, and `node.left` is `null`, insert `[start, end]` there.
         ```
-                        X [cur.start, cur.end] O   
+                        X [node.start, node.end] O   
         [start, end]  
         ```
-* If the new range overlaps with `cur`, split the two ranges into three parts, set the middle range as the new `cur` and compare the left range with `cur.left` and the right range with `cur.right` until a `null` location is found for insertion or further overlap occurs, requiring another split.    
+  * If the new range overlaps with `node`, split the two ranges into three parts, set the middle range as the new `node` and compare the left range with `node.left` and the right range with `node.right` until a `null` location is found for insertion or further overlap occurs, requiring another split.    
 
     Example: 
     ```
     [start, end]
-       X [cur.start, cur.end] O
+       X [node.start, node.end] O
     ```
-    Seperate the above two ranges into three ranges: `[start, cur.start]`, `[cur.start, end]`, and `[end, cur.end]`.  
-    If the `cur.left` or `cur.right` exits, compare `[start, cur.start]` with `cur.left` or `[end, cur.end]` with `cur.right` until a `null` location is found for insertion or another split is needed.
+    Seperate the above two ranges into three ranges: `[start, node.start]`, `[node.start, end]`, and `[end, node.end]`.  
+    If the `node.left` or `node.right` exits, compare `[start, node.start]` with `node.left` or `[end, node.end]` with `node.right` until a `null` location is found for insertion or another split is needed.
 
-#### Implementation
+
+#### Pyton3 Implementation
+```python
+class SegmentTree:
+    def __init__(self, startTime, endTime):
+        self.left = None
+        self.right = None
+        self.overlap = False
+        self.startTime = startTime
+        self.endTime = endTime
+
+class MyCalendarTwo:
+    def __init__(self):
+        self.root = None
+
+    def book(self, startTime, endTime):
+        # Check if the new event can be booked
+        if not self.insertable(self.root, startTime, endTime):
+            return False  
+        # Insert the new event into the tree
+        self.root = self.insert(self.root, startTime, endTime)
+        return True
+
+    def insertable(self, node, startTime, endTime):
+        # If the range is invalid, it's always insertable
+        if startTime >= endTime: 
+            return True
+        if node is None: 
+            return True
+        # Check if the new event is on the right side
+        if startTime >= node.endTime:
+            return self.insertable(node.right, startTime, endTime)
+        # Check if the new event is on the left side
+        elif endTime <= node.startTime:
+            return self.insertable(node.left, startTime, endTime)
+        # If there's an overlap, return False
+        else:
+            if node.overlap: 
+                return False
+            # Recursively check the left and right subtrees for insertability
+            return (self.insertable(node.left, startTime, node.startTime) and 
+                    self.insertable(node.right, node.endTime, endTime))
+
+    def insert(self, node, startTime, endTime):
+        # If the range is invalid, return the node as is
+        if startTime >= endTime: 
+            return node  
+        # Create a new node if the current one is None
+        if node is None: 
+            return SegmentTree(startTime, endTime) 
+        # If the new event is on the right side, insert it there
+        if startTime >= node.endTime:
+            node.right = self.insert(node.right, startTime, endTime)
+        # If the new event is on the left side, insert it there
+        elif endTime <= node.startTime:
+            node.left = self.insert(node.left, startTime, endTime)
+        # If there's an overlap, mark the current node and split the range
+        else:
+            node.overlap = True
+            # Merge ranges if necessary
+            a = min(startTime, node.startTime)
+            b = max(startTime, node.startTime)
+            c = min(endTime, node.endTime)
+            d = max(endTime, node.endTime)
+            node.left = self.insert(node.left, a, b)
+            node.right = self.insert(node.right, c, d)
+            node.startTime = b
+            node.endTime = c
+        return node  
+```
+#### Complexity Analysis
+* Time Complexity: $O(n\log n)$ (Base Case) or $O(n^2)$ (Worst Case)
+    * `insertable` method
+
+        This method traverses the tree until a `null` location is found or range overlaps.
+        * In the best case (when the tree is balanced), each recursive call halves the search space, leading to a logarithmic time complexity of $O(\log n)$.
+        * In the worst case, the tree is like a linked list, resulting in a time complexity of $O(n)$.
+    * `insert` method
+
+        Similar to `insertable`, it has a time complexity of $O(\log n)$ or $O(n)$.
+
+    The overall time complexity for `n` bookings is $O(n\log n)$ (Base Case) or $O(n^2)$ (Worst Case).
+
+* Space Complexity: $O(\log n)$ (Best Case) or $O(n)$ (Worst Case)
+
+    The stack depth depends on the segment tree's depth, requiring $(\log n)$ in the base case for a balanced tree, and $(n)$ space in the worst case when the tree degenerates into a linked list.
+
+    Thus, the overall space complexity is $O(\log n)$ (Best Case) or $O(n)$ (Worst Case).
+#### Java Implementation
 ```java
 class MyCalendarTwo {
     class SegmentTree {
@@ -4149,28 +4553,28 @@ class MyCalendarTwo {
     }
 
     /**
-     * Check the location of the current range relative to the `cur`.
+     * Check the location of the current range relative to the `node`.
      */
-    private boolean insertable(int start, int end, SegmentTree cur) {
+    private boolean insertable(int start, int end, SegmentTree node) {
         if (start >= end) return true;
-        if (cur == null) return true;
-        if (start >= cur.end) { 
+        if (node == null) return true;
+        if (start >= node.end) { 
             // Check right side
-            return insertable(start, end, cur.right);
-        } else if (end <= cur.start) { 
+            return insertable(start, end, node.right);
+        } else if (end <= node.start) { 
             // check left side
-            return insertable(start, end, cur.left);
+            return insertable(start, end, node.left);
         } else { 
-            // Ignore the current range if the `cur` node is already overlapped
-            if (cur.overlap) { 
+            // Ignore the current range if the `node` node is already overlapped
+            if (node.overlap) { 
                 return false;
             } else { 
-                // The current range from `start` to `end` is within the `cur` range
-                if (start >= cur.start && end <= cur.end) { 
+                // The current range from `start` to `end` is within the `node` range
+                if (start >= node.start && end <= node.end) { 
                     return true;
                 } else { 
                     // Check left and right side
-                    return insertable(start, cur.start, cur.left) && insertable(cur.end, end, cur.right);
+                    return insertable(start, node.start, node.left) && insertable(node.end, end, node.right);
                 }
             }
         }
@@ -4179,59 +4583,64 @@ class MyCalendarTwo {
     /**
      * Insert the current range to a `null` location or split it if overlapping.
      */
-    private SegmentTree insert(int start, int end, SegmentTree cur) {
+    private SegmentTree insert(int start, int end, SegmentTree node) {
         if (start >= end) 
-            return cur;
-        if (cur == null) 
+            return node;
+        if (node == null) 
             return new SegmentTree(start, end);
         
-        if (start >= cur.end) { 
-            // The curreng range is positioned to right of the `cur` node
-            cur.right = insert(start, end, cur.right);
-        } else if (end <= cur.start) { 
-            // The curreng range is positioned to left of the `cur` node
-            cur.left = insert(start, end, cur.left);
+        if (start >= node.end) { 
+            // The current range is positioned to right of the `node` node
+            node.right = insert(start, end, node.right);
+        } else if (end <= node.start) { 
+            // The current range is positioned to left of the `node` node
+            node.left = insert(start, end, node.left);
         } else {
-            cur.overlap = true;
+            node.overlap = true;
             //    L1   R1        start, end
-            //      L2    R2     cur.start, cur.end
+            //      L2    R2     node.start, node.end
             // [L1, L2] - [L2, R1] - [R1,R2]
 
+            int a = Math.min(node.start, start);
+            int b = Math.max(node.start, start);
+
+            int c = Math.min(node.end, end);
+            int d = Math.max(node.end, end);
             // Range1: [a,b] 
-            int a = Math.min(cur.start, start);
-            int b = Math.max(cur.start, start);
             // Range2: [b,c] 
             // Range3: [c,d] 
-            int c = Math.min(cur.end, end);
-            int d = Math.max(cur.end, end);
+
+            // One of the ranges [a,b] or [c,d] must overlap with `node`.
+            // and it will continue to be compared with a neighboring node of `node`.
+            node.left = insert(a, b, node.left);
+            node.right = insert(c, d, node.right);
             
-            // One of the ranges [a,b] or [c,d] must overlap with `cur`.
-            // and it will continue to be compared with a neighboring node of `cur`.
-            cur.left = insert(a, b, cur.left);
-            cur.right = insert(c, d, cur.right);
-            
-            cur.start = b;
-            cur.end = c;
+            node.start = b;
+            node.end = c;
         }
         
-        return cur;
+        return node;
     }
 }
 ```
 #### Complexity Analysis
-* Time Complexity: $O(m \times n)$
+* Time Complexity: $O(n\log n)$ (Base Case) or $O(n^2)$ (Worst Case)
     * `insertable` method
-        This method traverse the tree until a `null` location is found or range overlaps.
-        * If the tree is balanced, each search halves the search time, resulting in a time complexity of $O(\log n)$.
+
+        This method traverses the tree until a `null` location is found or range overlaps.
+        * In the best case (when the tree is balanced), each recursive call halves the search space, leading to a logarithmic time complexity of $O(\log n)$.
         * In the worst case, the tree is like a linked list, resulting in a time complexity of $O(n)$.
     * `insert` method
-        Similar to `insertable`, this method need to traverse the tree until a `null` location is found or range overlaps, then perform constant-time split and reset operation, resulting in a time complexity of $O(n)$.
 
-    For `m` bookings, the total time complexity is $O(m \times n)$.
-* Space Complexity: $O(n)$
+        Similar to `insertable`, it has a time complexity of $O(\log n)$ or $O(n)$.
 
-    The stack depth depends on the segment tree's depth, requiring $(n)$ space in the worst case when the tree degenerates into a linked list.
-    Thus, the overall space complexity is $O(n)$.
+    The overall time complexity for `n` bookings is $O(n\log n)$ (Base Case) or $O(n^2)$ (Worst Case).
+
+* Space Complexity: $O(\log n)$ (Best Case) or $O(n)$ (Worst Case)
+
+    The stack depth depends on the segment tree's depth, requiring $(\log n)$ in the base case for a balanced tree, and $(n)$ space in the worst case when the tree degenerates into a linked list.
+
+    Thus, the overall space complexity is $O(\log n)$ (Best Case) or $O(n)$ (Worst Case).
 
 ## 33. Graph Connectivity With Threshold
 [Back to Top](#table-of-contents)  
@@ -5910,7 +6319,7 @@ class Solution {
   If $n<m$, then $min(m,n)=n$, so $n+min(m,n)=n+n=2n$, which is O(n). 
 
   Thus, the overall space complexity is $O(n)$.
-<!-- 
+
 ## 46. Number of Paths with Max Score
 [Back to Top](#table-of-contents)
 ### Overview
@@ -5941,91 +6350,141 @@ In case there is no path, return `[0, 0]`.
 **Constraints:**
 * `2 <= board.length == board[i].length <= 100`
 
-### Analysis
+### Depth-first Search Solution
+Example: 
+```
+board: ["E11345","X452XX","3X43X4","44X312","23452X","1342XS"]
+output: [27,1]
 
-#### Java Implementation -->
-<!-- 13 / 25 -->
-<!-- ```java
+[E]1 1 3 4 5
+ X 4 5 2 X X
+ 3 X 4 3 X 4
+ 4 4 X 3 1 2
+ 2 3 4 5 2 X
+ 1 3 4 2 X[S]
+```
+
+1. Define a two-dimensional array `dpScore` to store the maximum score from `'E'` to the each grid in `board`.
+    
+    * Use backtracking to calculate the cumulative score for each path and track the maximum score for each grid.
+2. Define a two-dimensional array `dpRoad` to store the number of paths with the maximum score starting from `'S'`.
+   
+   * Compare `dpScore[r][c] - curScore` with adjacent grids like `dpScore[r-1][c]`, `dpScore[r-1][c-1]` and `dpScore[r][c-1]`. If any match, the grid is part of a valid path with the maximum score.
+
+#### Java Implementation
+```java
 class Solution {
-
-    private int maxSum=0;
-    private int pathNum=0;
-    private int MOD = 1000_000_007;
-
     public int[] pathsWithMaxScore(List<String> board) {
-        int len=board.size();
-        // E 1 1 3 4 5
-        // X 4 5 2 X X
-        // 3 X 4 3 X 4
-        // 4 4[X]3 1 2
-        // 2 3 4 5 2 X
-        // 1 3 4 2 X S
+        int rLen = board.size(), cLen = board.get(0).length();
+        dpScore = new int[rLen][cLen];
+        dpRoad = new int[rLen][cLen];
 
-        // E 1 2
-        // 1 X 1
-        // 2 1 5
-
-        
-
-        // Detect impassable area
-        int dx=-1;
-        int dy=-1;
-        for(int y=0; y<len; y++){
-            boolean hasX=false;
-            for(int x=0; x<len; x++){
-                if(board.get(x).charAt(y)=='X' && x>=dx && y>=dy){
-                    dx=x;
-                    dy=y;
-                    hasX=true;
-                }
-            }
-            if(!hasX)break;
+        // Fill `dpRoad` with `-1`
+        for (int i = 0; i < rLen; i++) {
+            Arrays.fill(dpRoad[i], -1);
         }
-        // System.out.println(dx);
-        // System.out.println(dy);
+        
+        // Fill each grid with its maximum score starting from `board[rLen-1][cLen-1]`
+        int maxScore = dfsScore(board, rLen - 1, cLen - 1);
 
-        dfs(board, len-1, len-1, 0, dx, dy);
-        return new int[]{maxSum, pathNum};
+        maxScore = maxScore == Integer.MIN_VALUE ? 0 : maxScore;
+        // Calculate the number of valid paths with the maximum score
+        int roadNum = dfsRoad(board, rLen - 1, cLen - 1);
+        return new int[] { maxScore, roadNum };
     }
 
-    private void dfs(List<String> board, int x, int y, int sum, int dx, int dy) {
-        if(x>=board.size() || x<0 || y>=board.size() || y<0)return;
-        char cur=board.get(x).charAt(y);
-        if(cur=='E'){
-            if(sum==this.maxSum){
-                this.pathNum+=1;
-            }else if(sum>this.maxSum){
-                this.maxSum=sum;
-                this.pathNum=1;
-            }
-            return;
-        }
-        if(cur=='X')return;
-        // System.out.println(x);
-        // System.out.println(y);
-        // System.out.println(dx);
-        // System.out.println(dy);
-        // System.out.println(x>=dx && y<=dy);
-        // E X
-        // X S
-        // System.out.println("-------------");
-        if(x>=dx && y<=dy)return;
+    public int mod = 1_000_000_007;
+    public int[][] dpScore;
 
-        int val=cur=='S'?0:Character.getNumericValue(cur);
-        // System.out.println(cur);
-        // System.out.println(val);
-        // System.out.println("-------------");
-        // go up
-        int newSum=(sum+val)%MOD;
-        dfs(board, x-1, y, newSum, dx, dy);
-        // go left
-        dfs(board, x, y-1, newSum, dx, dy);
-        // go up-left
-        dfs(board, x-1, y-1, newSum, dx, dy);
+    /**
+     * Calculate the score for the grid at position `board[r][c]` 
+     * , starting from 'S'.
+     * 
+     * @param board The game board
+     * @param r The row index of the grid
+     * @param c The column index of the grid
+     * @return The score of the grid at `board[r][c]`
+     */
+    public int dfsScore(List<String> board, int r, int c) {
+        // End conditions
+        if (r == 0 && c == 0) {
+            return 0;
+        }
+        if (r < 0 || c < 0) {
+            return Integer.MIN_VALUE;
+        }
+        char C = board.get(r).charAt(c);
+        if (C == 'X') {
+            return Integer.MIN_VALUE;
+        }
+        if (dpScore[r][c] != 0) {
+            return dpScore[r][c];
+        }
+
+        // Find the maximum score from the each backtracking path in the current grid.
+        int backScore = 
+            Math.max(
+                dfsScore(board, r - 1, c - 1), // go up-left
+                Math.max(
+                    dfsScore(board, r - 1, c), // go left
+                    dfsScore(board, r, c - 1)) // go up
+                );
+        
+        int curScore = C == 'S' ? 0 : C - '0';
+        int allScore = backScore == Integer.MIN_VALUE ? backScore : curScore + backScore;
+        dpScore[r][c] = allScore;
+        return allScore; 
+    }
+    
+    public int[][] dpRoad;
+    public int result = 0;
+    public int dfsRoad(List<String> board, int r, int c) {
+        if (r == 0 && c == 0) {
+            return 1;
+        }
+        if (dpRoad[r][c] != -1) {
+            return dpRoad[r][c];
+        }
+        int ways = 0;
+        char C = board.get(r).charAt(c);
+        int curScore = C == 'S' ? 0 : C - '0';
+        // Find grids that excatly matches the current maximum score in `dpScore[r][c] - curScore`.
+        if (r > 0 && dpScore[r][c] - curScore == dpScore[r - 1][c]) {
+            ways = (ways + dfsRoad(board, r - 1, c)) % mod;
+        }
+        if (c > 0 && dpScore[r][c] - curScore == dpScore[r][c - 1]) {
+            ways = (ways + dfsRoad(board, r, c - 1)) % mod;
+        }
+        if (r > 0 && c > 0 && dpScore[r][c] - curScore == dpScore[r - 1][c - 1]) {
+            ways = (ways + dfsRoad(board, r - 1, c - 1)) % mod;
+        }
+        dpRoad[r][c] = ways;
+        return ways;
     }
 }
-``` -->
+```
+#### Complexity Analysis
+* Time Complexity: $O(rLen \times cLen)$
+  * Fill `dpRoad` with `-1`
 
+    The loop iterates over the rows in `board` in $O(rLen)$ time, and `Arrays.fill` runs in $O(cLen)$ time.
+    Thus, the total time compleixty of this step is $O(rLen\times cLen)$.
+
+  * Fill each grid with its maximum score starting from `board[rLen-1][cLen-1]`
+  
+    Since each grid is visited at most once and the score culculation takes constant time during backtracking, this step runs in $O(rLen\times cLen)$ time.
+
+  * Calculate the number of valid paths with the maximum score
+
+    Similar to the previous step, all grids are visited at most once, resulting in a time complexity of $O(rLen\times cLen)$.
+
+  Therefore, the overall time complexity is $O(rLen\times cLen)$.
+* Space Complexity: $O(rLen\times cLen)$
+
+    * Both `dpScore` and `dpRoad` require $O(rLen\times cLen)$ space.
+    * The maximum stack depth for `dfsScore` and `dfsRoad` is $O(rLen+cLen)$ as at most three grids in up, left and up-left direction are checked in each call.
+   
+   Therefore, the total space complexity is $O(rLen\times cLen)$.
 
 # SQL Problems
 ## 1. Odd and Even Transactions
@@ -6114,4 +6573,111 @@ SELECT TO_CHAR(transaction_date,'yyyy-MM-dd') AS transaction_date,
 FROM transactions
 GROUP BY transaction_date
 ORDER BY transaction_date ASC;
+```
+
+## 2. Find Customer Referee
+[Back to Top](#table-of-contents)  
+### Overview
+Table: `Accounts`
+> ```
+> +-------------+------+
+> | Column Name | Type |
+> +-------------+------+
+> | account_id  | int  |
+> | income      | int  |
+> +-------------+------+
+> ```
+> `account_id` is the primary key (column with unique values) for this table.
+Each row contains information about the monthly income for one bank account.
+
+Write a solution to calculate the number of bank accounts for each salary category. The salary categories are:
+
+* `"Low Salary"`: All the salaries strictly less than `$20000`.
+* `"Average Salary"`: All the salaries in the inclusive range `[$20000, $50000]`.
+* `"High Salary"`: All the salaries strictly greater than `$50000`.
+The result table must contain all three categories. If there are no accounts in a category, return `0`.
+
+Return the result table in any order.
+
+The result format is in the following example.
+
+**Example 1:**
+> **Input:**
+> Accounts table:
+> ```
+> +------------+--------+
+> | account_id | income |
+> +------------+--------+
+> | 3          | 108939 |
+> | 2          | 12747  |
+> | 8          | 87709  |
+> | 6          | 91796  |
+> +------------+--------+
+> ```
+> **Output:** 
+> ```
+> +----------------+----------------+
+> | category       | accounts_count |
+> +----------------+----------------+
+> | Low Salary     | 1              |
+> | Average Salary | 0              |
+> | High Salary    | 3              |
+> +----------------+----------------+
+> ```
+> **Explanation:**   
+> Low Salary: Account 2.  
+> Average Salary: No accounts.  
+> High Salary: Accounts 3, 6, and 8.
+
+### Analysis
+1. Use of Common Table Expressions (CTEs)
+
+    Define two CTEs: one for storing the salary categories and another for counting the number of employees in each category.
+
+2. Direct Query with `UNION ALL`
+
+    Directly select and combine the results for each salary category in a single query using `UNION ALL`. 
+
+### MySQL Implementation
+```sql
+WITH category AS(
+    SELECT 'Low Salary' AS category
+    union
+    SELECT 'Average Salary'
+    union 
+    SELECT 'High Salary'
+), cnt AS (
+    SELECT
+        CASE 
+        WHEN income<20000 THEN 'Low Salary'
+        WHEN income>=20000 AND income<=50000 THEN 'Average Salary'
+        WHEN income>50000 THEN 'High Salary '
+        END AS category,
+        count(1) AS accounts_count
+    FROM
+        accounts
+    GROUP BY 1
+) 
+
+SELECT
+    category.category,
+    IFNULL(accounts_count,0) AS accounts_count
+FROM category
+LEFT JOIN cnt
+ON category.category=cnt.category;
+```
+
+### Oracle Implementation
+```sql
+SELECT  'Low Salary' AS category, NVL(count(account_id),0) accounts_count 
+    FROM accounts  
+    WHERE income <20000
+UNION ALL 
+    SELECT  'Average Salary' AS category, NVL(count(account_id),0) ct 
+        FROM accounts  
+        WHERE income  between  20000 and 50000 
+UNION ALL 
+    SELECT 'High Salary'  AS category, NVL( count(account_id),0) ct
+        FROM accounts 
+        WHERE income > 50000; 
 ```

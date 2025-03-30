@@ -1,16 +1,23 @@
 # Table of Contents
 [Back to Main Project README](../README.md)
 - [Table of Contents](#table-of-contents)
-- [Simi Docs 1.4.0 Release - Major Update to `Python_v1.1.0.pdf`](#simi-docs-140-release---major-update-to-python_v110pdf)
+- [Simi Docs 1.5.0 - Major Update to `Japanese_v1.2.0.pdf`](#simi-docs-150---major-update-to-japanese_v120pdf)
     - [Main Updates](#main-updates)
+    - [Python\_v1.2.0.pdf](#python_v120pdf)
+    - [Config\_v1.3.0.pdf](#config_v130pdf)
+    - [Japanese\_v1.2.0.pdf](#japanese_v120pdf)
+    - [Java\_v1.4.0.pdf](#java_v140pdf)
+    - [DatabaseAndMiddleware\_v1.1.0.pdf](#databaseandmiddleware_v110pdf)
+- [Simi Docs 1.4.0 - Major Update to `Python_v1.1.0.pdf`](#simi-docs-140---major-update-to-python_v110pdf)
+    - [Main Updates](#main-updates-1)
     - [Python\_v1.1.0.pdf](#python_v110pdf)
     - [Java\_v1.3.0.pdf](#java_v130pdf)
     - [SpringBoot\_v1.3.0.pdf](#springboot_v130pdf)
     - [Math\_v1.2.0.pdf](#math_v120pdf)
     - [WebFrameworks\_v1.2.0.pdf](#webframeworks_v120pdf)
     - [Internet\_v1.1.0.pdf](#internet_v110pdf)
-- [Simi Docs 1.3.0 Release - Document Migration](#simi-docs-130-release---document-migration)
-    - [Main Updates](#main-updates-1)
+- [Simi Docs 1.3.0 - Document Migration](#simi-docs-130---document-migration)
+    - [Main Updates](#main-updates-2)
     - [Linux\_v1.1.0.pdf](#linux_v110pdf)
     - [SpringBoot\_v1.2.0.pdf](#springboot_v120pdf)
     - [Java\_v1.2.0.pdf](#java_v120pdf)
@@ -21,7 +28,64 @@
     - [Java\_v1.1.0.pdf](#java_v110pdf)
     - [Node\_v1.1.0.pdf](#node_v110pdf)
     - [Config\_v1.1.0.pdf](#config_v110pdf)
-# Simi Docs 1.4.0 Release - Major Update to `Python_v1.1.0.pdf`
+# Simi Docs 1.5.0 - Major Update to `Japanese_v1.2.0.pdf`
+### Main Updates
+  * Algorithms.md
+    * Add new analyses for algorithm problems `32` and `46`, and SQL problem `2`.
+  * Questions.md
+    * Provide answers for the questions.
+### Python_v1.2.0.pdf
+* **Python / Core / Type Hints**
+  * Explain Type Hints in python3.
+* **Python / Build-in Libraries / biset**
+  * Describe the functions in `biset` module.
+* **Python / Build-in Libraries / Global**
+  * Optimize the content under this heading.
+### Config_v1.3.0.pdf
+* **Config / Java Environment / JDK / Command / java / Garbage Collection**
+  * Move the content under the heading *Config / Java Environment / JDK / Command / java / Parameters Specific to JDK 9 and Higher* to *Config / Java Environment / JDK / Command / java / Garbage Collection*
+* **Config / Java Environment / JDK / Command**
+  * Optimize the content format.
+* **Config / Java Environment / JDK / Command / java / Security**
+  * Describe the parameter `--add-opens <source-module>/<package>=<target-module>` and a Databricks initialization error.
+* **Config / Java Environment / gradle / Configuration / setting.gradle**
+  * Describe the configuration options in the `setting.gralde` file.
+### Japanese_v1.2.0.pdf
+* **Japanese / Verb**
+  * Optimize all verb grammar content under this heading.
+### Java_v1.4.0.pdf
+* **Java / java.base / java.nio / file / Path**
+  * `Path.of()` automatically handles platform-specific separators
+* **Java / java.base / java.io / (character stream) / FileWriter**
+  * Optimize the introduction.
+* **Java / java.base / java.io / File**
+  * Optimize the introduction.
+* **Java / java.base / java.beans**
+  * Optimize the introductions for all classes under the heading.
+* **Java / java.base / java.awt**
+  * Optimize the introductions for all classes under the heading.
+* **Java / java.util / concurrent / locks / AbstractQueuedSynchronizer**
+  * Simplify the explanation about the Node-based Queuing and Exclusive and Shared Modes mechanism.
+### DatabaseAndMiddleware_v1.1.0.pdf
+* **DAM / SQL / Operators**
+  * Describe the common operators used in all databases.
+* **DAM / SQL / Functions / Mysql**
+  * Move the heading *DAM / Mysql / Build-in functions* to *DAM / SQL / Funcitons / Mysql*.
+* **DAM / SQL / Functions / Oracle**
+  * Remove the `IFNULL` function from this section, as Oracle uses `NVL` instead.
+* **DAM / Mysql / Core / Data Types**
+  * Move the heading *DAM / Core SQL / Table Operations / DATA Types* to *DAM / Mysql / Core / Data Types*.
+* **DAM / Mysql / Core SQL / Database**
+  * Reorganize the content for better clarity.
+* **DAM / Mysql / Core SQL / Table**
+  * Reorganize the content for better clarity.
+* **DAM / SQL / Statement / CASE WHEN**
+  * Add usage examples.
+* **DAM / SQL / Data manipulation Language (DML) / SELECT / Compatibility**
+  * Oracle does not support `GROUP BY 1`
+* **DAM / SQL / Data manipulation Language (DML) / SELECT / PARTITION BY**
+  * Optimize the SQL execution example.
+# Simi Docs 1.4.0 - Major Update to `Python_v1.1.0.pdf`
 ### Main Updates
 * Move outedated PDFs to the `temp` and `temppdf` folders.
 * Rename the image title from *Simi Documentation* to *Simi Docs* for all PDF files.
@@ -30,7 +94,7 @@
 * **Python / Concept**
   * Refine the conceptual content.
 * **Python / Build-in Libraries / collections**
-  * Introduce the usage of `Counter` method.
+  * Describe the usage of `Counter` method.
 * **Python / Core / Constants and Variables**
   * Refine the introduction.
 * **Python / Core / Data Type Conversion**
@@ -75,7 +139,7 @@
 * **Internet / Network Model / OSI Model / Application Layer / HTTP**
   * Add clarification that CORS headers must be present in both preflight response and actual response.
   * Provide a CORS example involving the UI, Nginx and the server-side.
-# Simi Docs 1.3.0 Release - Document Migration
+# Simi Docs 1.3.0 - Document Migration
 ### Main Updates
 * Migrate core documents from Simi 1.2.0 Release to Simi Docs 1.3.0 Release.
 * Rename `Node_v1.1.0.pdf` to `WebFrameworks_v1.1.0.pdf`.
@@ -89,7 +153,7 @@
 * **Linux / Bash Script / Statement / Control Flow / while**
   * Provide usage examples for `IFS=`. 
 * **Linux / Commands / Service / Service File**
-  * Introduce options for configuring a systemctl service file.
+  * Describe options for configuring a systemctl service file.
 ### SpringBoot_v1.2.0.pdf
 * **SpringBoot / Third Party Package / Extensions / junit / \[mockito-core\] / Mockito**
   * Use `doReturn` to return different values on consecutive calls.  
@@ -116,7 +180,7 @@
 * **SpringBoot / org.springframework (spring) / web / annotation / InitBinder**
   * Add usage examples for InitBinder annotation. 
 * **SpringBoot_v1.1.0.pdf / Third Party Package / Servers / Temporal**
-  * Introduce the core classes in the `temporal-serviceclient` and `temporal-sdk` dependencies.
+  * Describe the core classes in the `temporal-serviceclient` and `temporal-sdk` dependencies.
 * **SpringBoot_v1.1.0.pdf / Third Party Package / Extentions / junit / \[junit-jupiter-api\]**
   * Use `@ExtendWith` in Junit 5 and `@Rule` in Junit 4.
 
@@ -124,7 +188,7 @@
 * **Java / Concept / Java Environment / Version Features / Java 16 (March 221)**
   * Use the `record` operator in Java 16 and later.
 * **Java / java.base / java.time / LocalDate**
-  * Introduce the default date string format.
+  * Describe the default date string format.
 * **Java / java.base / java.text / SimpleDateFormat**
   * Add examples for "MM" and "dd" time format.
   * SimpleDateFormat is not thread-safe. 
@@ -137,7 +201,7 @@
 * **Node / React / Core / Import Components**
   * How to import various components in React.
 * **Node / Configuration / tsconfig.json**
-  * Introduce typescript configuration file. 
+  * Describe typescript configuration file. 
 * **Node / Npm Packages / Cli Utils / craco**
   * Use craco to overwrite webpack configurations in a CRA project. 
 * **Node / Npm Packages / Loader / Cli Utils / create-react-app**
