@@ -4,8 +4,8 @@
   - [1. How does `AbstractQueuedSynchronizer` function internally?](#1-how-does-abstractqueuedsynchronizer-function-internally) 
 - Internet
   - [2. How to solve CORS issue?](#2-how-to-solve-cors-issue) 
-- Spring Boot 
-  - [3. How to ensure Kafka messages are not lost?](#3-how-to-ensure-kafka-messages-are-not-lost)
+<!-- - Spring Boot  -->
+  <!-- - [3. How to ensure Kafka messages are not lost?](#3-how-to-ensure-kafka-messages-are-not-lost) -->
 ## 1. How does `AbstractQueuedSynchronizer` function internally?  <!-- {4} -->
 ### References
 * **Java.pdf / Java / java.base / java.util / concurrent / locks / AbstractQueuedSynchronizer**     
@@ -31,13 +31,10 @@ The `state` field tracks the lock's status, and `AbstractQueuedSynchronizer` aut
   1. Forward Proxy (Normal Proxy)
   2. Reverse Proxy
 ### Answer
-If the preflight request passes, the browser allows cross-domain requests.
+1. Return the necessary CORS headers for all requests directly from the server.
+2. Configure the Nginx server to intercept both preflight and normal requests, adding the required CORS headers.
 
-You can configure the Nginx server to intercept both preflight and normal requests, adding the necessary CORS headers to allow them.
-
-Alternatively, return the allowed CORS headers directly from the server.
-
-## 3. How to ensure Kafka messages are not lost?
+<!-- ## 3. How to ensure Kafka messages are not lost?
 ### References
 * **DatabaseAndMiddleware / Kafka / Configuration / Leader Election**
   1. Assigned Replicas (AR)
@@ -48,7 +45,7 @@ Alternatively, return the allowed CORS headers directly from the server.
 1. Set `unclean.leader.election.enable` to `false` as OSR nodes may lack the latest messages, risking data loss if elected as the leader.
 
 2. 
-
+ -->
 
 
 
