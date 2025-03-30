@@ -1,14 +1,14 @@
 # Table of Contents
 [Back to Main Project README](../README.md)
 - [Table of Contents](#table-of-contents)
-- [Simi Docs 1.5.0 Release - Major Update to `Japanese_v1.2.0.pdf`](#simi-docs-150-release---major-update-to-japanese_v120pdf)
+- [Simi Docs 1.5.0 - Major Update to `Japanese_v1.2.0.pdf`](#simi-docs-150---major-update-to-japanese_v120pdf)
     - [Main Updates](#main-updates)
     - [Python\_v1.2.0.pdf](#python_v120pdf)
     - [Config\_v1.3.0.pdf](#config_v130pdf)
     - [Japanese\_v1.2.0.pdf](#japanese_v120pdf)
     - [Java\_v1.4.0.pdf](#java_v140pdf)
     - [DatabaseAndMiddleware\_v1.1.0.pdf](#databaseandmiddleware_v110pdf)
-- [Simi Docs 1.4.0 Release - Major Update to `Python_v1.1.0.pdf`](#simi-docs-140-release---major-update-to-python_v110pdf)
+- [Simi Docs 1.4.0 - Major Update to `Python_v1.1.0.pdf`](#simi-docs-140---major-update-to-python_v110pdf)
     - [Main Updates](#main-updates-1)
     - [Python\_v1.1.0.pdf](#python_v110pdf)
     - [Java\_v1.3.0.pdf](#java_v130pdf)
@@ -16,7 +16,7 @@
     - [Math\_v1.2.0.pdf](#math_v120pdf)
     - [WebFrameworks\_v1.2.0.pdf](#webframeworks_v120pdf)
     - [Internet\_v1.1.0.pdf](#internet_v110pdf)
-- [Simi Docs 1.3.0 Release - Document Migration](#simi-docs-130-release---document-migration)
+- [Simi Docs 1.3.0 - Document Migration](#simi-docs-130---document-migration)
     - [Main Updates](#main-updates-2)
     - [Linux\_v1.1.0.pdf](#linux_v110pdf)
     - [SpringBoot\_v1.2.0.pdf](#springboot_v120pdf)
@@ -28,12 +28,12 @@
     - [Java\_v1.1.0.pdf](#java_v110pdf)
     - [Node\_v1.1.0.pdf](#node_v110pdf)
     - [Config\_v1.1.0.pdf](#config_v110pdf)
-# Simi Docs 1.5.0 Release - Major Update to `Japanese_v1.2.0.pdf`
+# Simi Docs 1.5.0 - Major Update to `Japanese_v1.2.0.pdf`
 ### Main Updates
   * Algorithms.md
-    * Add new algorithm problem analyses starting from problem `46`.
+    * Add new analyses for algorithm problems `32` and `46`, and SQL problem `2`.
   * Questions.md
-    * Add new questions starting from question `3`. 
+    * Provide answers for the questions.
 ### Python_v1.2.0.pdf
 * **Python / Core / Type Hints**
   * Explain Type Hints in python3.
@@ -44,6 +44,8 @@
 ### Config_v1.3.0.pdf
 * **Config / Java Environment / JDK / Command / java / Garbage Collection**
   * Move the content under the heading *Config / Java Environment / JDK / Command / java / Parameters Specific to JDK 9 and Higher* to *Config / Java Environment / JDK / Command / java / Garbage Collection*
+* **Config / Java Environment / JDK / Command**
+  * Optimize the content format.
 * **Config / Java Environment / JDK / Command / java / Security**
   * Describe the parameter `--add-opens <source-module>/<package>=<target-module>` and a Databricks initialization error.
 * **Config / Java Environment / gradle / Configuration / setting.gradle**
@@ -83,7 +85,7 @@
   * Oracle does not support `GROUP BY 1`
 * **DAM / SQL / Data manipulation Language (DML) / SELECT / PARTITION BY**
   * Optimize the SQL execution example.
-# Simi Docs 1.4.0 Release - Major Update to `Python_v1.1.0.pdf`
+# Simi Docs 1.4.0 - Major Update to `Python_v1.1.0.pdf`
 ### Main Updates
 * Move outedated PDFs to the `temp` and `temppdf` folders.
 * Rename the image title from *Simi Documentation* to *Simi Docs* for all PDF files.
@@ -137,7 +139,7 @@
 * **Internet / Network Model / OSI Model / Application Layer / HTTP**
   * Add clarification that CORS headers must be present in both preflight response and actual response.
   * Provide a CORS example involving the UI, Nginx and the server-side.
-# Simi Docs 1.3.0 Release - Document Migration
+# Simi Docs 1.3.0 - Document Migration
 ### Main Updates
 * Migrate core documents from Simi 1.2.0 Release to Simi Docs 1.3.0 Release.
 * Rename `Node_v1.1.0.pdf` to `WebFrameworks_v1.1.0.pdf`.
