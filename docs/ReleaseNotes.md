@@ -1,7 +1,7 @@
 # Table of Contents
 [Back to Main Project README](../README.md)
 - [Table of Contents](#table-of-contents)
-- [Simi Docs 1.5.1 - Remove all problem descriptions](#simi-docs-151---remove-all-problem-descriptions)
+- [Simi Docs 1.5.1 - Remove all algorithm problem descriptions](#simi-docs-151---remove-all-algorithm-problem-descriptions)
     - [Main Updates](#main-updates)
 - [Simi Docs 1.5.0 - Major Update to `Japanese_v1.2.0.pdf`](#simi-docs-150---major-update-to-japanese_v120pdf)
     - [Main Updates](#main-updates-1)
@@ -30,7 +30,7 @@
     - [Java\_v1.1.0.pdf](#java_v110pdf)
     - [Node\_v1.1.0.pdf](#node_v110pdf)
     - [Config\_v1.1.0.pdf](#config_v110pdf)
-# Simi Docs 1.5.1 - Remove all problem descriptions
+# Simi Docs 1.5.1 - Remove all algorithm problem descriptions
 ### Main Updates
   * Algorithms.md
     * Remove all problem descriptions to prevent unintentional copyright infringement.
