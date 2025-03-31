@@ -1,15 +1,17 @@
 # Table of Contents
 [Back to Main Project README](../README.md)
 - [Table of Contents](#table-of-contents)
-- [Simi Docs 1.5.0 - Major Update to `Japanese_v1.2.0.pdf`](#simi-docs-150---major-update-to-japanese_v120pdf)
+- [Simi Docs 1.5.1 - Remove all problem descriptions](#simi-docs-151---remove-all-problem-descriptions)
     - [Main Updates](#main-updates)
+- [Simi Docs 1.5.0 - Major Update to `Japanese_v1.2.0.pdf`](#simi-docs-150---major-update-to-japanese_v120pdf)
+    - [Main Updates](#main-updates-1)
     - [Python\_v1.2.0.pdf](#python_v120pdf)
     - [Config\_v1.3.0.pdf](#config_v130pdf)
     - [Japanese\_v1.2.0.pdf](#japanese_v120pdf)
     - [Java\_v1.4.0.pdf](#java_v140pdf)
     - [DatabaseAndMiddleware\_v1.1.0.pdf](#databaseandmiddleware_v110pdf)
 - [Simi Docs 1.4.0 - Major Update to `Python_v1.1.0.pdf`](#simi-docs-140---major-update-to-python_v110pdf)
-    - [Main Updates](#main-updates-1)
+    - [Main Updates](#main-updates-2)
     - [Python\_v1.1.0.pdf](#python_v110pdf)
     - [Java\_v1.3.0.pdf](#java_v130pdf)
     - [SpringBoot\_v1.3.0.pdf](#springboot_v130pdf)
@@ -17,7 +19,7 @@
     - [WebFrameworks\_v1.2.0.pdf](#webframeworks_v120pdf)
     - [Internet\_v1.1.0.pdf](#internet_v110pdf)
 - [Simi Docs 1.3.0 - Document Migration](#simi-docs-130---document-migration)
-    - [Main Updates](#main-updates-2)
+    - [Main Updates](#main-updates-3)
     - [Linux\_v1.1.0.pdf](#linux_v110pdf)
     - [SpringBoot\_v1.2.0.pdf](#springboot_v120pdf)
     - [Java\_v1.2.0.pdf](#java_v120pdf)
@@ -28,6 +30,12 @@
     - [Java\_v1.1.0.pdf](#java_v110pdf)
     - [Node\_v1.1.0.pdf](#node_v110pdf)
     - [Config\_v1.1.0.pdf](#config_v110pdf)
+# Simi Docs 1.5.1 - Remove all problem descriptions
+### Main Updates
+  * Algorithms.md
+    * Remove all problem descriptions to prevent unintentional copyright infringement.
+  * PDFs
+    * Move all PDFs to the `temppdf` folder due to mixed Chinese content.
 # Simi Docs 1.5.0 - Major Update to `Japanese_v1.2.0.pdf`
 ### Main Updates
   * Algorithms.md
