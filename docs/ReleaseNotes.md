@@ -2,7 +2,8 @@
 [Back to Main Project README](../README.md)
 - [Table of Contents](#table-of-contents)
 - [Simi Docs 1.6.0](#simi-docs-160)
-    - [Config\_v1.4.0](#config_v140)
+    - [Scala\_v1.0.0.pdf](#scala_v100pdf)
+    - [Config\_v1.4.0.pdf](#config_v140pdf)
 - [Simi Docs 1.5.1 - Remove all algorithm problem descriptions](#simi-docs-151---remove-all-algorithm-problem-descriptions)
     - [Main Updates](#main-updates)
 - [Simi Docs 1.5.0 - Major Update to `Japanese_v1.2.0.pdf`](#simi-docs-150---major-update-to-japanese_v120pdf)
@@ -33,9 +34,15 @@
     - [Node\_v1.1.0.pdf](#node_v110pdf)
     - [Config\_v1.1.0.pdf](#config_v110pdf)
 # Simi Docs 1.6.0
-### Config_v1.4.0
-* *Config / Java Environment / gradle / Configuration / gradle.properties*
+### Config_v1.4.0.pdf
+* **Config / Java Environment / gradle / Configuration / build.gradle**
+  * Refine the configuration option introduction of all plugins under this heading.
+* **Config / Java Environment / gradle / Configuration / gradle.properties**
   * Explain the property resolution order.
+* **Config / Java Environment / gradle / Configuration / build.gradle / Inheritable Configuration**
+  * Explain how inheritable properties are used.
+* **Config / Java Environment / gradle / Configuration / build.gradle / maven-publish (Plugin)**
+  * Introduce the use of the `maven-publish` plugin.
 * **Config / Java Environment / Groovy**
   * Introduce the use of Groovy.
 # Simi Docs 1.5.1 - Remove all algorithm problem descriptions
