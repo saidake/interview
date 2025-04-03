@@ -2,7 +2,7 @@
 [Back to Main Project README](../README.md)
 - [Table of Contents](#table-of-contents)
 - [Simi Docs 1.6.0](#simi-docs-160)
-    - [Scala\_v1.0.0.pdf](#scala_v100pdf)
+    - [Japanese\_v1.3.0.pdf](#japanese_v130pdf)
     - [Config\_v1.4.0.pdf](#config_v140pdf)
 - [Simi Docs 1.5.1 - Remove all algorithm problem descriptions](#simi-docs-151---remove-all-algorithm-problem-descriptions)
     - [Main Updates](#main-updates)
@@ -34,6 +34,22 @@
     - [Node\_v1.1.0.pdf](#node_v110pdf)
     - [Config\_v1.1.0.pdf](#config_v110pdf)
 # Simi Docs 1.6.0
+### Japanese_v1.3.0.pdf
+* **Japanese / Pronunciation**
+  * Improve the content under this heading.
+* **Japanese / Verb**
+  * Add four new headings *Basic Verb Forms*, *Copula*, *Core Forms*, *Functional Forms*.
+  * Optimize all verb transformation content with clean table format.
+* **Japanese**
+  * Optimize all content under these headings:
+    * *Japanese / Auxiliary Word*
+    * *Japanese / Noun*
+    * *Japanese / Adjective*
+    * *Japanese / Numeral*
+  * Add two new sections:
+    * *Japanese / Attributive Words* 
+    * *Japanese / Honorifics and Suffixes*.
+
 ### Config_v1.4.0.pdf
 * **Config / Java Environment / gradle / Configuration / build.gradle**
   * Refine the configuration option introduction of all plugins under this heading.
