@@ -1,8 +1,29 @@
 # 2025
 <!-- 
 Listening Section
-   Test 01 - [68-70]  32:53
+   Test 01 - [80-82] 37:50
 -->
+## April 6, 2025
+* [77-79]
+  * That was Mr. Smith with his **insightful** information about the types of
+investments out on the market today。
+  *  Mr. Rowe, who has been at the center of attention in the business world lately as the youngest person ever to become the
+**Chief Executive Officer** at Livetalk Communications, **credits** the
+teachings of his father, Mark Rowe, for success.
+  * According to Mr. Rowe, the work **ethics** and positive attitude displayed by his father during his childhood set the standards for the way he works today.
+  * He **stresses** the importance of our everyday attitude toward work and will give us some tips on how to make them become part of us.
+* [74-76]
+  * As I look around, I **cannot help but say** how wonderful it is to
+see many children from our community holding the hands of their parents and
+grandparents.
+  * **main attraction**
+  * As most of you the parents know and agree, it is **vital** that we **instill** in our children the special qualities each and every single one of them **possesses**.
+  * And for this reason, we have set up special classes for the parents to learn how to **bring out** the best in their children. 
+  * Would everyone **give a big hand of applause** for “Teddy the Clown”?
+* [71-73]
+  * In the meantime, if you know the **extension** of the person you
+wish to contact, please press it on your phone now. 
+  * If you would like to **get in touch with** our billing services, press 3.
 ## March 26, 2025
 * [68-70]
   * As you can see, the numbers are less than stellar.
