@@ -1,7 +1,8 @@
 # Table of Contents
 [Back to Main Project README](../README.md)
 - [Table of Contents](#table-of-contents)
-- [Simi Docs 1.6.0](#simi-docs-160)
+- [Simi Docs 1.6.0-beta](#simi-docs-160-beta)
+    - [Java\_v1.5.0.pdf](#java_v150pdf)
     - [Japanese\_v1.3.0.pdf](#japanese_v130pdf)
     - [Config\_v1.4.0.pdf](#config_v140pdf)
 - [Simi Docs 1.5.1 - Remove all algorithm problem descriptions](#simi-docs-151---remove-all-algorithm-problem-descriptions)
@@ -33,7 +34,10 @@
     - [Java\_v1.1.0.pdf](#java_v110pdf)
     - [Node\_v1.1.0.pdf](#node_v110pdf)
     - [Config\_v1.1.0.pdf](#config_v110pdf)
-# Simi Docs 1.6.0
+# Simi Docs 1.6.0-beta
+### Java_v1.5.0.pdf
+* **Java / Core / Data Type Conversion / Widening or Automatic Type Conversion**
+  * Explain the necessity of using explicit type casting to prevent value overflow.
 ### Japanese_v1.3.0.pdf
 * **Japanese / Pronunciation**
   * Improve the content under this heading.
@@ -57,8 +61,9 @@
   * Explain the property resolution order.
 * **Config / Java Environment / gradle / Configuration / build.gradle / Inheritable Configuration**
   * Explain how inheritable properties are used.
-* **Config / Java Environment / gradle / Configuration / build.gradle / maven-publish (Plugin)**
-  * Introduce the use of the `maven-publish` plugin.
+* **Config / Java Environment / gradle / Configuration / Gradle Plugins**
+  * Move all plugin configuration descriptions under this heading.
+  * Introduce the usage of gradle plugins such as `maven-publish`, `application`, `java-library` and `org.gradle.toolchains.foojay-resolver-convention`, etc.
 * **Config / Java Environment / Groovy**
   * Introduce the use of Groovy.
 # Simi Docs 1.5.1 - Remove all algorithm problem descriptions
