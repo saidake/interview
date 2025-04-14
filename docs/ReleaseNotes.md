@@ -4,6 +4,7 @@
 - [Simi Docs 1.6.0-beta](#simi-docs-160-beta)
     - [Java\_v1.5.0.pdf](#java_v150pdf)
     - [Japanese\_v1.3.0.pdf](#japanese_v130pdf)
+    - [Math\_v1.3.0.pdf](#math_v130pdf)
     - [Config\_v1.4.0.pdf](#config_v140pdf)
 - [Simi Docs 1.5.1 - Remove all algorithm problem descriptions](#simi-docs-151---remove-all-algorithm-problem-descriptions)
     - [Main Updates](#main-updates)
@@ -53,7 +54,10 @@
   * Add two new sections:
     * *Japanese / Attributive Words* 
     * *Japanese / Honorifics and Suffixes*.
-
+### Math_v1.3.0.pdf
+  * Remove headings '*Math / Data Structure / Advanced Data Structure*' and '*Math / Data Structure / Common Data Structure*'
+  * **Math / Data Structure / Tree Data Structure / Based on the number of children / Binary Tree**
+    * Introduce the pattern for the total number of nodes `M` with depth `D` and the number of elements `N` at layer `i` in a complete binary tree.
 ### Config_v1.4.0.pdf
 * **Config / Java Environment / gradle / Configuration / build.gradle**
   * Refine the configuration option introduction of all plugins under this heading.
