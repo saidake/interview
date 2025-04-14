@@ -1,3 +1,8 @@
+<!-----------------------------------------------------------
+Author:  Craig Brown
+Version: simi-docs-1.6.0
+Source:  https://github.com/saidake/simi-docs
+------------------------------------------------------------->
 # Table of Contents
 [Back to Main Project README](../README.md)
 - [Table of Contents](#table-of-contents)
@@ -15,6 +20,8 @@
 * **SpringBoot.pdf / Third Party Package / Servers / Temporal**
 #### Code Flow Diagram
 [![](https://mermaid.ink/img/pako:eNqNlN1uozAQhV9l5KtWCpFC0l5wUS2FVqrUaquSVaUtuXBgmlgBzNqmEUry7mtiE8iPukskFNsn3xlmTtiQhKdIPLIQtFzCNIwL0Jes5mYjUljCyGz6o493LlafGV9HKL5YgpGq5nIGjnO3DQRShXILvnv14UMjhEetBCuFRju7NiQs0ks-rtm873yCjGGhThzuTxys6Hv22GwGho3ikSaKi3oGx-zgwEYBraZPbj7n9Imlj39sQC5piR4ofeqoAWR0jpkHMTEeQIsU5kzfKBS4hrWxUhxizaCgqFzBnworjAnsDDYcdUWdFHNeyo39jftNKcZ0KHDBpELRdvspLzPMdS-pYryY1iXKXhHj_wf6iWJfTDGUx8ge7jCmS89way0n_7S0IxpKRYW6uj7hm6_Th5fXn2_-cwdL6qxHmmJeckGzfVRRGIaNvAvOEH5J1DOrYejc6XDakJ6dBPYkcJtI6Sy0mdgvw9HRsq2pHfA-hW-2fXbUOo6he1nQNVhrxn3fbdR0QvYQEzIgOYqcslT_zzeNOCZqqacSk-bxUypWMYmLndbRSvGoLhLiKVHhgAheLZbE-6SZ1KuqTHWCQ0b1qPLDbkmL35x3a0yZHsmLea3s3y67v73zZ8A?type=png)](https://mermaid.live/edit#pako:eNqNlN1uozAQhV9l5KtWCpFC0l5wUS2FVqrUaquSVaUtuXBgmlgBzNqmEUry7mtiE8iPukskFNsn3xlmTtiQhKdIPLIQtFzCNIwL0Jes5mYjUljCyGz6o493LlafGV9HKL5YgpGq5nIGjnO3DQRShXILvnv14UMjhEetBCuFRju7NiQs0ks-rtm873yCjGGhThzuTxys6Hv22GwGho3ikSaKi3oGx-zgwEYBraZPbj7n9Imlj39sQC5piR4ofeqoAWR0jpkHMTEeQIsU5kzfKBS4hrWxUhxizaCgqFzBnworjAnsDDYcdUWdFHNeyo39jftNKcZ0KHDBpELRdvspLzPMdS-pYryY1iXKXhHj_wf6iWJfTDGUx8ge7jCmS89way0n_7S0IxpKRYW6uj7hm6_Th5fXn2_-cwdL6qxHmmJeckGzfVRRGIaNvAvOEH5J1DOrYejc6XDakJ6dBPYkcJtI6Sy0mdgvw9HRsq2pHfA-hW-2fXbUOo6he1nQNVhrxn3fbdR0QvYQEzIgOYqcslT_zzeNOCZqqacSk-bxUypWMYmLndbRSvGoLhLiKVHhgAheLZbE-6SZ1KuqTHWCQ0b1qPLDbkmL35x3a0yZHsmLea3s3y67v73zZ8A)
+
+<!-- ![](./assets/SourceCodeAnalysis/temporal-startup-process.drawio.svg) -->
 #### Potential Issues
 * The workflow execution method is blocked.  
   
