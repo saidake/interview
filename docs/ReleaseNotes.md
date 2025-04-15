@@ -2,6 +2,7 @@
 [Back to Main Project README](../README.md)
 - [Table of Contents](#table-of-contents)
 - [Simi Docs 1.6.0-beta](#simi-docs-160-beta)
+    - [Linux\_v1.2.0.pdf](#linux_v120pdf)
     - [Java\_v1.5.0.pdf](#java_v150pdf)
     - [Japanese\_v1.3.0.pdf](#japanese_v130pdf)
     - [Math\_v1.3.0.pdf](#math_v130pdf)
@@ -36,6 +37,9 @@
     - [Node\_v1.1.0.pdf](#node_v110pdf)
     - [Config\_v1.1.0.pdf](#config_v110pdf)
 # Simi Docs 1.6.0-beta
+### Linux_v1.2.0.pdf
+* **Linux / Commands / Network / Transmission**
+  * Refine all content under this heading.
 ### Java_v1.5.0.pdf
 * **Java / Core / Data Type Conversion / Widening or Automatic Type Conversion**
   * Explain the necessity of using explicit type casting to prevent value overflow.
@@ -70,6 +74,8 @@
   * Introduce the usage of gradle plugins such as `maven-publish`, `application`, `java-library` and `org.gradle.toolchains.foojay-resolver-convention`, etc.
 * **Config / Java Environment / Groovy**
   * Introduce the use of Groovy.
+* **Config / Work Environment / git / Configuration / Secret Key**
+  * Refine the content under this heading.
 # Simi Docs 1.5.1 - Remove all algorithm problem descriptions
 ### Main Updates
   * Algorithms.md
