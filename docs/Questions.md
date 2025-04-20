@@ -9,8 +9,8 @@ Source:  https://github.com/saidake/simi-docs
   - [1. How does `AbstractQueuedSynchronizer` function internally?](#1-how-does-abstractqueuedsynchronizer-function-internally) 
 - Internet
   - [2. How to solve CORS issue?](#2-how-to-solve-cors-issue) 
-- Spring Boot 
-  - [3. How to ensure Kafka messages are not lost?](#3-how-to-ensure-kafka-messages-are-not-lost)
+<!-- - Spring Boot  -->
+  <!-- - [3. How to ensure Kafka messages are not lost?](#3-how-to-ensure-kafka-messages-are-not-lost) -->
 ## 1. How does `AbstractQueuedSynchronizer` function internally?  <!-- {4} -->
 ### References
 * **Java.pdf / Java / java.base / java.util / concurrent / locks / AbstractQueuedSynchronizer**     
@@ -39,7 +39,7 @@ The `state` field tracks the lock's status, and `AbstractQueuedSynchronizer` aut
 1. Return the necessary CORS headers for all requests directly from the server.
 2. Configure the Nginx server to intercept both preflight and normal requests, adding the required CORS headers.
 
-## 3. How to ensure Kafka messages are not lost?
+<!-- ## 3. How to ensure Kafka messages are not lost?
 ### References
 * **DatabaseAndMiddleware / Kafka / Configuration / Leader Election**
   1. Assigned Replicas (AR)
@@ -51,7 +51,7 @@ The `state` field tracks the lock's status, and `AbstractQueuedSynchronizer` aut
 
 2. 
 
-
+ -->
 
 
 
