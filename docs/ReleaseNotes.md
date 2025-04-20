@@ -63,6 +63,16 @@
   * **Math / Data Structure / Tree Data Structure / Based on the number of children / Binary Tree**
     * Introduce the pattern for the total number of nodes `M` with depth `D` and the number of elements `N` at layer `i` in a complete binary tree.
 ### Config_v1.4.0.pdf
+* **Config / Java Environment / maven / Core / Dependency Mediation**
+  * Rename the Heading to '*Config / Java Environment / maven / Core / Version Alignment*'
+* **Config / Java Environment / gradle / Core / Version Alignment**
+  * Add a new section to introduce Gradle's version alignment.
+* **Config / Java Environment / maven / Core / target folder**
+  * Explain the contents in the `target` folder after building a maven project.
+* **Config / Java Environment / maven / pom.xml**
+  * Refine the content under this heading.
+* **Config / Java Environment / gradle / Core / build folder**
+  * Explain the contents in the `build` folder after building a gradle project.
 * **Config / Java Environment / gradle / Configuration / build.gradle**
   * Refine the configuration option introduction of all plugins under this heading.
 * **Config / Java Environment / gradle / Configuration / gradle.properties**
@@ -71,7 +81,9 @@
   * Explain how inheritable properties are used.
 * **Config / Java Environment / gradle / Configuration / Gradle Plugins**
   * Move all plugin configuration descriptions under this heading.
-  * Introduce the usage of gradle plugins such as `maven-publish`, `application`, `java-library` and `org.gradle.toolchains.foojay-resolver-convention`, etc.
+  * Introduce the usage of gradle plugins such as `maven-publish`, `application`, `java-library`, `java-platform` and `org.gradle.toolchains.foojay-resolver-convention`, etc.
+* **Config / Java Environment / gradle / Configuration / Gradle Plugins / java**
+  * Explain how to create a custom `fatJar` task that bundles all dependencies.
 * **Config / Java Environment / Groovy**
   * Introduce the use of Groovy.
 * **Config / Work Environment / git / Configuration / Secret Key**
