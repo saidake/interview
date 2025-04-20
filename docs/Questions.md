@@ -1,3 +1,8 @@
+<!-----------------------------------------------------------
+Author:  Craig Brown
+Version: simi-docs-1.6.0
+Source:  https://github.com/saidake/simi-docs
+------------------------------------------------------------->
 # Table of Contents
 [Back to Main Project README](../README.md)  
 - Java
@@ -45,8 +50,8 @@ The `state` field tracks the lock's status, and `AbstractQueuedSynchronizer` aut
 1. Set `unclean.leader.election.enable` to `false` as OSR nodes may lack the latest messages, risking data loss if elected as the leader.
 
 2. 
- -->
 
+ -->
 
 
 

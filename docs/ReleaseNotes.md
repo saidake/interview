@@ -1,6 +1,12 @@
 # Table of Contents
 [Back to Main Project README](../README.md)
 - [Table of Contents](#table-of-contents)
+- [Simi Docs 1.6.0 – Perfected `Japanese v1.3.0.pdf`](#simi-docs-160--perfected-japanese-v130pdf)
+    - [Japanese\_v1.3.0.pdf](#japanese_v130pdf)
+    - [Config\_v1.4.0.pdf](#config_v140pdf)
+    - [Linux\_v1.1.1.pdf](#linux_v111pdf)
+    - [Java\_v1.4.1.pdf](#java_v141pdf)
+    - [Math\_v1.2.1.pdf](#math_v121pdf)
 - [Simi Docs 1.5.1 - Remove all algorithm problem descriptions](#simi-docs-151---remove-all-algorithm-problem-descriptions)
     - [Main Updates](#main-updates)
 - [Simi Docs 1.5.0 - Major Update to `Japanese_v1.2.0.pdf`](#simi-docs-150---major-update-to-japanese_v120pdf)
@@ -30,6 +36,64 @@
     - [Java\_v1.1.0.pdf](#java_v110pdf)
     - [Node\_v1.1.0.pdf](#node_v110pdf)
     - [Config\_v1.1.0.pdf](#config_v110pdf)
+# Simi Docs 1.6.0 – Perfected `Japanese v1.3.0.pdf`
+* Change the license from `MIT` to `CC-BY-SA` to address concerns about potential misuse.
+* Refine the heading structure in `docs/Algorithms.md`.
+### Japanese_v1.3.0.pdf
+* **Japanese / Pronunciation**
+  * Improve the content under this heading.
+* **Japanese / Verb**
+  * Add four new headings *Basic Verb Forms*, *Copula*, *Core Forms*, *Functional Forms*.
+  * Optimize all verb transformation content with clean table format.
+* **Japanese**
+  * Optimize all content under these headings:
+    * *Japanese / Auxiliary Word*
+    * *Japanese / Noun*
+    * *Japanese / Adjective*
+    * *Japanese / Numeral*
+  * Add two new sections:
+    * *Japanese / Attributive Words* 
+    * *Japanese / Honorifics and Suffixes*.
+### Config_v1.4.0.pdf
+* **Config / Java Environment / maven / Core / Dependency Mediation**
+  * Rename the Heading to '*Config / Java Environment / maven / Core / Version Alignment*'
+* **Config / Java Environment / gradle / Core / Version Alignment**
+  * Add a new section to introduce Gradle's version alignment.
+* **Config / Java Environment / maven / Core / target folder**
+  * Explain the contents in the `target` folder after building a maven project.
+* **Config / Java Environment / maven / pom.xml**
+  * Refine the content under this heading.
+* **Config / Java Environment / gradle / Core / build folder**
+  * Explain the contents in the `build` folder after building a gradle project.
+* **Config / Java Environment / gradle / Configuration / build.gradle**
+  * Refine the configuration option introduction of all plugins under this heading.
+* **Config / Java Environment / gradle / Configuration / gradle.properties**
+  * Explain the property resolution order.
+* **Config / Java Environment / gradle / Configuration / build.gradle / Inheritable Configuration**
+  * Explain how inheritable properties are used.
+* **Config / Java Environment / gradle / Configuration / Gradle Plugins**
+  * Move all plugin configuration descriptions under this heading.
+  * Introduce the usage of gradle plugins such as `maven-publish`, `application`, `java-library`, `java-platform` and `org.gradle.toolchains.foojay-resolver-convention`, etc.
+* **Config / Java Environment / gradle / Configuration / Gradle Plugins / java**
+  * Explain how to create a custom `fatJar` task that bundles all dependencies.
+* **Config / Java Environment / Groovy**
+  * Introduce the use of Groovy.
+* **Config / Work Environment / git / Configuration / Secret Key**
+  * Refine the content under this heading.
+### Linux_v1.1.1.pdf
+* **Linux / Commands / Network / Transmission**
+  * Refine all content under this heading.
+### Java_v1.4.1.pdf
+* **Java / Core / Data Type Conversion / Widening or Automatic Type Conversion**
+  * Explain the necessity of using explicit type casting to prevent value overflow.
+### Math_v1.2.1.pdf
+* **Math / Data Structure / Advanced Data Structure**
+  * Remove this heading.
+* **Math / Data Structure / Common Data Structure**
+  * Remove this heading.
+* **Math / Data Structure / Tree Data Structure / Based on the number of children / Binary Tree**
+  * Introduce the formulas for the total number of nodes `M` and the number of elements `N` at depth `D` in a complete binary tree.
+
 # Simi Docs 1.5.1 - Remove all algorithm problem descriptions
 ### Main Updates
   * Algorithms.md

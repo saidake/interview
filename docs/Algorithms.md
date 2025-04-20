@@ -1,29 +1,36 @@
+<!-----------------------------------------------------------
+Author:  Craig Brown
+Version: simi-docs-1.6.0
+Source:  https://github.com/saidake/simi-docs
+------------------------------------------------------------->
 # Table of Contents
 [Back to Main Project README](../README.md)
 - [Algorithm Problems](#algorithm-problems)
-  - Array
-    - Standard
+  - <a id="h-array">Array</a>
+    - <a id="h-array-standard">Standard</a>
       - [1. Array Partition](#1-array-partition)
       - [31. Minimum Number Game](#31-minimum-number-game)
-    - Meaningful Index for Automatic Sorting
+    - <a id="h-array-meaningful-index">Meaningful Index</a> (`Automatic Sorting`)
       - [34. Sort Array by Increasing Frequency](#34-sort-array-by-increasing-frequency)
-  - Backtracking
+  - <a id="h-backtracking">Backtracking</a>
     - [29. Power Set LCCI](#29-power-set-lcci)
-  - Binary Search
+    - [50. Merge Sort](#50-merge-sort)
+  - <a id="h-binarysearch">Binary Search</a>
     - [32. My Calendar II](#32-my-calendar-ii)
-  - Conditional Logic
+  - <a id="h-conditionallogic">Conditional Logic</a>
     - [2. Add Edges to Make Degrees of All Nodes Even](#2-add-edges-to-make-degrees-of-all-nodes-even)
-  - Depth-first Search
+  - <a id="h-dfs">Depth-first Search</a>
     - [3. Amount of Time for Binary Tree to Be Infected](#3-amount-of-time-for-binary-tree-to-be-infected)
     - [29. Power Set LCCI](#29-power-set-lcci)
     - [46. Number of Paths with Max Score](#46-number-of-paths-with-max-score)
-  - Dichotomy
+    <!-- - [51. Quick Sort](#51-quick-sort) -->
+  - <a id="h-dichotomy">Dichotomy</a>
     - [4. Search in Rotated Sorted Array](#4-search-in-rotated-sorted-array)
-  - Difference Array
+  - <a id="h-difference-array">Difference Array</a>
     - [5. Jump Game VII](#5-jump-game-vii)
     - [37. Zero Array Transformation II](#37-zero-array-transformation-ii)
-  - Dynamic Programming
-    - Standard
+  - <a id="h-dynamic-programming">Dynamic Programming</a>
+    - <a id="h-dynamic-programming-standard">Standard</a>
       - [6. Climbing Stairs](#6-climbing-stairs)
       - [7. Count All Valid Pickup and Delivery Options](#7-count-all-valid-pickup-and-delivery-options)
       - [8. Decode Ways II](#8-decode-ways-ii)
@@ -32,62 +39,70 @@
       - [11. Minimum Deletions to Make String Balanced](#11-minimum-deletions-to-make-string-balanced)
       - [12. Stone Game](#12-stone-game)
       - [13. Target Sum](#13-target-sum)
-    - Problem Breakdown
+    - <a id="h-dynamic-programming-problem-breakdown">Problem Breakdown</a>
       - [35. Maximum Multiplication Score](#35-maximum-multiplication-score)
-  - HashMap
+  - <a id="h-hashmap">HashMap</a>
     - [30. Count Common Words With One Occurrence](#30-count-common-words-with-one-occurrence)
-    - [45. Intersection of Two Arrays II](#45-common-elements-between-two-arrays)
-  - Heap
+    - [45. Intersection of Two Arrays II](#45-intersection-of-two-arrays-ii)
+  - <a id="h-heap">Heap</a>
     - [39. Trapping Rain Water II](#39-trapping-rain-water-ii)
     - [43. Total Cost to Hire K Workers](#43-total-cost-to-hire-k-workers)
-  - Fenwick Tree
+  - <a id="h-fenwick-tree">Fenwick Tree</a>
     - [14. Distribute Elements Into Two Arrays II](#14-distribute-elements-into-two-arrays-ii)
-  - Graph 
-    - Dijkstra
+  - <a id="h-graph">Graph</a>
+    - <a id="h-graph-dijkstra">Dijkstra</a>
       - [41. Path with Maximum Probability](#41-path-with-maximum-probability)
-    - Bellman-Ford
+    - <a id="h-graph-bellman-ford">Bellman-Ford</a>
       - [41. Path with Maximum Probability](#41-path-with-maximum-probability)
-  - Greedy
+  - <a id="h-greedy">Greedy</a>
     - [15. Max Difference You Can Get From Changing an Integer](#15-max-difference-you-can-get-from-changing-an-integer)
     - [16. Maximum Length of Subarray With Positive Product](#16-maximum-length-of-subarray-with-positive-product)
-  - Math
+  - <a id="h-math">Math</a>
     - [17. Construct the Minimum Bitwise Array II](#17-construct-the-minimum-bitwise-array-ii)
     - [18. Egg Drop With 2 Eggs and N Floors](#18-egg-drop-with-2-eggs-and-n-floors)
     - [19. Find Number of Ways to Reach the K-th Stair](#19-find-number-of-ways-to-reach-the-k-th-stair)
     - [20. Minimum Moves to Capture The Queen](#20-minimum-moves-to-capture-the-queen)
-  - Pattern Rule
+  - <a id="h-pattern-rule">Pattern Rule</a>
     - [38. Transform to Chessboard](#38-transform-to-chessboard)
-  - Precomputation
+  - <a id="h-precomputation">Precomputation</a>
     - [21. Range Product Queries of Powers](#21-range-product-queries-of-powers)
-  - Segment Tree
+  - <a id="h-segment-tree">Segment Tree</a>
     - [32. My Calendar II](#32-my-calendar-ii)
-  - Sliding Window
-    - Standard
+  - <a id="h-sliding-window">Sliding Window</a>
+    - <a id="h-sliding-window-standard">Standard</a>
       - [22. Find the Longest Equal Subarray](#22-find-the-longest-equal-subarray)
-    - Handle the right side separately
+    - <a id="h-sliding-window-subset-concatenation">Subset Concatenation</a>
       - [40. Count Subarrays Where Max Element Appears at Least K Times](#40-count-subarrays-where-max-element-appears-at-least-k-times)
-    - Fixed-size
+    - <a id="h-sliding-window-fixed-size-window">Fixed-size Window</a>
       - [44. Find Indices With Index and Value Difference I](#44-find-indices-with-index-and-value-difference-i) 
-  - String
+  - <a id="h-sorting">Sorting</a>
+    - [49. Bubble Sort](#49-bubble-sort)
+    - [50. Merge Sort](#50-merge-sort)
+  - <a id="h-stack">Stack</a>
+    - <a id="h-stack-monotonic-stack">Monotonic Stack</a>
+      - [47. Beautiful Towers II](#47-beautiful-towers-ii)
+  - <a id="h-string">String</a>
     - [23. License Key Formatting](#23-license-key-formatting)
-  - Traversal
+  - <a id="h-traversal">Traversal</a>
     - [24. Find the Number of Ways to Place People I](#24-find-the-number-of-ways-to-place-people-i)
     - [25. Maximum Number of Operations With the Same Score I](#25-maximum-number-of-operations-with-the-same-score-i)
     - [29. Power Set LCCI](#29-power-set-lcci)
     - [36. Find Triangular Sum of an Array](#36-find-triangular-sum-of-an-array)
     - [42. Count Prefix and Suffix Pairs I](#42-count-prefix-and-suffix-pairs-i)
-  - Two Pointer
+    - [48. Longest Common Prefix](#48-longest-common-prefix)
+    - [49. Bubble Sort](#49-bubble-sort)
+  - <a id="h-two-pointer">Two Pointer</a>
     - [26. Boats to Save People](#26-boats-to-save-people)
     - [27. Find the Lexicographically Largest String From the Box I](#27-find-the-lexicographically-largest-string-from-the-box-i)
     - [28. Merge Sorted Array](#28-merge-sorted-array)
-  - Union-Find
+  - <a id="h-union-find">Union-Find</a>
     - [33. Graph Connectivity With Threshold](#33-graph-connectivity-with-threshold)
-- [SQL Problems](#sql-problems)
+- <a id="h-sql-problems">SQL Problems</a>
     - [1. Odd and Even Transactions](#1-odd-and-even-transactions)
     - [2. Find Customer Referee](#2-find-customer-referee)
 # Algorithm Problems
 ## 1. Array Partition
-[Back to Top](#table-of-contents)  
+[Back to `Array / Standard`](#h-array-standard)  
 ### Source
 https://leetcode.com/problems/array-partition/
 ### Array Solution
@@ -124,7 +139,7 @@ Note that the space complexity of `Arrays.sort` is:
 * $O(n)$ for sorting object arrays.
 
 ## 2. Add Edges to Make Degrees of All Nodes Even
-[Back to Top](#table-of-contents)
+[Back to `Conditional Logic`](#h-conditionallogic)
 ### Source
 https://leetcode.com/problems/add-edges-to-make-degrees-of-all-nodes-even/
 ### Conditional Logic Solution
@@ -204,7 +219,7 @@ class Solution {
     Thus, the total space complexity is $O(m+n)$.
 
 ## 3. Amount of Time for Binary Tree to Be Infected
-[Back to Top](#table-of-contents)
+[Back to `Depth-first Search`](#h-dfs)
 ### Source
 https://leetcode.com/problems/amount-of-time-for-binary-tree-to-be-infected/
 ### Depth-first Search Solution
@@ -381,6 +396,7 @@ class Solution {
     Therefore, the overall space complexity of the solution is $O(n)$.
 
 ## 4. Search in Rotated Sorted Array
+[Back to `Dichotomy`](#h-dichotomy)
 ### Source
 https://leetcode.com/problems/search-in-rotated-sorted-array/
 ### Analysis
@@ -437,7 +453,7 @@ class Solution {
     Each recursive call adds a frame to the recursion stack, with a maximum depth of $O(\log n)$, leading to a space complexity of $O(\log n)$.
 
 ## 5. Jump Game VII
-[Back to Top](#table-of-contents)  
+[Back to `Difference Array`](#h-difference-array)  
 ### Source
 https://leetcode.com/problems/jump-game-vii/
 
@@ -617,7 +633,7 @@ class Solution {
     The `dp` array has a size of len, contributing $O(n)$ to the space complexity.
 
 ## 6. Climbing Stairs
-[Back to Top](#table-of-contents)  
+[Back to `Dynamic Programming / Standard`](#h-dynamic-programming-standard)  
 ### Source
 https://leetcode.com/problems/climbing-stairs/
 ### Analysis
@@ -663,7 +679,7 @@ class Solution {
     The `for` loop iterate over the stairs starting from `3`, yielding a time complexity of $O(n)$.
 * Space Complexity: $O(1)$
 ## 7. Count All Valid Pickup and Delivery Options
-[Back to Top](#table-of-contents)  
+[Back to `Dynamic Programming / Standard`](#h-dynamic-programming-standard)  
 ### Source
 https://leetcode.com/problems/count-all-valid-pickup-and-delivery-options/
 ### Analysis
@@ -730,7 +746,7 @@ class Solution {
 
 
 ## 8. Decode Ways II
-[Back to Top](#table-of-contents)  
+[Back to `Dynamic Programming / Standard`](#h-dynamic-programming-standard)  
 ### Source
 https://leetcode.com/problems/decode-ways-ii/
 ### Analysis
@@ -857,7 +873,7 @@ class Solution {
 * Using `Character.getNumericValue()` to obtain the numeric value of `'*'` in string `s` will return `'-1'` and using the `-1` for checking purposes can lead to misleading readability.
 
 ## 9. Make the XOR of All Segments Equal to Zero
-[Back to Top](#table-of-contents)  
+[Back to `Dynamic Programming / Standard`](#h-dynamic-programming-standard)  
 ### Source
 https://leetcode.com/problems/make-the-xor-of-all-segments-equal-to-zero/
 ### Dynamic Programming Solution
@@ -1052,7 +1068,8 @@ class Solution {
         Includes variables like sum, min, and loop variables. These require $O(1)$ space.
 
 ## 10. Maximize Value of Function in a Ball Passing Game
-[Back to Top](#table-of-contents)  
+[Back to `Dynamic Programming / Standard`](#h-dynamic-programming-standard)  
+ 
 ### Source
 https://leetcode.com/problems/maximize-value-of-function-in-a-ball-passing-game/
 ### Analysis
@@ -1222,7 +1239,7 @@ class Solution {
         
         The other variables, such as `len`, `passCount`, `i`, `x`, `k`, `ctz`, `s`, and `ans`, require constant extra space.
 ## 11. Minimum Deletions to Make String Balanced
-[Back to Top](#table-of-contents)  
+[Back to `Dynamic Programming / Standard`](#h-dynamic-programming-standard)  
 ### Source
 https://leetcode.com/problems/minimum-deletions-to-make-string-balanced/
 
@@ -1263,7 +1280,7 @@ class Solution {
 * Space Complexity: $O(1)$
 
 ## 12. Stone Game
-[Back to Top](#table-of-contents)
+[Back to `Dynamic Programming / Standard`](#h-dynamic-programming-standard)  
 ### Source
 https://leetcode.com/problems/stone-game/
 ### Depth-first Search Solution
@@ -1429,7 +1446,7 @@ class Solution {
     The space requried for this array is $O(n)$.
 
 ## 13. Target Sum
-[Back to Top](#table-of-contents) 
+[Back to `Dynamic Programming / Standard`](#h-dynamic-programming-standard)  
 ### Source
 https://leetcode.com/problems/target-sum/
 ### Depth-first Search Solution
@@ -1740,7 +1757,7 @@ public class Solution {
 
 
 ## 14. Distribute Elements Into Two Arrays II
-[Back to Top](#table-of-contents) 
+[Back to `Fenwick Tree`](#h-fenwick-tree) 
 ### Source
 https://leetcode.com/problems/distribute-elements-into-two-arrays-ii/
 ### Analysis
@@ -1871,7 +1888,7 @@ class Solution {
     Therefore, the total space complexity is $O(n)$.
 
 ## 15. Max Difference You Can Get From Changing an Integer
-[Back to Top](#table-of-contents)  
+[Back to `Greedy`](#h-greedy)  
 ### Source
 https://leetcode.com/problems/max-difference-you-can-get-from-changing-an-integer/
 
@@ -1912,7 +1929,7 @@ class Solution {
 * Space Complexity: $O(1)$
 
 ## 16. Maximum Length of Subarray With Positive Product
-[Back to Top](#table-of-contents)
+[Back to `Greedy`](#h-greedy)  
 ### Source
 https://leetcode.com/problems/maximum-length-of-subarray-with-positive-product/
 
@@ -2017,6 +2034,7 @@ class Solution {
 
 
 ## 17. Construct the Minimum Bitwise Array II
+[Back to `Math`](#h-math)  
 ### Source
 https://leetcode.com/problems/construct-the-minimum-bitwise-array-ii/
 ### Analysis
@@ -2089,7 +2107,7 @@ class Solution {
     The array `ans` takes $O(n)$ space.
 
 ## 18. Egg Drop With 2 Eggs and N Floors
-[Back to Top](#table-of-contents)  
+[Back to `Math`](#h-math)  
 ### Source
 https://leetcode.com/problems/egg-drop-with-2-eggs-and-n-floors/
 ### Analysis
@@ -2156,7 +2174,7 @@ class Solution {
 * Space Complexity: $O(1)$
 
 ## 19. Find Number of Ways to Reach the K-th Stair
-[Back to Top](#table-of-contents)  
+[Back to `Math`](#h-math)
 ### Source
 https://leetcode.com/problems/find-number-of-ways-to-reach-the-k-th-stair/
 
@@ -2239,7 +2257,7 @@ class Solution {
     The time and space used during the precomputation process are not factored into the solution.
 * Space Complexity: $O(1)$
 ## 20. Minimum Moves to Capture The Queen
-[Back to Top](#table-of-contents)  
+[Back to `Math`](#h-math)
 ### Source
 https://leetcode.com/problems/minimum-moves-to-capture-the-queen/
 
@@ -2317,7 +2335,7 @@ class Solution {
 * Time Complexity: $O(1)$
 * Space Complexity: $O(1)$
 ## 21. Range Product Queries of Powers
-[Back to Top](#table-of-contents)  
+[Back to `Precomputation`](#h-precomputation)  
 ### Source
 https://leetcode.com/problems/range-product-queries-of-powers/
 
@@ -2398,7 +2416,7 @@ class Solution {
     Because $O(q)$ grows slower than $O(bc^2)$ and can be omitted, the total space complexity is $O(bc^2)$.
 
 ## 22. Find the Longest Equal Subarray
-[Back to Top](#table-of-contents)  
+[Back to `Sliding Window / Standard`](#h-sliding-window-standard)  
 ### Source
 https://leetcode.com/problems/find-the-longest-equal-subarray/
 ### Analysis
@@ -2508,7 +2526,7 @@ class Solution {
    Since the primary space usage comes from the `valCount` array, the space complexity is $O(n)$
 
 ## 23. License Key Formatting
-[Back to Top](#table-of-contents)  
+[Back to `String`](#h-string)  
 ### Source
 https://leetcode.com/problems/license-key-formatting/
 ### Analysis
@@ -2545,7 +2563,7 @@ class Solution {
     `StringBuilder sb` stores the result string, which can also be of size $O(n)$.  
     Therefore, the total space complexity is $O(n)$
 ## 24. Find the Number of Ways to Place People I
-[Back to Top](#table-of-contents)  
+[Back to `Traversal`](#h-traversal)  
 ### Source
 https://leetcode.com/problems/find-the-number-of-ways-to-place-people-i/
 
@@ -2598,6 +2616,7 @@ Note that the space complexity of `Arrays.sort` is:
 
 
 ## 25. Maximum Number of Operations With the Same Score I
+[Back to `Traversal`](#h-traversal)
 ### Source
 https://leetcode.com/problems/maximum-number-of-operations-with-the-same-score-i/
 
@@ -2629,7 +2648,7 @@ class Solution {
 
     Only a constant amount of additional space is used.
 ## 26. Boats to Save People
-[Back to Top](#table-of-contents)  
+[Back to `Two Pointer`](#h-two-pointer)  
 ### Source
 https://leetcode.com/problems/boats-to-save-people/
 
@@ -2674,7 +2693,7 @@ Note that the space complexity of `Arrays.sort` is:
 * $O(logn)$ for sorting primitive arrays.
 * $O(n)$ for sorting object arrays.
 ## 27. Find the Lexicographically Largest String From the Box I
-[Back to Top](#table-of-contents)  
+[Back to `Two Pointer`](#h-two-pointer)
 ### Source
 https://leetcode.com/problems/find-the-lexicographically-largest-string-from-the-box-i/
 
@@ -2762,7 +2781,7 @@ class Solution {
 * Space Complexity: $O(1)$
 
 ## 28. Merge Sorted Array
-[Back to Top](#table-of-contents)  
+[Back to `Two Pointer`](#h-two-pointer)
 ### Source
 https://leetcode.com/problems/merge-sorted-array/
 
@@ -2802,7 +2821,9 @@ class Solution {
     The array `nums1Cp` occupies $O(m)$ space where `m` is the first `m` integers in array `nums1`.
 
 ## 29. Power Set LCCI
-[Back to Top](#table-of-contents)  
+[Back to `Backtracking`](#h-backtracking)  
+[Back to `Depth-first Search`](#h-dfs)  
+[Back to `Traversal`](#h-traversal)
 ### Source
 https://leetcode.com/problems/power-set-lcci/
 ### Backtracking Solution
@@ -3076,7 +3097,7 @@ class Solution {
     Thus, the overall space complexity is $O(n\times2^n)$.
 
 ## 30. Count Common Words With One Occurrence
-[Back to Top](#table-of-contents)  
+[Back to `HashMap`](#h-hashmap)  
 ### Source
 https://leetcode.com/problems/count-common-words-with-one-occurrence/
 
@@ -3122,7 +3143,7 @@ class Solution {
     The maps `wordCount1` and `wordCount1` store keys from `words1` and `words2` respectively, with fixed-size values, resulting in a total space complexity of $O(m+n)$.
 
 ## 31. Minimum Number Game
-[Back to Top](#table-of-contents)  
+[Back to `Array / Standard`](#h-array-standard)  
 ### Source
 https://leetcode.com/problems/minimum-number-game/
 
@@ -3154,39 +3175,39 @@ class Solution {
     Therefore, the total space complexity is $O(\log n)$.
 
 ## 32. My Calendar II
-[Back to Top](#table-of-contents)  
+[Back to `Binary Search`](#h-binarysearch)  
+[Back to `Segment Tree`](#h-segment-tree)
 ### Source
 https://leetcode.com/problems/my-calendar-ii/
 
 ### Array Solution
 Define an array `self.cal` to store inserted elements and `self.cnt` to track the overlap count at each `startTime` index.
  * The value in `self.cnt` at `startTime` represents the total overlap count at that moment.
- * The value in `self.cnt` at `endTime` indicates the number of events covered the current event.
+ * The value in `self.cnt` at `endTime` indicates the number of events that cover the current event.
 
 Solution: 
 1. Insert `endTime`.
-   * if it already exists, ignore it, as the number of overlapping events remain unchanged.
+   * if it already exists, ignore it, as the number of events that cover the current event remain unchanged.
    * if it doesn't exist, directly copy `self.cnt[r-1]` to `self.cnt[r]`, as explained below:
       * If `self.cal[r-1]` is a `startTime`, the current event must overlap with the previous one.
         
         Copy `self.cnt[r-1]` to `self.cnt[r]` since there are now `self.cnt[r-1]` events now cover the current event.
-      * If `self.cal[r-1]` is an `endTime`, the current event does not overlap with it but overlaps with the events covered by the previous event.
+      * If `self.cal[r-1]` is an `endTime`, the overlap situation with the previous one can't be determined but the current event must overlap with the events that cover the previous event.
     
-        Similarly, copy `self.cnt[r-1]` to `self.cnt[r]` since there are now `self.cnt[r-1]` events now cover the current event.
+        Similarly, copy `self.cnt[r-1]` to `self.cnt[r]` since `self.cnt[r-1]` events now cover the current event.
 
 2. Increment the overlap count for the affected range.
 3. Insert `startTime`.
     * If `startTime` already exists, increment its overlap count.
     * If `startTime` does not exist, directly copy `self.cnt[l-1]` to `self.cnt[l]` and increase it by `1`, explained as follows:
 
-      * If `self.cal[l-1]` is a startTime, the current event must overlap with the previous one.
+      * If `self.cal[l-1]` is a `startTime`, the current event must overlap with the previous one.
 
-        Copy `self.cnt[l-1]` to `self.cnt[l]` and increment it by `1`, as there are `self.cnt[l-1] + 1` events now cover the current event.
+        Copy `self.cnt[l-1]` to `self.cnt[l]` and increment it by `1`, as `self.cnt[l-1] + 1` events now cover the current event.
 
-      * If `self.cal[l-1]` is an endTime, the current event does not overlap with it but overlaps with the events covered by the previous event.
+      * If `self.cal[l-1]` is an `endTime`, the current event does not overlap with it but overlaps with the events that covers the previous event.
 
-        Similarly, copy `self.cnt[l-1]` to `self.cnt[l]` and increment it by `1`, as there are `self.cnt[l-1] + 1` events now cover the current event.
-
+        Similarly, copy `self.cnt[l-1]` to `self.cnt[l]` and increment it by `1`, as `self.cnt[l-1] + 1` events cover the current event.
 
 Example: 
 ```
@@ -3704,7 +3725,7 @@ class MyCalendarTwo {
     Thus, the overall space complexity is $O(\log n)$ (Best Case) or $O(n)$ (Worst Case).
 
 ## 33. Graph Connectivity With Threshold
-[Back to Top](#table-of-contents)  
+[Back to `Union Find`](#h-union-find)  
 ### Source
 https://leetcode.com/problems/graph-connectivity-with-threshold/
 
@@ -3857,7 +3878,7 @@ class Solution {
     Thus the overall space complexity is $O(n+m)$.
 
 ## 34. Sort Array by Increasing Frequency
-[Back to Top](#table-of-contents)  
+[Back to `Meaningful Index`](#h-array-meaningful-index)  
 ### Source
 https://leetcode.com/problems/sort-array-by-increasing-frequency/
 
@@ -3955,7 +3976,7 @@ class Solution {
     Manually copying values into a new list offers better performance compared to using Java Streams.
 
 ## 35. Maximum Multiplication Score
-[Back to Top](#table-of-contents)  
+[Back to `Dynamic Programming / Problem Breakdown`](#h-dynamic-programming-problem-breakdown)  
 ### Source
 https://leetcode.com/problems/maximum-multiplication-score/
 ### Dynamic Programming Solution
@@ -4074,7 +4095,7 @@ class Solution {
   The variables `dp1`, `dp2`, `dp3`, `dp4` each take constant time $O(1)$.
 
 ## 36. Find Triangular Sum of an Array
-[Back to Top](#table-of-contents)  
+[Back to `Traversal`](#h-traversal) 
 ### Source
 https://leetcode.com/problems/find-triangular-sum-of-an-array/
 
@@ -4110,7 +4131,7 @@ class Solution {
  * Reusing `nums` is more efficient since its original elements are no longer required in the following steps.
 
 ## 37. Zero Array Transformation II
-[Back to Top](#table-of-contents)  
+[Back to `Difference Array`](#h-difference-array)   
 ### Source
 https://leetcode.com/problems/zero-array-transformation-ii/
 
@@ -4163,7 +4184,7 @@ class Solution {
   * The `diff` array requires $O(n)$ space, where `n` is the length of `nums`.
 
 ## 38. Transform to Chessboard
-[Back to Top](#table-of-contents)  
+[Back to `Pattern Rule`](#h-pattern-rule)  
 ### Source
 https://leetcode.com/problems/transform-to-chessboard/
 ### Pattern Rule Solution 
@@ -4261,7 +4282,7 @@ class Solution {
     Thus, the overall space complexity is $O(n)$.
 
 ## 39. Trapping Rain Water II
-[Back to Top](#table-of-contents)  
+[Back to `Heap`](#h-heap)  
 ### Source
 https://leetcode.com/problems/trapping-rain-water-ii/
 
@@ -4460,6 +4481,7 @@ class Solution {
   Thus, the total space complexity is $O(m\times n)$.
 
 ## 40. Count Subarrays Where Max Element Appears at Least K Times
+[Back to `Sliding Window / Subset Concatenation`](#h-sliding-window-subset-concatenation)  
 ### Source
 https://leetcode.com/problems/count-subarrays-where-max-element-appears-at-least-k-times/
 
@@ -4567,7 +4589,8 @@ class Solution {
     `max`, `ans`, `cntMax` and `left` each take constant time $O(1)$.
 
 ## 41. Path with Maximum Probability
-[Back to Top](#table-of-contents)  
+[Back to `Graph / Dijkstra`](#h-graph-dijkstra)  
+[Back to `Bellman-Ford`](#h-graph-bellman-ford)  
 ### Source
 https://leetcode.com/problems/path-with-maximum-probability/
 
@@ -4764,6 +4787,7 @@ class Solution {
   * `pathProb` has a space complexity of $O(n)$.
 
 ## 42. Count Prefix and Suffix Pairs I
+[Back to `Traversal`](#h-traversal)
 ### Source
 https://leetcode.com/problems/count-prefix-and-suffix-pairs-i/
 ### Traversal Solution
@@ -4791,7 +4815,7 @@ class Solution {
 * Space Complexity: $O(1)$
 
 ## 43. Total Cost to Hire K Workers
-[Back to Top](#table-of-contents)  
+[Back to `Heap`](#h-heap)  
 ### Source
 https://leetcode.com/problems/total-cost-to-hire-k-workers/
 
@@ -4864,7 +4888,7 @@ class Solution {
     The `leftQue` and `rightQue` each take $O(m)$ space where `m` is the number of candidates.
 
 ## 44. Find Indices With Index and Value Difference I
-[Back to Top](#table-of-contents)
+[Back to `Fixed-size Window`](#h-sliding-window-fixed-size-window)
 ### Source
 https://leetcode.com/problems/find-indices-with-index-and-value-difference-i/
 
@@ -4907,7 +4931,7 @@ class Solution {
 * Space Complexity: $O(1)$
 
 ## 45. Intersection of Two Arrays II
-[Back to Top](#table-of-contents)
+[Back to `HashMap`](#h-hashmap)  
 ### Source
 https://leetcode.com/problems/intersection-of-two-arrays-ii/
 
@@ -4997,7 +5021,7 @@ class Solution {
   Thus, the overall space complexity is $O(n)$.
 
 ## 46. Number of Paths with Max Score
-[Back to Top](#table-of-contents)
+[Back to `Depth-first Search`](#h-dfs)
 ### Source
 https://leetcode.com/problems/number-of-paths-with-max-score/
 
@@ -5137,9 +5161,429 @@ class Solution {
    
    Therefore, the total space complexity is $O(rLen\times cLen)$.
 
+## 47. Beautiful Towers II
+[Back to `Monotonic Stack`](#h-stack-monotonic-stack)  
+
+### Source
+https://leetcode.cn/problems/beautiful-towers-ii/
+
+### Monotonic Stack Solution
+Define a monotonically increasing stack `stack` to compute the maximum sum of an increasing subarray `incList1` from the beginning of `maxHeights` or `incList2` from the end.
+* Since the previous larger values must be excluded and the relative order must be preserved, a monotonic stack is well-suited for this task.
+* The goal is to find the maximum possible sum of heights in a valid configuration, which is achieved by combining prefix and suffix contributions.
+$$res=max(sum(incList1[i])+sum(incList2[i]))$$  
+    
+  * `incList1[i]` represents the sum of the first `i` elements in the increasing sequence from the start. 
+  The current element should be excluded from `incList1` to avoid double-counting it in both sums.  
+  For `i=0`, the `incList1[0]=0`.  
+  * The `incList2[i]` represent the sum of first `i+1` elements of `incList2`.
+
+Solution: 
+1. Traverse `maxHeights` from left to right to compute `incList1`, storing the maximum prefix sum at each index.
+2. Traverse `maxHeights` from right to left to compute `incList2`, storing the maximum suffix sum.
+    * At each index, calculate the total height sum as `incList1[i] + incList[2]`, and update `res` with the maximum value found.
+#### Java Implementation
+```java
+/**
+ * @author Craig Brown
+ * @date April 4, 2025
+ */
+class Solution {
+    public long maximumSumOfHeights(List<Integer> maxHeights) {
+        // Convert `maxHeights` to `arr`
+        int[] arr = new int[maxHeights.size()];  
+        for(int i=0; i<maxHeights.size(); i++){
+            arr[i]=maxHeights.get(i);
+        }
+        // Common data
+        ArrayDeque<Integer> stack=new ArrayDeque<>();
+        int len = arr.length;
+        long[] incList1=new long[len+1];
+        incList1[0]=0;
+        stack.push(-1);
+        long sum1=0;
+        // Traverse `arr` from the beginning
+        for(int i=0; i<len; i++){
+            int cur=arr[i];
+            // Deduct earlier larger values from `sum1`
+            while(stack.size()>1 && cur <= arr[stack.peek()]){
+                int preInd=stack.pop();
+                sum1-=(long) arr[preInd]*(preInd-stack.peek());
+            }
+            // Push the current index to the `stack`
+            sum1+=(long) cur*(i-stack.peek());
+            stack.push(i);
+            incList1[i+1]=sum1;
+        }
+
+        stack.clear();
+        stack.push(len);
+        // There's no need to define `incList2`, simply use `sum2` directly at each index i.
+        long sum2=0; 
+        long res=sum1;
+        // Traverse `arr` from the end
+        for(int i=len-1; i>=0; i--){
+            int cur=arr[i];
+            while(stack.size()>1 && cur<=arr[stack.peek()]){
+                int preInd=stack.pop();
+                sum2-=(long) arr[preInd]*(stack.peek()-preInd);
+            }
+            sum2+=(long) cur*(stack.peek()-i);
+            stack.push(i);
+            res = Math.max(res,incList1[i]+sum2);
+        }
+        return res;
+    }
+}
+```
+#### Complexity Analysis
+* Time Complexity: $O(n)$
+  * Convert `maxHeights` to `arr`
+    
+    This loop runs in $O(n)$ time, where `n` is the length of `maxHeights`, as it iterates through each element once.
+  * Traverse `arr` from the beginning
+    
+    The operations `stack.push`, `stack.pop` and `stack.peek` all have constant time complexity.
+    The outer loop runs in $O(n)$ time to traverse `arr`,
+    The inner loop deducts up to `n` values.
+    
+    The total time complexity of this step is $O(2n)$，which simplifies to $O(n)$.
+  * Traverse `arr` from the end
+  
+    Similiar to the previous step, this step also has a time complexity of $O(n)$.
+
+  Therefore, the overall time complexity is $O(n^2)$.
+* Space Complexity: $O(n)$
+  * `arr` and `sum1List` each use $O(n)$ space, where `n` is the length of `maxHeights`.
+  * `stack` takes $O(n)$ space in the worst case when all values increase from either the beginning or the end.
+
+  Thus, the overall space complexity is $O(n)$
+#### Consideration
+* Use a primitive array instead of `java.util.List` to avoid unnecessary type boxing and array resizing.
+* `java.util.ArrayDeque` offers better performance than `java.util.Stack` as `Stack` is synchronized and incurs additional locking overhead.
+* When the result may exceed the limits of the data type, relying on automatic type conversion can lead to precision loss.  
+  In such cases, explicit type casting should be used to prevent overflow:  `sum1 -= (long) arr[preInd] * (preInd - stack.peek());`
+
+
+## 48. Longest Common Prefix
+[Back to `Traversal`](#h-traversal)  
+### Source
+https://leetcode.com/problems/longest-common-prefix/
+### Traversal Solution
+The length of the longest common prefix cannot exceed the length of the shortest string in the array `strs`.
+
+Solution:
+1. Identify the shortest string in `strs`.
+2. Compare each string with the shortest one, updating the minimium length of the common prefix.
+3. Return the common prefix by extracting the corresponding substring from the shortest string.
+#### Java Implementation
+```java
+/**
+ * @author Craig Brown
+ * @date April 10, 2025
+ **/ 
+class Solution {
+
+    public String longestCommonPrefix(String[] strs) {
+        int len=strs.length;
+        String res=strs[0];
+
+        // Identify the shortest string
+        for(String str: strs){
+            if(str.length()<res.length())res=str;
+        }
+
+        // Compare each string to find the longest common prefix
+        int resInd=res.length();
+        for(int i=0; i<len; i++){
+            for(int j=0; j<strs[i].length() && j<res.length(); j++){
+                if(strs[i].charAt(j)!=res.charAt(j)){
+                    resInd=Math.min(resInd, j);
+                }
+            }
+        }
+        return res.substring(0,resInd);
+    }
+}
+```
+#### Complexity Analysis
+* Time Complexity: $O(nm)$
+  * Identify the shortest string
+    * Traversing `strs` has a time complexity of $O(n)$ where `n` is the length of array `strs`.
+  * Compare each string to find the longest common prefix
+    * In the worst case, each string in `strs` contains the entire shortest string, requiring a full traversal.   
+    This results in a total time complexity of $O(nm)$, where `n` is the length of array `strs` and `m` is the length of the shortest string.
+* Space Complexity: $O(1)$
+  * All variables occupy constant space.
+
+## 49. Bubble Sort
+[Back to `Sorting`](#h-sorting)  
+[Back to `Traversal`](#h-traversal)  
+### Description
+Given an integer array `arr`, sort it in ascending order.
+
+#### Constraints:
+* `1 <= arr.length <= 10^4`
+* `-10^4 <= arr[i] <= 10^4`
+### Traversal Solution
+1. Compare each element with the elements that come after it.  
+2. Swap elements to arrange them in ascending or descending order.
+
+Example (Ascending Order):
+
+```
+arr = [64, 34, 25, 12, 22, 11, 90];
+
+Step 1:
+    [64, 34, 25, 12, 22, 11, 90]  
+         64                       (Compare `64` with `34` and swap since `34` is smaller.)
+
+Step 2:
+    [34, 64, 25, 12, 22, 11, 90]
+             34                   (Compare `64` with `25` and swap.)
+
+Step 3:
+    [25, 64, 34, 12, 22, 11, 90]
+                 25               (Compare `64` with `12` and swap.)
+
+Step 4:
+    [12, 64, 34, 25, 22, 11, 90]
+                     12           (Compare `12` with `22`, no swap needed.)
+
+Step 5:
+    [12, 64, 34, 25, 22, 11, 90]
+                         12       (Compare `12` with `11`, and swap.)
+
+Step 6:
+    [11, 64, 34, 25, 22, 12, 90]
+                             11   (Compare `11` with `90`, no swap needed.)
+
+Step 7:
+    [11, 64, 34, 25, 22, 12, 90]
+             64                   (Compare `64` with `34`, and swap.)
+
+Step 8:
+    [11, 34, 64, 25, 22, 12, 90]
+                 34               (Compare `34` with `25`, and swap.)
+
+Step 9:
+    [11, 25, 64, 34, 22, 12, 90]
+                     25           (Compare `25` with `22`, and swap.)
+
+...
+```
+#### Java Implementation
+```java
+/**
+ * @author Craig Brown
+ * @date April 11, 2025
+ **/
+public class BubbleSort {
+    /**
+     * Sorts the given array in ascending order.
+     * 
+     * @param arr The array to be sorted
+     **/
+    public static void bubbleSort(int[] arr) {
+        int len = arr.length;
+        for (int i = 0; i < len; i++) {
+            for (int j = i; j < len; j++) {
+                if (arr[i] > arr[j]) {
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+    }
+
+    /**
+     * Test the 'bubbleSort' method and print the sorted result.
+     **/
+    public static void main(String[] args) {
+        int[] arr = {64, 34, 25, 12, 22, 11, 90};
+        bubbleSort(arr);
+        System.out.print("Sorted array: ");
+        for (int i : arr) {
+            System.out.print(i + " ");
+        }
+    }
+}
+```
+#### Complexity Analysis
+* Time Complexity: $O(n^2)$
+  * Since each element is compared with the elements that come after it, the total time complexity is:  
+    $$\sum_{i=0}^{n}i=\frac{(n+1)\times n}{2}$$
+    This simplifies to $O(n^2)$.
+* Space Complexity: $O(1)$
+    * All variables occupy constant space.
+
+## 50. Merge Sort
+[Back to `Backtracking`](#h-backtracking)  
+### Description
+Given an integer array `arr`, sort it in ascending order.
+
+#### Constraints:
+* `1 <= arr.length <= 10^4`
+* `-10^4 <= arr[i] <= 10^4`
+### Backtracking Solution
+Sort each pair of elements based on backtracking paths, then repeatedly double the group size and sort until the entire array is sorted.
+
+Note that the comparison process begins at the bottom of the tree when the recursive calls reach their base case and the backtracking starts.
+
+Example:
+```
+arr:
+    38, 27, 43, 3, 9, 82, 10
+
+Step-by-step Splits:
+                            [38, 27, 43, 3, 9, 82, 10]
+                         /                              \
+                [38, 27, 43, 3]                        [9, 82, 10]
+               /               \                     /           \
+          [38, 27]           [43, 3]              [9, 82]         [10]
+          /     \            /     \             /     \
+       [38]   [27]        [43]   [3]         [9]     [82]
+```
+### Java Implementation
+```java
+/**
+ * @author Craig Brown
+ * @date April 17, 2025
+ **/
+public class MergeSort {
+    public static void mergeSort(int[] arr, int left, int right) {
+        // Check whether the range is valid.
+        if (left < right) {
+            // Calculate the middle index (left <= middle < right)
+            //   2 3 			left=2  right=3  middle=2
+            //   2 3 4 			left=2  right=4  middle=3
+            //   2 3 4 5		left=2  right=5  middle=3
+            int middle = (left + right) / 2;
+            // Partition the array to ranges [left, middle] and (middle, right].
+            mergeSort(arr, left, middle);
+            mergeSort(arr, middle+1, right);
+
+            int lLen=middle-left+1;
+            int rLen=right-middle;
+            int[] lArr=new int[lLen]; // [left, middle]
+            int[] rArr=new int[rLen]; // (middle, right]
+            // Split elements from arr to 'lArr' and 'rArr'.
+            for(int i=0; i<lLen; i++){
+                lArr[i]=arr[left+i];
+            }
+            for(int i=0; i<rLen; i++){
+                rArr[i]=arr[middle+1+i];
+            }
+            // Simply merge the sorted left and right partitions.
+            int i=0,j=0,k=left;
+            for(;i<lLen&&j<rLen; k++){
+                if(lArr[i]<rArr[j]){
+                    arr[k]=lArr[i];
+                    i++;
+                }else{
+                    arr[k]=rArr[j];
+                    j++;
+                }
+            }
+            // Handle the remaining elements
+            for(;i<lLen; i++,k++){
+                arr[k]=lArr[i];
+            }
+            for(;j<rLen; j++,k++){
+                arr[k]=rArr[j];
+            }
+        }
+    }
+
+
+    public static void main(String[] args) {
+        int[] arr = {38, 27, 43, 3, 9, 82, 10};
+        mergeSort(arr, 0, arr.length - 1);
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+    }
+}
+```
+#### Complexity Analysis
+* Time Complexity: $O(n\log n)$
+  * For a complete binary tree, the total number of elements `n` and the depth `D` satisfy $n=2^D-1$.
+    The depth is $O(\log n)$,
+
+    At every level `D`, all elements in `arr` are traversed for merging, even though they are divided into subarrays, resulting a time complexity of $O(n)$ per level.
+
+  Therefore, the over time complexity is $O(n\log n)$
+
+* Space Complexity: $O(n)$
+  * The depth of the recursive stack is $\log n$, requiring $O(\log n)$ space.
+  * At each level `D`, `arr` is partitioned into `lArr` and `rArr` at each node, but the total number of elements stored across all nodes at that level remains `n`, leading in a space complexity of $O(n)$.
+    
+    As recursive calls complete, the temporary arrays used in each call are released, so the total auxiliary space used by these subarrays at any point in time remains $O(n)$..
+
+
+  The overall space complexity is therefore $O(n)$, as the additional $O(\log n)$ recursion stack space is negligible in comparison.
+
+#### Consideration
+* The `middle` element should be included in the left range rather than the right, because with `int middle = (left + right) / 2` and `left <= middle < right`, the split may result in the left range having `0` elements and the right range having `2`, potentially leading the right range unsorted. 
+
+<!-- 
+## 51. Quick Sort
+[Back to `Depth-first Search`](#h-dfs)  
+### Description
+Given an integer array `arr`, sort it in ascending order.
+
+#### Constraints:
+* `1 <= arr.length <= 10^4`
+* `-10^4 <= arr[i] <= 10^4`
+
+### Depth-first Search Solution
+
+#### Java Implementation
+```java
+/**
+ * @author Craig Brown
+ * @date April 18, 2025
+ **/
+public class MergeSort {
+    public static void quickSort(int[] arr, int left, int right) {
+        if (left < right) {
+            // Calculate the middle index (left <= middle < right)
+            //   2 3 			left=2  right=3  middle=2
+            //   2 3 4 			left=2  right=4  middle=3
+            //   2 3 4 5		left=2  right=5  middle=3
+            int middle = (left + right) / 2;
+            // Sort the array to make the elements in [left, middle] are less than the elements in (middle, right].
+            int comp=arr[right];
+            for(int i=left, j=left+1;j<=right;j++){
+                if(arr[j]<comp){
+                    int temp=arr[j];
+                    arr[j]=arr[i];
+                    arr[i]=temp;
+                    i++;
+                }
+            }
+            quickSort(arr, left, middle);
+            quickSort(arr, middle+1, right);
+        }
+    }
+
+
+    public static void main(String[] args) {
+        int[] arr = {38, 27, 43, 3, 9, 82, 10};
+        quickSort(arr, 0, arr.length - 1);
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+    }
+}
+
+
+``` -->
+
 # SQL Problems
 ## 1. Odd and Even Transactions
-[Back to Top](#table-of-contents)  
+[Back to `Sql Problems`](#h-sql-problems)  
 ### Source
 https://leetcode.com/problems/odd-and-even-transactions/
 ### Analysis
@@ -5172,7 +5616,7 @@ ORDER BY transaction_date ASC;
 ```
 
 ## 2. Find Customer Referee
-[Back to Top](#table-of-contents)  
+[Back to `Sql Problems`](#h-sql-problems) 
 ### Source
 https://leetcode.com/problems/find-customer-referee/
 

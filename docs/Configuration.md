@@ -1,10 +1,15 @@
+<!-----------------------------------------------------------
+Author:  Craig Brown
+Version: simi-docs-1.6.0
+Source:  https://github.com/saidake/simi-docs
+------------------------------------------------------------->
 # Table of Contents
 [Back to Main Project README](../README.md)
+- [Table of Contents](#table-of-contents)
 - [Database](#database)
   - [Oracle 23ai](#oracle-23ai)
 - [Server](#server)
   - [Temporal](#temporal)
-  - [Spark](#spark)
 - [AI](#ai)
   - [Stable Diffusion](#stable-diffusion)
 # Database

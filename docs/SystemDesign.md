@@ -1,3 +1,8 @@
+<!-----------------------------------------------------------
+Author:  Craig Brown
+Version: simi-docs-1.6.0
+Source:  https://github.com/saidake/simi-docs
+------------------------------------------------------------->
 # Table of Contents
 [Back to Main Project README](../README.md)
 - [Table of Contents](#table-of-contents)
@@ -6,6 +11,7 @@
   - [Static Inner Class](#static-inner-class)
 - [Development Standards](#development-standards)
   - [Git Commit Type](#git-commit-type)
+  - [Business Log Type](#business-log-type)
   - [Comment](#comment)
     - [Javadoc tags](#javadoc-tags)
     - [Examples](#examples)
@@ -85,6 +91,50 @@
 </tr>
 </tbody>
 </table>
+
+## Business Log Type
+* **Validation Log**
+
+    Use this log to provide evidence that your feature is working as intended.
+    
+    If a failure occurs in subsequent business logic, this log can verify your feature’s correctness and help prevent unnecessary troubleshooting.
+
+    Capturing relevant data as evidence is especially important in production, where online errors are often difficult to reproduce.
+
+    Example: 
+    ```java
+    log.info("Parsed data successfully. ID: {}", id);
+    ```
+* **Critical Log**
+
+    A critical error has occurred that typically requires terminating the entire workflow.  
+    Clearly explain why the process is being interrupted and include relevant data for investigation.
+
+    Example: 
+    ```java
+    log.error("Workflow interrupted: failed to process data. ID: {}", id);
+    ```
+* **Warning Log**
+
+    Indicates an issue in your feature that does not affect the overall workflow and it's safe to continue execution.
+
+    If the issue could potentially impact downstream logic, ensure proper handling is implemented.
+
+    Example: 
+    ```java
+    log.warn("Skipping process due to missing parameter. age: {}", age);
+    ```
+* **Debug Log**
+
+    Intended for local development and troubleshooting.
+
+    Use these logs to assist in identifying and reproducing issues when the feature doesn't behave as expected.
+
+
+    Example: 
+    ```java
+    log.debug("Current referenced name: {}", name);
+    ```
 
 ## Comment
 ### Javadoc tags
