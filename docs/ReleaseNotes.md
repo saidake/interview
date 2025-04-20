@@ -1,12 +1,12 @@
 # Table of Contents
 [Back to Main Project README](../README.md)
 - [Table of Contents](#table-of-contents)
-- [Simi Docs 1.6.0-beta](#simi-docs-160-beta)
-    - [Linux\_v1.2.0.pdf](#linux_v120pdf)
-    - [Java\_v1.5.0.pdf](#java_v150pdf)
+- [Simi Docs 1.6.0 – Perfected `Japanese v1.3.0.pdf`](#simi-docs-160--perfected-japanese-v130pdf)
     - [Japanese\_v1.3.0.pdf](#japanese_v130pdf)
-    - [Math\_v1.3.0.pdf](#math_v130pdf)
     - [Config\_v1.4.0.pdf](#config_v140pdf)
+    - [Linux\_v1.1.1.pdf](#linux_v111pdf)
+    - [Java\_v1.4.1.pdf](#java_v141pdf)
+    - [Math\_v1.2.1.pdf](#math_v121pdf)
 - [Simi Docs 1.5.1 - Remove all algorithm problem descriptions](#simi-docs-151---remove-all-algorithm-problem-descriptions)
     - [Main Updates](#main-updates)
 - [Simi Docs 1.5.0 - Major Update to `Japanese_v1.2.0.pdf`](#simi-docs-150---major-update-to-japanese_v120pdf)
@@ -36,13 +36,9 @@
     - [Java\_v1.1.0.pdf](#java_v110pdf)
     - [Node\_v1.1.0.pdf](#node_v110pdf)
     - [Config\_v1.1.0.pdf](#config_v110pdf)
-# Simi Docs 1.6.0-beta
-### Linux_v1.2.0.pdf
-* **Linux / Commands / Network / Transmission**
-  * Refine all content under this heading.
-### Java_v1.5.0.pdf
-* **Java / Core / Data Type Conversion / Widening or Automatic Type Conversion**
-  * Explain the necessity of using explicit type casting to prevent value overflow.
+# Simi Docs 1.6.0 – Perfected `Japanese v1.3.0.pdf`
+* Change the license from `MIT` to `CC-BY-SA` to address concerns about potential misuse.
+* Refine the heading structure in `docs/Algorithms.md`.
 ### Japanese_v1.3.0.pdf
 * **Japanese / Pronunciation**
   * Improve the content under this heading.
@@ -58,10 +54,6 @@
   * Add two new sections:
     * *Japanese / Attributive Words* 
     * *Japanese / Honorifics and Suffixes*.
-### Math_v1.3.0.pdf
-  * Remove headings '*Math / Data Structure / Advanced Data Structure*' and '*Math / Data Structure / Common Data Structure*'
-  * **Math / Data Structure / Tree Data Structure / Based on the number of children / Binary Tree**
-    * Introduce the pattern for the total number of nodes `M` with depth `D` and the number of elements `N` at layer `i` in a complete binary tree.
 ### Config_v1.4.0.pdf
 * **Config / Java Environment / maven / Core / Dependency Mediation**
   * Rename the Heading to '*Config / Java Environment / maven / Core / Version Alignment*'
@@ -88,6 +80,20 @@
   * Introduce the use of Groovy.
 * **Config / Work Environment / git / Configuration / Secret Key**
   * Refine the content under this heading.
+### Linux_v1.1.1.pdf
+* **Linux / Commands / Network / Transmission**
+  * Refine all content under this heading.
+### Java_v1.4.1.pdf
+* **Java / Core / Data Type Conversion / Widening or Automatic Type Conversion**
+  * Explain the necessity of using explicit type casting to prevent value overflow.
+### Math_v1.2.1.pdf
+* **Math / Data Structure / Advanced Data Structure**
+  * Remove this heading.
+* **Math / Data Structure / Common Data Structure**
+  * Remove this heading.
+* **Math / Data Structure / Tree Data Structure / Based on the number of children / Binary Tree**
+  * Introduce the formulas for the total number of nodes `M` and the number of elements `N` at depth `D` in a complete binary tree.
+
 # Simi Docs 1.5.1 - Remove all algorithm problem descriptions
 ### Main Updates
   * Algorithms.md
