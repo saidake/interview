@@ -67,5 +67,10 @@ The `state` field tracks the lock's status, and `AbstractQueuedSynchronizer` aut
     # Sets the interval in milliseconds at which Kafka checks whether a flush is needed. 
     log.flush.scheduler.interval.ms = 3000
     ```
+3. In the Kafka producer, setting `acks=all` ensures that the producer waits for acknowledgments from all in-sync replicas (ISRs) of the partition before considering the message successfully sent. 
 
+    Additionally, a **callback** function should be set for each sent message to handle success, failure, and retries. 
+  The callback provides a way to receive feedback from the broker, allowing you to **log successes** or **handle any delivery failures** (e.g., network issues or broker unavailability) with appropriate actions such as retries or compensatory measures.
 
+4. In the Kafka consumer, setting `enable.auto.commit=false` and **manually committing the message offset** ensures greater control over message processing.   
+   Relying on automatic offset commits can lead to data loss if the consumer crashes before committing the latest offsets.
