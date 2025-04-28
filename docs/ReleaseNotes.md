@@ -1,6 +1,13 @@
 # Table of Contents
 [Back to Main Project README](../README.md)
 - [Table of Contents](#table-of-contents)
+- [Simi Docs 1.6.1](#simi-docs-161)
+    - [Global Updates](#global-updates)
+    - [Configuration.md (v1.0.1)](#configurationmd-v101)
+    - [InterviewQuestions.md (v\_1.0.1)](#interviewquestionsmd-v_101)
+    - [Algorithms.md (v1.0.1)](#algorithmsmd-v101)
+    - [Internet\_v1.1.1.pdf](#internet_v111pdf)
+    - [SpringBoot\_v1.3.1.pdf](#springboot_v131pdf)
 - [Simi Docs 1.6.0 – Perfected `Japanese v1.3.0.pdf`](#simi-docs-160--perfected-japanese-v130pdf)
     - [Japanese\_v1.3.0.pdf](#japanese_v130pdf)
     - [Config\_v1.4.0.pdf](#config_v140pdf)
@@ -8,16 +15,17 @@
     - [Java\_v1.4.1.pdf](#java_v141pdf)
     - [Math\_v1.2.1.pdf](#math_v121pdf)
 - [Simi Docs 1.5.1 - Remove all algorithm problem descriptions](#simi-docs-151---remove-all-algorithm-problem-descriptions)
-    - [Main Updates](#main-updates)
+    - [Global Updates](#global-updates-1)
+    - [Algorithms.md](#algorithmsmd)
 - [Simi Docs 1.5.0 - Major Update to `Japanese_v1.2.0.pdf`](#simi-docs-150---major-update-to-japanese_v120pdf)
-    - [Main Updates](#main-updates-1)
+    - [Global Updates](#global-updates-2)
     - [Python\_v1.2.0.pdf](#python_v120pdf)
     - [Config\_v1.3.0.pdf](#config_v130pdf)
     - [Japanese\_v1.2.0.pdf](#japanese_v120pdf)
     - [Java\_v1.4.0.pdf](#java_v140pdf)
     - [DatabaseAndMiddleware\_v1.1.0.pdf](#databaseandmiddleware_v110pdf)
 - [Simi Docs 1.4.0 - Major Update to `Python_v1.1.0.pdf`](#simi-docs-140---major-update-to-python_v110pdf)
-    - [Main Updates](#main-updates-2)
+    - [Global Updates](#global-updates-3)
     - [Python\_v1.1.0.pdf](#python_v110pdf)
     - [Java\_v1.3.0.pdf](#java_v130pdf)
     - [SpringBoot\_v1.3.0.pdf](#springboot_v130pdf)
@@ -25,7 +33,7 @@
     - [WebFrameworks\_v1.2.0.pdf](#webframeworks_v120pdf)
     - [Internet\_v1.1.0.pdf](#internet_v110pdf)
 - [Simi Docs 1.3.0 - Document Migration](#simi-docs-130---document-migration)
-    - [Main Updates](#main-updates-3)
+    - [Global Updates](#global-updates-4)
     - [Linux\_v1.1.0.pdf](#linux_v110pdf)
     - [SpringBoot\_v1.2.0.pdf](#springboot_v120pdf)
     - [Java\_v1.2.0.pdf](#java_v120pdf)
@@ -36,9 +44,29 @@
     - [Java\_v1.1.0.pdf](#java_v110pdf)
     - [Node\_v1.1.0.pdf](#node_v110pdf)
     - [Config\_v1.1.0.pdf](#config_v110pdf)
+# Simi Docs 1.6.1
+### Global Updates
+* Rename *docs/Questions.md* to *docs/InterviewQuestions.md*.
+* Provide version control for Markdown files.
+### Configuration.md (v1.0.1)
+* Introduce how to configure SAP Hana Database.
+### InterviewQuestions.md (v_1.0.1)
+* Analyze a new interview question *3. How to ensure Kafka messages are not lost?*.
+### Algorithms.md (v1.0.1)
+* Add a new problem *51. Quick Sort*.
+* Rewrite the java solution and add a python solution for the problem *3. Amount of Time for Binary Tree to Be Infected*.
+* Refine the complexity analysis for the *50. Merge Sort* problem. 
+### Internet_v1.1.1.pdf
+* **Internet / Network Model / OSI Model / Application Layer / HTTP**
+  * Move heading '*Internet / Network Model / OSI Model / Application Layer / HTTP / Cross-domain communication*' to '*Internet / Concept / Cross-domain communication*'
+* **Internet / Concept / Cross-domain communication**
+  * Add a new section *Cross-Site Request Forgery (CSRF)* and introduce it.
+### SpringBoot_v1.3.1.pdf
+* **SpringBoot / Third Party Package / Core / spring-boot-starter-security / Configuration / SecurityFilterChain (Bean)**
+  * Use gray comment style
 # Simi Docs 1.6.0 – Perfected `Japanese v1.3.0.pdf`
 * Change the license from `MIT` to `CC-BY-SA` to address concerns about potential misuse.
-* Refine the heading structure in `docs/Algorithms.md`.
+* Refine the heading structure in `docs/Algorithms.md` to include backlink anchors for better cross-referencing.
 ### Japanese_v1.3.0.pdf
 * **Japanese / Pronunciation**
   * Improve the content under this heading.
@@ -95,13 +123,12 @@
   * Introduce the formulas for the total number of nodes `M` and the number of elements `N` at depth `D` in a complete binary tree.
 
 # Simi Docs 1.5.1 - Remove all algorithm problem descriptions
-### Main Updates
-  * Algorithms.md
-    * Remove all problem descriptions to prevent unintentional copyright infringement.
-  * PDFs
-    * Move all PDFs to the `temppdf` folder due to mixed Chinese content.
+### Global Updates
+  * Move all PDFs to the `temppdf` folder due to mixed Chinese content.
+### Algorithms.md
+  * Remove all problem descriptions to prevent unintentional copyright infringement.
 # Simi Docs 1.5.0 - Major Update to `Japanese_v1.2.0.pdf`
-### Main Updates
+### Global Updates
   * Algorithms.md
     * Add new analyses for algorithm problems `32` and `46`, and SQL problem `2`.
   * Questions.md
@@ -158,7 +185,7 @@
 * **DAM / SQL / Data manipulation Language (DML) / SELECT / PARTITION BY**
   * Optimize the SQL execution example.
 # Simi Docs 1.4.0 - Major Update to `Python_v1.1.0.pdf`
-### Main Updates
+### Global Updates
 * Move outedated PDFs to the `temp` and `temppdf` folders.
 * Rename the image title from *Simi Documentation* to *Simi Docs* for all PDF files.
 * Replace *Author* with *Edited by* to maintain protection for the external sources and AI-generated content.
@@ -212,7 +239,7 @@
   * Add clarification that CORS headers must be present in both preflight response and actual response.
   * Provide a CORS example involving the UI, Nginx and the server-side.
 # Simi Docs 1.3.0 - Document Migration
-### Main Updates
+### Global Updates
 * Migrate core documents from Simi 1.2.0 Release to Simi Docs 1.3.0 Release.
 * Rename `Node_v1.1.0.pdf` to `WebFrameworks_v1.1.0.pdf`.
 * Rename `Algorithms_v1.1.0.pdf` to `Math_v1.1.0.pdf`.
