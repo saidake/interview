@@ -1,6 +1,6 @@
 <!-----------------------------------------------------------
 Author:  Craig Brown
-Version: simi-docs-1.6.0
+Version: 1.0.1
 Source:  https://github.com/saidake/simi-docs
 ------------------------------------------------------------->
 # Table of Contents
@@ -11,7 +11,6 @@ Source:  https://github.com/saidake/simi-docs
   - [SAP Hana Database](#sap-hana-database)
 - [Server](#server)
   - [Temporal](#temporal)
-  - [Nginx](#nginx)
 - [AI](#ai)
   - [Stable Diffusion](#stable-diffusion)
 # Database
@@ -55,7 +54,7 @@ Installation:
 1. Start your tail from https://www.sap.com/products/technology-platform/hana/express-trial.html, then download the **HXE Download Manager**.
 2. Install the Linux image into you VMware
 ![](./assets/Configuration/sap-hana-database1.png)
-3. 
+<!-- 3.  -->
 
 # Server
 ## Temporal
@@ -128,7 +127,19 @@ Installation:
        driver: bridge
    ```
    Replace `<ui-port>` with your ui port to avoid port conflicts.
-## Nginx
+<!-- ## Nginx
+1. Update System Packages
+  
+    ```bash
+    sudo apt update && sudo apt upgrade -y
+    ```
+
+2. Install Nginx
+
+    ```bash
+    sudo apt install nginx -y
+    ``` -->
+
 
 # AI
 ## Stable Diffusion
