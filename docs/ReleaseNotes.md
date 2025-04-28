@@ -1,7 +1,7 @@
 # Table of Contents
 [Back to Main Project README](../README.md)
 - [Table of Contents](#table-of-contents)
-- [Simi Docs 1.6.1](#simi-docs-161)
+- [Simi Docs 1.6.1 - Version Control for Markdown files](#simi-docs-161---version-control-for-markdown-files)
     - [Global Updates](#global-updates)
     - [Configuration.md (v1.0.1)](#configurationmd-v101)
     - [InterviewQuestions.md (v\_1.0.1)](#interviewquestionsmd-v_101)
@@ -44,7 +44,7 @@
     - [Java\_v1.1.0.pdf](#java_v110pdf)
     - [Node\_v1.1.0.pdf](#node_v110pdf)
     - [Config\_v1.1.0.pdf](#config_v110pdf)
-# Simi Docs 1.6.1
+# Simi Docs 1.6.1 - Version Control for Markdown files
 ### Global Updates
 * Rename *docs/Questions.md* to *docs/InterviewQuestions.md*.
 * Provide version control for Markdown files.
@@ -63,7 +63,7 @@
   * Add a new section *Cross-Site Request Forgery (CSRF)* and introduce it.
 ### SpringBoot_v1.3.1.pdf
 * **SpringBoot / Third Party Package / Core / spring-boot-starter-security / Configuration / SecurityFilterChain (Bean)**
-  * Use gray comment style
+  * Use grey comment style
 # Simi Docs 1.6.0 – Perfected `Japanese v1.3.0.pdf`
 * Change the license from `MIT` to `CC-BY-SA` to address concerns about potential misuse.
 * Refine the heading structure in `docs/Algorithms.md` to include backlink anchors for better cross-referencing.
