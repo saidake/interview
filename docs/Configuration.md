@@ -1,6 +1,6 @@
 <!-----------------------------------------------------------
 Author:  Craig Brown
-Version: simi-docs-1.6.0
+Version: 1.0.1
 Source:  https://github.com/saidake/simi-docs
 ------------------------------------------------------------->
 # Table of Contents
@@ -8,6 +8,7 @@ Source:  https://github.com/saidake/simi-docs
 - [Table of Contents](#table-of-contents)
 - [Database](#database)
   - [Oracle 23ai](#oracle-23ai)
+  - [SAP Hana Database](#sap-hana-database)
 - [Server](#server)
   - [Temporal](#temporal)
 - [AI](#ai)
@@ -17,6 +18,7 @@ Source:  https://github.com/saidake/simi-docs
 Reference:  
   * https://www.oracle.com/cn/database/technologies/oracle-database-software-downloads.html
 
+Installation:
 1. Pull the Oracle 23ai Docker Image  
      Run the below command in terminal.
      ```text
@@ -35,6 +37,25 @@ Reference:
     ```text
     docker exec -it <container-name-or-id>  bash
     ```
+## SAP Hana Database
+References:
+* Download SAP Hana Express  
+  https://www.sap.com/products/technology-platform/hana/express-trial.html
+* SAP Hana Express  
+  http://www.datadisk.co.uk/html_docs/hana/hana_2.html  
+* Download and Install the SAP HANA Client  
+  https://help.sap.com/docs/hana-cloud/sap-hana-cloud-getting-started-guide/download-and-install-sap-hana-client
+* SAP HANA 2.0 Express Edition, HANA Studio Full Installation with 1 Year Free Registration  
+  https://www.youtube.com/watch?v=bgKRBDUpFDM&t=126s
+
+
+
+Installation:
+1. Start your tail from https://www.sap.com/products/technology-platform/hana/express-trial.html, then download the **HXE Download Manager**.
+2. Install the Linux image into you VMware
+![](./assets/Configuration/sap-hana-database1.png)
+<!-- 3.  -->
+
 # Server
 ## Temporal
 1. Prerequisites
@@ -106,6 +127,20 @@ Reference:
        driver: bridge
    ```
    Replace `<ui-port>` with your ui port to avoid port conflicts.
+<!-- ## Nginx
+1. Update System Packages
+  
+    ```bash
+    sudo apt update && sudo apt upgrade -y
+    ```
+
+2. Install Nginx
+
+    ```bash
+    sudo apt install nginx -y
+    ``` -->
+
+
 # AI
 ## Stable Diffusion
 1. Visit the project repository
