@@ -1,6 +1,8 @@
 # Table of Contents
 [Back to Main Project README](../README.md)
 - [Table of Contents](#table-of-contents)
+- [Simi Docs 1.6.2](#simi-docs-162)
+    - [Config\_v1.4.1.pdf](#config_v141pdf)
 - [Simi Docs 1.6.1 - Version Control for Markdown files](#simi-docs-161---version-control-for-markdown-files)
     - [Global Updates](#global-updates)
     - [Configuration.md (v1.0.1)](#configurationmd-v101)
@@ -44,6 +46,10 @@
     - [Java\_v1.1.0.pdf](#java_v110pdf)
     - [Node\_v1.1.0.pdf](#node_v110pdf)
     - [Config\_v1.1.0.pdf](#config_v110pdf)
+# Simi Docs 1.6.2
+### Config_v1.4.1.pdf
+* **Config / Java Environment / maven / pom.xml**
+  * Use yellow tag style.
 # Simi Docs 1.6.1 - Version Control for Markdown files
 ### Global Updates
 * Rename *docs/Questions.md* to *docs/InterviewQuestions.md*.
