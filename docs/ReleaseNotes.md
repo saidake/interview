@@ -2,7 +2,10 @@
 [Back to Main Project README](../README.md)
 - [Table of Contents](#table-of-contents)
 - [Simi Docs 1.6.2](#simi-docs-162)
+    - [Algorithms.md (v1.0.2)](#algorithmsmd-v102)
     - [Config\_v1.4.1.pdf](#config_v141pdf)
+    - [CPlusPlus\_v1.0.1.pdf](#cplusplus_v101pdf)
+    - [Python\_v1.2.1.pdf](#python_v121pdf)
 - [Simi Docs 1.6.1 - Version Control for Markdown files](#simi-docs-161---version-control-for-markdown-files)
     - [Global Updates](#global-updates)
     - [Configuration.md (v1.0.1)](#configurationmd-v101)
@@ -47,9 +50,22 @@
     - [Node\_v1.1.0.pdf](#node_v110pdf)
     - [Config\_v1.1.0.pdf](#config_v110pdf)
 # Simi Docs 1.6.2
+### Algorithms.md (v1.0.2)
+  * Add new algorithm problems 
+    * <span>52.</span> Maximum Number of Pairs in Array
+    * <span>53.</span> Can I Win
 ### Config_v1.4.1.pdf
 * **Config / Java Environment / maven / pom.xml**
   * Use yellow tag style.
+* **Config / Work Environment / nginx / Configuration / nginx.conf**
+  * Optimize the content under this heading.
+### CPlusPlus_v1.0.1.pdf
+* **CPlusPlus / Core / Data Types**
+  * Rename this heading to *CPlusPlus / Core / Constants and Variables*
+  * Optimize the content under this heading.
+### Python_v1.2.1.pdf
+* **Python / Core / Constants and Variables**
+  * Optimize the content under this heading.
 # Simi Docs 1.6.1 - Version Control for Markdown files
 ### Global Updates
 * Rename *docs/Questions.md* to *docs/InterviewQuestions.md*.
