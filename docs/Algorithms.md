@@ -1,6 +1,7 @@
 <!-----------------------------------------------------------
 Author:  Craig Brown
-Version: 1.0.1
+Version: 1.0.2
+Date:    May 6, 2025
 Source:  https://github.com/saidake/simi-docs
 ------------------------------------------------------------->
 # Table of Contents
@@ -12,6 +13,7 @@ Source:  https://github.com/saidake/simi-docs
       - [31. Minimum Number Game](#31-minimum-number-game)
     - <a id="h-array-meaningful-index">Meaningful Index</a> (`Automatic Sorting`)
       - [34. Sort Array by Increasing Frequency](#34-sort-array-by-increasing-frequency)
+      - [52. Maximum Number of Pairs in Array](#52-maximum-number-of-pairs-in-array)
   - <a id="h-backtracking">Backtracking</a>
     - [3. Amount of Time for Binary Tree to Be Infected](#3-amount-of-time-for-binary-tree-to-be-infected)
     - [29. Power Set LCCI](#29-power-set-lcci)
@@ -78,6 +80,7 @@ Source:  https://github.com/saidake/simi-docs
   - <a id="h-sorting">Sorting</a>
     - [49. Bubble Sort](#49-bubble-sort)
     - [50. Merge Sort](#50-merge-sort)
+    - [51. Quick Sort](#51-quick-sort)
   - <a id="h-stack">Stack</a>
     - <a id="h-stack-monotonic-stack">Monotonic Stack</a>
       - [47. Beautiful Towers II](#47-beautiful-towers-ii)
@@ -228,7 +231,7 @@ https://leetcode.com/problems/amount-of-time-for-binary-tree-to-be-infected/
 Use a **positive** path length to represent the distance from a leaf node to the current node (red path in the image),  
 and a **negative** path length to represent the distance from the node with the `start` value to the current node (green path).
 
-Solution: 
+Approach: 
 1. Use backtracking to calculate the infection time starting from leaf nodes.
 2. When the backtracking process reaches the node with the `start` value, compute the required infection time using the maximum path length at that node.  
    Then, reset the path length to a **negative value** to indicate the path now originates from the `start` node instead of a leaf.
@@ -3157,7 +3160,7 @@ Define an array `self.cal` to store inserted elements and `self.cnt` to track th
  * The value in `self.cnt` at `startTime` represents the total overlap count at that moment.
  * The value in `self.cnt` at `endTime` indicates the number of events that cover the current event.
 
-Solution: 
+Approach: 
 1. Insert `endTime`.
    * if it already exists, ignore it, as the number of events that cover the current event remain unchanged.
    * if it doesn't exist, directly copy `self.cnt[r-1]` to `self.cnt[r]`, as explained below:
@@ -3466,7 +3469,7 @@ Define a fixed node `root` to represent the root event in the tree.
 `X` to denote the absence of such a range, 
 * Use `start` for the start of a new range, and `end` for the end of the new range.
 
-Solution:  
+Approach:  
 
 When a new booking event arrives, recursively check the left and right nodes from `root`.
 
@@ -5150,7 +5153,7 @@ $$res=max(sum(incList1[i])+sum(incList2[i]))$$
   For `i=0`, the `incList1[0]=0`.  
   * The `incList2[i]` represent the sum of first `i+1` elements of `incList2`.
 
-Solution: 
+Approach: 
 1. Traverse `maxHeights` from left to right to compute `incList1`, storing the maximum prefix sum at each index.
 2. Traverse `maxHeights` from right to left to compute `incList2`, storing the maximum suffix sum.
     * At each index, calculate the total height sum as `incList1[i] + incList[2]`, and update `res` with the maximum value found.
@@ -5392,6 +5395,7 @@ public class BubbleSort {
 
 ## 50. Merge Sort
 [Back to `Backtracking`](#h-backtracking)  
+[Back to `Sorting`](#h-sorting)  
 ### Description
 Given an integer array `arr`, sort it in ascending order.
 
@@ -5502,6 +5506,7 @@ public class MergeSort {
 
 ## 51. Quick Sort
 [Back to `Depth-first Search`](#h-dfs)  
+[Back to `Sorting`](#h-sorting)  
 ### Description
 Given an integer array `arr`, sort it in ascending order.
 
@@ -5587,6 +5592,156 @@ public class QuickSort {
   Thus, the average space complexity is $O(\log n)$, and the worst-case is $O(n)$.
 #### Consideration
 * The `if (left < right)` check ensures no out-of-bounds access, even if the indices exceed valid ranges.
+## 52. Maximum Number of Pairs in Array
+### Source
+https://leetcode.com/problems/maximum-number-of-pairs-in-array/
+### Array Solution
+Define a frequency array `freqArr` to count the occuerences of elements in `nums`.
+
+Approach:  
+1. Count the occurences of unique elements in `nums`.
+2. Calculate the number of pairs and the leftover elements by traversing `freqArr`.
+#### Java Implementation
+```java
+/**
+ * @author Craig Brown
+ * @date April 29, 2025
+ **/
+class Solution {
+    public int[] numberOfPairs(int[] nums) {
+        int[] freqArr=new int[101];
+        // Compute the frequency of elements in `nums`
+        for(int i=0;i<nums.length; i++){
+            freqArr[nums[i]]++;
+        }
+        // Calculate the result
+        int pair=0, leftover=0;
+        for(int i=0;i<freqArr.length; i++){
+            pair+=freqArr[i]/2;
+            leftover+=freqArr[i]%2;;
+        }
+        return new int[]{pair, leftover};
+    }
+}
+```
+#### Python Implementation
+```python
+"""
+Author: Craig Brown
+Date:   April 29, 2025
+"""
+class Solution:
+    def numberOfPairs(self, nums: List[int]) -> List[int]:
+        # Compute the frequency of elements in `nums`
+        freqArr=Counter(nums)
+        # Calculate the result
+        pair=0
+        leftover=0
+        for val in freqArr.values():
+            pair+=val//2
+            leftover+=val%2
+        return [pair, leftover]
+```
+#### Complexity Analysis
+* Time Complexity: $O(n)$
+  * Traversing `nums` and `freqArr` results in a time complexity of $O(n)$.
+* Space Complexity: $O(1)$
+    * `freqArr` and the result array take constant space.
+* Consideration
+  * Using `freqArr[i]/2` is more efficient for counting pairs than checking `freqArr[i]>0 && freqArr[i]%2==0`.
+## 53. Can I Win
+### Source
+https://leetcode.com/problems/can-i-win/
+### Depth-first Search Solution
+Define a bitmask `permutation` to represent the current selection state of integers for both players.   
+Use a Boolean array `memo` to cache computed results and avoid repeated work.
+
+Approach:  
+
+Try all available integers during each player's turn:
+- If selecting an integer directly meets or exceeds `desiredTotal`, the current player wins — return `true`.
+- Otherwise, recursively simulate the opponent's turn:
+  - If all possible opponent responses return `false`, then the current move guarantees a win — return `true`.
+  - If any opponent response returns `true`, continue checking other options.
+- If no option leads to a win, return `false`.
+
+#### Java Implementation
+```java
+/**
+ * Author: Craig Brown
+ * Date:   May 3, 2025
+ * Source: https://github.com/saidake/simi-docs
+ */ 
+class Solution {
+    public boolean canIWin(int maxChoosableInteger, int desiredTotal) {
+        // If the largest integer is enough to reach or exceed the `desiredTotal`, first player wins immediately
+        if(maxChoosableInteger>=desiredTotal)return true;
+        // If the total sum of all numbers is less than the target, no one can win
+        int maxSum=maxChoosableInteger*(maxChoosableInteger+1)/2;
+        if(desiredTotal>maxSum)return false;
+        // Memoization array to store results of all possible permutations represented by bitmask
+        Boolean[] memo=new Boolean[1 << maxChoosableInteger];
+        return dfs(memo, maxChoosableInteger, desiredTotal, 0);
+    }
+
+    private boolean dfs(Boolean[] memo, int maxChoosableInteger, int desiredTotal, int permutation){
+        if(memo[permutation]!=null)return memo[permutation];
+        // Try every unused number from 1 to `maxChoosableInteger`
+        for(int i=0; i<maxChoosableInteger; i++){
+            int cur = 1 << i;
+            // Skip if the current integer (i+1) has already been chosen
+            if((permutation & cur) != 0)continue;  
+            // If choosing (i + 1) reaches or exceeds the target, or forces the opponent into a losing state
+            if (desiredTotal <= i+1 || !dfs(memo, maxChoosableInteger, desiredTotal - (i + 1), permutation | cur)) {
+                return memo[permutation] = true;
+            }
+        }
+        return memo[permutation] = false;
+    }
+}
+```
+#### Python3 Implementation
+```python
+"""
+Author: Craig Brown
+Date:   May 4, 2025
+Source: https://github.com/saidake/simi-docs
+"""
+class Solution:
+    def canIWin(self, maxChoosableInteger: int, desiredTotal: int) -> bool:
+        # If the largest integer is enough to reach or exceed the `desiredTotal`, first player wins immediately
+        if maxChoosableInteger>=desiredTotal: 
+            return True
+        # If the total sum of all numbers is less than the target, no one can win
+        maxSum = maxChoosableInteger*(maxChoosableInteger+1) // 2
+        if desiredTotal>maxSum:
+            return False
+        # Memoization directionary to store results of all possible permutations represented by bitmask
+        memo = {}
+        return self.dfs(memo, maxChoosableInteger, desiredTotal, 0)
+    def dfs(self, memo, maxChoosableInteger, desiredTotal, permutation):
+        if permutation in memo:
+            return memo[permutation]
+        # Try every unused number from 1 to `maxChoosableInteger`
+        for i in range(maxChoosableInteger): 
+            cur = 1 << i
+            # Skip if the current integer (i+1) has already been chosen
+            if (permutation & cur) != 0:
+                continue
+            # If choosing (i + 1) reaches or exceeds the target, or forces the opponent into a losing state
+            if i+1 >= desiredTotal or not self.dfs(memo, maxChoosableInteger, desiredTotal-(i+1), permutation | cur):
+                memo[permutation]=True
+                return True
+        memo[permutation]=False
+        return False
+```
+#### Complexity Analysis
+* Time Complexity: $O(2^n \cdot n)$
+  * There are $2^n$ possible states (bitmask combinations), and for each state we try up to $n$ options (`n` is `maxChoosableInteger`).
+* Space Complexity: $O(2^n)$
+  * $O(2^n)$ for the memoization array, where each bitmask state consumes a Boolean entry (`n` is `maxChoosableInteger`).
+#### Consideration
+* To analyze the time complexity of the depth-first algorithm, focus on **the total number of recursive calls** and **all possible combinations traversed**, rather than just the recursion depth.
 # SQL Problems
 ## 1. Odd and Even Transactions
 [Back to `Sql Problems`](#h-sql-problems)  
