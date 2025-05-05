@@ -2,12 +2,13 @@
 [Back to Main Project README](../README.md)
 - [Table of Contents](#table-of-contents)
 - [Simi Docs 1.6.2](#simi-docs-162)
+    - [Global Updates](#global-updates)
     - [Algorithms.md (v1.0.2)](#algorithmsmd-v102)
     - [Config\_v1.4.1.pdf](#config_v141pdf)
     - [CPlusPlus\_v1.0.1.pdf](#cplusplus_v101pdf)
     - [Python\_v1.2.1.pdf](#python_v121pdf)
 - [Simi Docs 1.6.1 - Version Control for Markdown files](#simi-docs-161---version-control-for-markdown-files)
-    - [Global Updates](#global-updates)
+    - [Global Updates](#global-updates-1)
     - [Configuration.md (v1.0.1)](#configurationmd-v101)
     - [InterviewQuestions.md (v\_1.0.1)](#interviewquestionsmd-v_101)
     - [Algorithms.md (v1.0.1)](#algorithmsmd-v101)
@@ -20,17 +21,17 @@
     - [Java\_v1.4.1.pdf](#java_v141pdf)
     - [Math\_v1.2.1.pdf](#math_v121pdf)
 - [Simi Docs 1.5.1 - Remove all algorithm problem descriptions](#simi-docs-151---remove-all-algorithm-problem-descriptions)
-    - [Global Updates](#global-updates-1)
+    - [Global Updates](#global-updates-2)
     - [Algorithms.md](#algorithmsmd)
 - [Simi Docs 1.5.0 - Major Update to `Japanese_v1.2.0.pdf`](#simi-docs-150---major-update-to-japanese_v120pdf)
-    - [Global Updates](#global-updates-2)
+    - [Global Updates](#global-updates-3)
     - [Python\_v1.2.0.pdf](#python_v120pdf)
     - [Config\_v1.3.0.pdf](#config_v130pdf)
     - [Japanese\_v1.2.0.pdf](#japanese_v120pdf)
     - [Java\_v1.4.0.pdf](#java_v140pdf)
     - [DatabaseAndMiddleware\_v1.1.0.pdf](#databaseandmiddleware_v110pdf)
 - [Simi Docs 1.4.0 - Major Update to `Python_v1.1.0.pdf`](#simi-docs-140---major-update-to-python_v110pdf)
-    - [Global Updates](#global-updates-3)
+    - [Global Updates](#global-updates-4)
     - [Python\_v1.1.0.pdf](#python_v110pdf)
     - [Java\_v1.3.0.pdf](#java_v130pdf)
     - [SpringBoot\_v1.3.0.pdf](#springboot_v130pdf)
@@ -38,7 +39,7 @@
     - [WebFrameworks\_v1.2.0.pdf](#webframeworks_v120pdf)
     - [Internet\_v1.1.0.pdf](#internet_v110pdf)
 - [Simi Docs 1.3.0 - Document Migration](#simi-docs-130---document-migration)
-    - [Global Updates](#global-updates-4)
+    - [Global Updates](#global-updates-5)
     - [Linux\_v1.1.0.pdf](#linux_v110pdf)
     - [SpringBoot\_v1.2.0.pdf](#springboot_v120pdf)
     - [Java\_v1.2.0.pdf](#java_v120pdf)
@@ -50,6 +51,10 @@
     - [Node\_v1.1.0.pdf](#node_v110pdf)
     - [Config\_v1.1.0.pdf](#config_v110pdf)
 # Simi Docs 1.6.2
+### Global Updates
+* Add configuration files.
+  *  `review.yml` for the simi-review-tool.
+  *  `deployment.yml` for the new website.
 ### Algorithms.md (v1.0.2)
   * Add new algorithm problems 
     * <span>52.</span> Maximum Number of Pairs in Array
