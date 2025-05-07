@@ -1,6 +1,8 @@
 # Table of Contents
 [Back to Main Project README](../README.md)
 - [Table of Contents](#table-of-contents)
+- [Simi Docs 1.6.3](#simi-docs-163)
+    - [Python\_v1.2.2.pdf](#python_v122pdf)
 - [Simi Docs 1.6.2](#simi-docs-162)
     - [Global Updates](#global-updates)
     - [Algorithms.md (v1.0.2)](#algorithmsmd-v102)
@@ -50,6 +52,16 @@
     - [Java\_v1.1.0.pdf](#java_v110pdf)
     - [Node\_v1.1.0.pdf](#node_v110pdf)
     - [Config\_v1.1.0.pdf](#config_v110pdf)
+# Simi Docs 1.6.3
+### Python_v1.2.2.pdf
+* **Python / Build-in Libraries / bisect**
+  * Optimize the method introduction.
+* **Python / Build-in Libraries / str**
+  * Optimize the method introduction.
+* **Python / Build-in Libraries / math**
+  * Provide an explanation of the methods available in the Python math library.
+* **Python / Features / Exception**
+  * Refine the introduction with Python comments for better clarity and understanding.
 # Simi Docs 1.6.2
 ### Global Updates
 * Add configuration files.
