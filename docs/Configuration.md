@@ -6,6 +6,9 @@ Source:  https://github.com/saidake/simi-docs
 # Table of Contents
 [Back to Main Project README](../README.md)
 - [Table of Contents](#table-of-contents)
+- [Base Env](#base-env)
+  - [Docker](#docker)
+  - [Docker Compose](#docker-compose)
 - [Database](#database)
   - [Oracle 23ai](#oracle-23ai)
   - [SAP Hana Database](#sap-hana-database)
@@ -13,6 +16,40 @@ Source:  https://github.com/saidake/simi-docs
   - [Temporal](#temporal)
 - [AI](#ai)
   - [Stable Diffusion](#stable-diffusion)
+# Base Env
+## Docker
+<h3>Linux Installation</h3>
+
+1. Install docker with `yum` command.
+    ```bash
+    sudo yum install -y docker-ce
+    ```
+2. Start Docker service
+    ```bash
+    sudo systemctl start docker
+    ```
+3. Enable Docker to start on boot
+    ```bash
+    sudo systemctl enable docker
+    ```
+## Docker Compose
+<h3>Linux Installation</h3>
+
+1. Download Docker Compose
+    ```bash
+    sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+    ```
+    * This command fetches the latest stable release of Docker Compose from GitHub and installs it to `/usr/local/bin/docker-compose`.
+2. Apply Executable Permissions
+    ```bash
+    sudo chmod +x /usr/local/bin/docker-compose
+    ```
+3. Verify Installation
+    ```bash
+    docker-compose --version
+    ```
+
+
 # Database
 ## Oracle 23ai
 Reference:  
@@ -127,6 +164,51 @@ Installation:
        driver: bridge
    ```
    Replace `<ui-port>` with your ui port to avoid port conflicts.
+
+   By default:
+   - Spark master UI: http://localhost:8080  
+   - Spark master server: http://localhost:7077
+3. Navigate to the folder containing the docker-compose.yml file, then start the Spark cluster using the following command:
+   
+   ```bash
+   docker-compose up -d
+   ```
+4. (Optional) Create a service file to manage the Spark service (start, stop, and restart) using `systemctl`.
+    * Use the following commands to create the service file:
+      ```bash
+      cd /lib/systemd/system   
+      # Go to this directory to create a service file
+      # The system might block all ports except port 80. Use the firewall-cmd command to allow other ports.
+      touch spark.service        
+      # The service might not access system environment variables defined in /etc/profile.
+      tail -f /var/log/messages 
+      # View log files in real time.
+      ```
+      Content of the `spark.service` file:
+      ```ini
+      [Unit]
+      Description=Spark Service
+      After=network.target
+      [Service]
+      Type=forking
+      # The location of the docker-compose.yml file
+      WorkingDirectory=/root/env/spark
+      ExecStart=docker-compose up -d
+      ExecStop=docker-compose down
+      ExecReload=docker-compose restart
+
+      [Install]
+      WantedBy=multi-user.target
+      ```
+    * Manage the Spark service: start, stop, and restart.
+      ```bash
+      systemctl start spark
+      systemctl stop spark
+      systemctl restart spark
+      ```
+
+
+
 <!-- ## Nginx
 1. Update System Packages
   
