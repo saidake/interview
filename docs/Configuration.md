@@ -14,6 +14,7 @@ Source:  https://github.com/saidake/simi-docs
   - [SAP Hana Database](#sap-hana-database)
 - [Server](#server)
   - [Temporal](#temporal)
+  - [Spark](#spark)
 - [AI](#ai)
   - [Stable Diffusion](#stable-diffusion)
 # Base Env
@@ -122,13 +123,14 @@ Installation:
 3. Start the Temporal Server  
    Run the following command to start all required services:
    ```text
-    docker-compose up
-    ```
+   docker-compose up
+   ```
 4. Access the Temporal Web UI  
    Once the server is running, access the Temporal Web UI in your browser:
-    ```text
-    http://localhost:<your-ui-port>
-    ```
+   ```text
+   http://localhost:<your-ui-port>
+   ```
+
 ## Spark
 1. Prerequisites
    * Docker: Ensure Docker is installed and running.
