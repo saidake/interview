@@ -4,6 +4,8 @@
 - [Simi Docs 1.6.3](#simi-docs-163)
     - [Global Updates](#global-updates)
     - [Configuration (v1.0.2)](#configuration-v102)
+    - [Java\_v1.4.2.pdf](#java_v142pdf)
+    - [CPlusPlus\_v1.0.2.pdf](#cplusplus_v102pdf)
     - [Python\_v1.2.2.pdf](#python_v122pdf)
 - [Simi Docs 1.6.2](#simi-docs-162)
     - [Global Updates](#global-updates-1)
@@ -59,7 +61,33 @@
 * Rename *docs/InterviewQuestions.md* to *docs/DevelopmentProblems.md*.
 ### Configuration (v1.0.2)
 * Explain how to configure Docker, Docker Compose, Spark server.
+### Java_v1.4.2.pdf 
+* **Java / Core**
+  * Replace **Heading 8** style with **Heading 2** style for significant child headings.
+    * *Types of Objects in Java*
+    * *Types of References in Java*
+    * *String Literals*
+* **Java / Core / Constants and Variables**
+  * Rename the heading *Java / Core / Primitive Type* to *Java / Core / Constants and Variables*. 
+  * Refine the content under this heading.
+### CPlusPlus_v1.0.2.pdf
+* **CPlusPlus / Concept**
+  * Add new sections:
+    * *Simple Example*
+    * *Compilation Process*
+    * *Identifiers*
+* **CPlusPlus / Core / Constants and Variables**
+  * Replace **Heading 9** style with **Heading 8** style.
+  * Simplify the type heading.
+* **CPlusPlus / Core / Data Type Conversion**
+  * Introduce the data type conversion in CPlusPlus.
+* **CPlusPlus / Features / Scope Levels**
+  * Add a new section introducing scope levels in C++.
 ### Python_v1.2.2.pdf
+* **Python / Core / Constants and Variables**
+  * Replace **Heading 9** style with **Heading 8** style.
+* **Python / Core / Operators**
+  * Refine the operator description.
 * **Python / Build-in Libraries / bisect**
   * Optimize the method introduction.
 * **Python / Build-in Libraries / str**
