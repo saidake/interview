@@ -1,10 +1,9 @@
 # Table of Contents
 [Back to Main Project README](../README.md)
 - [Table of Contents](#table-of-contents)
-- [Simi Docs 1.6.4](#simi-docs-164)
-    - [CPlusPlus\_v1.0.2.pdf](#cplusplus_v102pdf)
 - [Simi Docs 1.6.3](#simi-docs-163)
     - [Global Updates](#global-updates)
+    - [Algorithms.md (v1.0.3)](#algorithmsmd-v103)
     - [Configuration (v1.0.2)](#configuration-v102)
     - [Java\_v1.4.2.pdf](#java_v142pdf)
     - [Python\_v1.2.2.pdf](#python_v122pdf)
@@ -57,7 +56,7 @@
     - [Java\_v1.1.0.pdf](#java_v110pdf)
     - [Node\_v1.1.0.pdf](#node_v110pdf)
     - [Config\_v1.1.0.pdf](#config_v110pdf)
-# Simi Docs 1.6.4
+<!-- # Simi Docs 1.6.4
 ### CPlusPlus_v1.0.2.pdf
 * **CPlusPlus / Concept**
   * Add new sections:
@@ -70,7 +69,7 @@
 * **CPlusPlus / Core / Data Type Conversion**
   * Introduce the data type conversion in CPlusPlus.
 * **CPlusPlus / Features / Scope Levels**
-  * Add a new section introducing scope levels in C++.
+  * Add a new section introducing scope levels in C++. -->
 # Simi Docs 1.6.3
 ### Global Updates
 * Remove all PDFs from the `temppdf` folder, except for the Java and Python PDFs, due to accuracy and formatting issues. These will return in future releases once verified.
@@ -79,6 +78,10 @@
 
 * Remove `temp` folder.
 * Remove configuration files `deployment.yml` and `review.yml`.
+### Algorithms.md (v1.0.3)
+  * Add Python3 and C++ solution for problem *1. Array Partition*. 
+  * Add a new algorithm problem. 
+    * <span>54.</span> 3Sum Closest
 ### Configuration (v1.0.2)
 * Explain how to configure Docker, Docker Compose, Spark server.
 ### Java_v1.4.2.pdf 
