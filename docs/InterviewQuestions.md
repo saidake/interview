@@ -13,12 +13,12 @@ Source:  https://github.com/saidake/simi-docs
   - [3. How to ensure Kafka messages are not lost?](#3-how-to-ensure-kafka-messages-are-not-lost)
 ## 1. How does `AbstractQueuedSynchronizer` function internally?  
 <!-- {4} -->
-### References
+<!-- ### References
 * **Java.pdf / Java / java.base / java.util / concurrent / locks / AbstractQueuedSynchronizer**     
   1. State Management
   2. Node-based Queuing
   3. Exclusive and Shared Modes
-  4. Condition Support
+  4. Condition Support -->
 ### Answer
 AbstractQueuedSynchronizer is a utility for creating custom synchronizers in Java, using a node-based queue mechanism.
 
@@ -29,25 +29,25 @@ The `state` field tracks the lock's status, and `AbstractQueuedSynchronizer` aut
 
 ## 2. How to solve CORS issue?  
 <!-- {3-2} -->
-### References
+<!-- ### References
 * **Internet.pdf / Network Model / Application Layer / HTTP (Hypertext Transfer Protocol) / Cross-domain communication**
   1. Same-Origin Policy (SOP)
   2. Cross-Origin Resource Sharing (CORS)
   3. Preflight Request
 * **Config.pdf / Work Environment / nginx / Core / Proxy**     
   1. Forward Proxy (Normal Proxy)
-  2. Reverse Proxy
+  2. Reverse Proxy -->
 ### Answer
 1. Return the necessary CORS headers for all requests directly from the server.
 2. Set up a reverse proxy server (e.g., Nginx) to intercept both preflight and regular requests, adding the necessary CORS headers.
 
 ## 3. How to ensure Kafka messages are not lost?
 <!-- {3} -->
-### References
+<!-- ### References
 * **DatabaseAndMiddleware.pdf / Kafka / Configuration / server.properties / Leader Election**
   1. Assigned Replicas (AR)
   2. In-Sync Replicas (ISR)
-  3. Out-of-Sync Replicas (OSR)
+  3. Out-of-Sync Replicas (OSR) -->
 
 ### Answer
 1. Set all broker replicas keep synchronized as OSR nodes may lack the latest messages, risking data loss if elected as the leader.  

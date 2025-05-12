@@ -1,7 +1,7 @@
 <!-----------------------------------------------------------
 Author:  Craig Brown
-Version: 1.0.2
-Date:    May 6, 2025
+Version: 1.0.3
+Date:    May 13, 2025
 Source:  https://github.com/saidake/simi-docs
 ------------------------------------------------------------->
 # Table of Contents
@@ -26,6 +26,7 @@ Source:  https://github.com/saidake/simi-docs
     - [29. Power Set LCCI](#29-power-set-lcci)
     - [46. Number of Paths with Max Score](#46-number-of-paths-with-max-score)
     - [51. Quick Sort](#51-quick-sort)
+    - [53. Can I Win](#53-can-i-win)
   - <a id="h-dichotomy">Dichotomy</a>
     - [4. Search in Rotated Sorted Array](#4-search-in-rotated-sorted-array)
   - <a id="h-difference-array">Difference Array</a>
@@ -98,6 +99,7 @@ Source:  https://github.com/saidake/simi-docs
     - [26. Boats to Save People](#26-boats-to-save-people)
     - [27. Find the Lexicographically Largest String From the Box I](#27-find-the-lexicographically-largest-string-from-the-box-i)
     - [28. Merge Sorted Array](#28-merge-sorted-array)
+    - [54. 3Sum Closest](#54-3sum-closest)
   - <a id="h-union-find">Union-Find</a>
     - [33. Graph Connectivity With Threshold](#33-graph-connectivity-with-threshold)
 - <a id="h-sql-problems">SQL Problems</a>
@@ -109,15 +111,23 @@ Source:  https://github.com/saidake/simi-docs
 ### Source
 https://leetcode.com/problems/array-partition/
 ### Array Solution
-In each group, the larger integer will be omitted, and we need to maximize the `sum`.
-Therefore, The omitted value must be smaller.
-To ensure this, wen can sort the array, so that the smaller integer is omitted when calculating the minimal value from the group.
+In each group, the larger integer will be omitted to maximize the sum.   
+Thus, the omitted value must be as small as possible.
 
-#### Implementation
+To achieve this, we can sort the array and group every two elements into pairs, ensuring that the omitted integer in each group is the smallest possible, thereby maximizing the sum of `min(a_i, b_i)` across all groups.
+
+#### Java Implementation
 ```java
+/**
+ * Author: Craig Brown
+ * Date:   May 11, 2025
+ * Source: https://github.com/saidake/simi-docs
+ */ 
 class Solution {
     public int arrayPairSum(int[] nums) {
+        // Sort `nums`
         Arrays.sort(nums);
+        // Compute the result sum
         int sum=0;
         for(int i=0; i< nums.length; i+=2){
             sum+=nums[i];
@@ -126,20 +136,110 @@ class Solution {
     }
 }
 ```
-#### Complexity Analysis
-* Time Complexity: $O(n \log n)$
-    * `Arrays.sort` has a time complexity of $O(nlogn)$;
-    * The loop iterates through the array with a step of 2, so it runs $n/2$ times, resulting a time complexity of $O(n)$.  
-    
-    Hence, The total time complexity is $O(n \log n)$.
-* Space Complexity: $O(logn)$
-    * `Arrays.sort` typically requires $O(logn)$ space for sorting a primitive array.  
-    
-    Therefore, the total space complexity is $O(logn)$.
+#### Python3 Implementation
+```python
+"""
+Author: Craig Brown
+Date:   May 11, 2025
+Source: https://github.com/saidake/simi-docs
+"""
+class Solution:
+    def arrayPairSum(self, nums: List[int]) -> int:
+        # Sort `nums`
+        nums.sort()
+        # Compute the result sum
+        sum=0
+        for i in range(0, len(nums), 2):
+            sum += nums[i]
+        return sum
+```
+#### C++ Implementation
+```c++
+/**
+ * Author: Craig Brown
+ * Date:   May 11, 2025
+ * Source: https://github.com/saidake/simi-docs
+ */ 
+class Solution {
+public:
+    int arrayPairSum(vector<int>& nums) {
+        // Sort `nums`
+        std::sort(nums.begin(), nums.end());
+        // Compute the result sum
+        int sum=0;
+        for(int i=0; i<nums.size(); i+=2){
+            sum+=nums[i];
+        }
+        return sum;
+    }
+};
+```
+#### Build-in Method Complexity Analysis
+##### Java Implementation
+* `Arrays.sort(nums)`
+  * For primitive types (e.g., int[], double[])   
+  
+    Algorithm: Dual-Pivot Quicksort  
+  
+    Time Complexity:
+    * Average case: $O(n \log n)$
+    * Worst-case case: $O(n²)$ (rare due to optimized pivot selection).  
+  
+    Space Complexity:
+    * $O(\log n)$ (due to recursion stack, in-place sorting)
+  
+  * For Object Types (e.g., Integer[], String[])    
+  
+    Algorithm: TimSort (hybrid of MergeSort and InsertionSort)  
+  
+    Time Complexity:  
+    * Average and worst case: $O(n \log n)$
+  
+    Space Complexity:  
+    * $O(n)$ (requires temporary storage for merging)
 
-Note that the space complexity of `Arrays.sort` is:
-* $O(logn)$ for sorting primitive arrays.
-* $O(n)$ for sorting object arrays.
+##### Python3 Implementation
+* `nums.sort()`
+  * Algorithm: TimSort (same as Java's for objects)  
+  * Time Complexity:  
+    * Average and worst case: $O(n \log n)$  
+  * Space Complexity:  
+    * $O(n)$ (stable sort with extra space for merges)
+
+##### C++ Implementation
+* `std::sort(nums.begin(), nums.end())`
+  * Algorithm: IntroSort (hybrid of Quicksort, Heapsort, and InsertionSort)  
+  * Time Complexity:  
+    * Average case: $O(n \log n)$  
+    * Worst case: $O(n \log n)$ (Heapsort fallback prevents $O(n^2)$)  
+  * Space Complexity:  
+    * $O(\log n)$ (due to recursion stack, in-place)
+#### Complexity Analysis
+* Time Complexity
+  * Sort `nums`
+    - Java: $O(n \log n)$ for `int` type. 
+    - Python: $O(n \log n)$  
+    - C++: $O(n \log n)$  
+  * Compute the result sum
+  
+    The loop iterates through the array with a step of 2, so it runs $n/2$ times, resulting a time complexity of $O(n)$.  
+
+  Total Time Complexity:
+  
+    - Java: $O(n \log n)$
+    - Python: $O(n \log n)$  
+    - C++: $O(n \log n)$  
+* Space Complexity
+  * Sort `nums`
+    - Java: $O(\log n)$ for `int` type.  
+    - Python: $O(n)$  
+    - C++: $O(\log n)$  
+
+  Total Space Complexity:
+
+  * Java: $O(\log n)$
+  * Python: $O(n)$
+  * C++: $O(\log n)$
 
 ## 2. Add Edges to Make Degrees of All Nodes Even
 [Back to `Conditional Logic`](#h-conditionallogic)
@@ -3853,7 +3953,7 @@ class Solution {
     Thus the overall space complexity is $O(n+m)$.
 
 ## 34. Sort Array by Increasing Frequency
-[Back to `Meaningful Index`](#h-array-meaningful-index)  
+[Back to `Array / Meaningful Index`](#h-array-meaningful-index)  
 ### Source
 https://leetcode.com/problems/sort-array-by-increasing-frequency/
 
@@ -5593,6 +5693,7 @@ public class QuickSort {
 #### Consideration
 * The `if (left < right)` check ensures no out-of-bounds access, even if the indices exceed valid ranges.
 ## 52. Maximum Number of Pairs in Array
+[Back to `Array / Meaningful Index`](#h-array-meaningful-index)  
 ### Source
 https://leetcode.com/problems/maximum-number-of-pairs-in-array/
 ### Array Solution
@@ -5650,6 +5751,7 @@ class Solution:
 * Consideration
   * Using `freqArr[i]/2` is more efficient for counting pairs than checking `freqArr[i]>0 && freqArr[i]%2==0`.
 ## 53. Can I Win
+[Back to `Depth-first Search`](#h-dfs)  
 ### Source
 https://leetcode.com/problems/can-i-win/
 ### Depth-first Search Solution
@@ -5742,6 +5844,117 @@ class Solution:
   * $O(2^n)$ for the memoization array, where each bitmask state consumes a Boolean entry (`n` is `maxChoosableInteger`).
 #### Consideration
 * To analyze the time complexity of the depth-first algorithm, focus on **the total number of recursive calls** and **all possible combinations traversed**, rather than just the recursion depth.
+## 54. 3Sum Closest
+[Back to `Two Pointer`](#h-two-pointer)
+### Source
+https://leetcode.com/problems/3sum-closest/
+### Two-Pointer Solution
+Fix one element and apply the two-pointer technique to find the closest sum for the remaining two elements.
+
+Approach:
+1. Sort the input array `nums` to enable efficient two-pointer traversal.
+2. Iterate through the array, fixing one element at a time.
+3. For each fixed element:
+   - Initialize two pointers: `left` (starting just after the fixed element) and `right` (at the end of the array).
+   - Use the two-pointer approach to find the pair whose sum, along with the fixed element, is closest to the target.
+   - Update the result whenever a smaller absolute difference from the target is found.
+#### Java Implementation
+```java
+/**
+ * Author: Craig Brown
+ * Date:   May 6, 2025
+ * Source: https://github.com/saidake/simi-docs
+ */ 
+class Solution {
+    public int threeSumClosest(int[] nums, int target) {
+        // Sort `nums`
+        Arrays.sort(nums);
+        int sum=nums[0]+nums[1]+nums[2];
+        // Iterate through `nums`
+        for(int i=0; i<nums.length; i++){
+            int left=i+1;
+            int right=nums.length-1;
+
+            // Find the closest sum for each num[i]
+            while(left<right){
+                int cSum = nums[i]+nums[left]+nums[right];
+                // Update the closest sum if this combination is closer to the target
+                if(Math.abs(target-sum)>Math.abs(target-cSum) ){
+                    sum=cSum;
+                }
+                // Utilize the sorted order to adjust pointers and minimize the difference to the target sum
+                if(cSum<target){
+                    left++;
+                }else if(cSum>target){
+                    right--;
+                }else{
+                    // If an exact match is found, return immediately
+                    return target;
+                }
+            }
+        }
+        return sum;
+    }
+}
+```
+#### Python Implementation
+```python
+"""
+Author: Craig Brown
+Date:   May 8, 2025
+Source: https://github.com/saidake/simi-docs
+"""
+class Solution:
+    def threeSumClosest(self, nums: List[int], target: int) -> int:
+        # Sort `nums`
+        nums.sort()
+        sum=nums[0]+nums[1]+nums[2]
+        # Iterate through `nums`
+        for i in range(len(nums)):
+            left, right=i+1, len(nums)-1
+            # Find the closest sum for each num[i]
+            while left<right:
+                cSum=nums[i]+nums[left]+nums[right]
+                # Update the closest sum if this combination is closer to the target
+                if abs(sum-target)>abs(cSum-target):
+                    sum=cSum
+                # Utilize the sorted order to adjust pointers and minimize the difference to the target sum
+                if cSum<target:
+                    left+=1
+                elif cSum>target:
+                    right-=1
+                else:
+                    # If an exact match is found, return immediately
+                    return cSum
+        return sum
+```
+#### Complexity Analysis
+* Time Complexity: $O(n^2)$
+  * Sort `nums`
+    * Java implementation
+      
+      `Arrays.sort()` uses Dual-Pivot Quicksort for primitive types, with an average time complexity of $O(n \log n)$ and a worst-case complexity of $O(n^2)$.
+    * Python implementation
+      
+      `list.sort()` has an average time complexity of $O(n \log n)$ and $O(n)$ in the best case (when the list is already sorted).
+
+  * Iterate through `nums`
+    
+    The outer loop runs `n` times, and for each iteration, the inner loop iterates through the remaining elements (i.e., `n-i` times).
+    The total number of iterations is the sum of `n-i` across all iterations: 
+    $$\sum_{i=0}^{n-i} i = O(n^2)$$
+
+  Thus, the overall time complexity is $O(n^2)$.
+
+* Space Complexity: $O(n\log n)$ in Java, $O(n)$ in Python
+    * Java implementation
+      
+      `Arrays.sort()` uses $O(n \log n)$ space for primitive types due to the recursive nature of TimSort.
+    * Python implementation
+      
+      `list.sort()` uses a non-recursive algorithm and requires linear space $O(n)$ for temporary storage.
+#### Consideration
+* All relevant combinations should be carefully considered by iterating through `nums`.
 # SQL Problems
 ## 1. Odd and Even Transactions
 [Back to `Sql Problems`](#h-sql-problems)  
