@@ -1,6 +1,9 @@
 # Table of Contents
 [Back to Main Project README](../README.md)
 - [Table of Contents](#table-of-contents)
+- [Simi Docs 1.6.4](#simi-docs-164)
+    - [CPlusPlus\_v1.0.2.pdf](#cplusplus_v102pdf)
+    - [Golang\_v1.0.0.pdf](#golang_v100pdf)
 - [Simi Docs 1.6.3](#simi-docs-163)
     - [Global Updates](#global-updates)
     - [Algorithms.md (v1.0.3)](#algorithmsmd-v103)
@@ -56,7 +59,7 @@
     - [Java\_v1.1.0.pdf](#java_v110pdf)
     - [Node\_v1.1.0.pdf](#node_v110pdf)
     - [Config\_v1.1.0.pdf](#config_v110pdf)
-<!-- # Simi Docs 1.6.4
+# Simi Docs 1.6.4
 ### CPlusPlus_v1.0.2.pdf
 * **CPlusPlus / Concept**
   * Add new sections:
@@ -67,9 +70,15 @@
   * Replace **Heading 9** style with **Heading 8** style.
   * Simplify data type headings for clarity.
 * **CPlusPlus / Core / Data Type Conversion**
-  * Introduce the data type conversion in CPlusPlus.
+  * Introduce the data type conversion in C++.
 * **CPlusPlus / Features / Scope Levels**
-  * Add a new section introducing scope levels in C++. -->
+  * Add a new section introducing scope levels in C++.
+### Golang_v1.0.0.pdf
+* Add new sections with rich and detailed content:
+  * Golang / Concept
+  * Golang / Core
+  * Golang / Features
+  * Golang / Build-in Libraries
 # Simi Docs 1.6.3
 ### Global Updates
 * Remove all PDFs from the `temppdf` folder, except for the Java and Python PDFs, due to accuracy and formatting issues. These will return in future releases once verified.
