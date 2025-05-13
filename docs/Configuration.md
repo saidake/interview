@@ -7,20 +7,26 @@ Source:  https://github.com/saidake/simi-docs
 # Table of Contents
 [Back to Main Project README](../README.md)
 - [Table of Contents](#table-of-contents)
-- [Base Env](#base-env)
+- [Basic Env](#basic-env)
   - [Docker](#docker)
   - [Docker Compose](#docker-compose)
+  - [Kubernetes](#kubernetes)
 - [Database](#database)
   - [Oracle 23ai](#oracle-23ai)
   - [SAP Hana Database](#sap-hana-database)
 - [Server](#server)
   - [Temporal](#temporal)
+  - [Jenkins](#jenkins)
   - [Spark](#spark)
 - [AI](#ai)
   - [Stable Diffusion](#stable-diffusion)
-# Base Env
+# Basic Env
 ## Docker
-<h3>Linux Installation</h3>
+<h3>Linux Installation (apt-get)</h3>
+
+* Install using the apt repository
+  https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
+<h3>Linux Installation (yum)</h3>
 
 1. Install docker with `yum` command.
     ```bash
@@ -50,7 +56,11 @@ Source:  https://github.com/saidake/simi-docs
     ```bash
     docker-compose --version
     ```
+## Kubernetes
+<h3>Linux Installation</h3>
 
+* Install and Set Up kubectl on Linux
+https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
 
 # Database
 ## Oracle 23ai
@@ -131,6 +141,9 @@ Installation:
    ```text
    http://localhost:<your-ui-port>
    ```
+## Jenkins
+<h3>Linux Installation (apt-get)</h3>
+
 
 ## Spark
 1. Prerequisites
