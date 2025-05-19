@@ -1,12 +1,13 @@
 <!-----------------------------------------------------------
 Author:  Craig Brown
-Version: 1.0.1
+Version: 1.0.2
 Source:  https://github.com/saidake/simi-docs
 ------------------------------------------------------------->
 # Table of Contents
 [Back to Main Project README](../README.md)  
 - Java
   - [1. How does `AbstractQueuedSynchronizer` function internally?](#1-how-does-abstractqueuedsynchronizer-function-internally) 
+  - [4. Why must you override `hashCode()` if you override `equals()`?](#4-why-must-you-override-hashcode-if-you-override-equals)
 - Internet
   - [2. How to solve CORS issue?](#2-how-to-solve-cors-issue) 
 - Spring Boot 
@@ -69,8 +70,24 @@ The `state` field tracks the lock's status, and `AbstractQueuedSynchronizer` aut
     ```
 3. In the Kafka producer, setting `acks=all` ensures that the producer waits for acknowledgments from all in-sync replicas (ISRs) of the partition before considering the message successfully sent. 
 
-    Additionally, a **callback** function should be set for each sent message to handle success, failure, and retries. 
-  The callback provides a way to receive feedback from the broker, allowing you to **log successes** or **handle any delivery failures** (e.g., network issues or broker unavailability) with appropriate actions such as retries or compensatory measures.
+   Additionally, a **callback** function should be set for each sent message to handle success, failure, and retries.   
+     The callback provides a way to receive feedback from the broker, allowing you to **log successes** or **handle any delivery failures** (e.g., network issues or broker unavailability) with appropriate actions such as retries or compensatory measures.
 
 4. In the Kafka consumer, setting `enable.auto.commit=false` and **manually committing the message offset** ensures greater control over message processing.   
-   Relying on automatic offset commits can lead to data loss if the consumer crashes before committing the latest offsets.
+   * Relying on automatic offset commits can lead to data loss if the consumer crashes before committing the latest offsets.
+
+## 4. Why must you override `hashCode()` if you override `equals()`?
+<!-- ### References
+* **Java.pdf / java.base / java.lang / (Core) / Object**
+  1. Default Hash Code Consistency
+* **Java.pdf / java.base / java.util / (Data Type) / (Map) / HashMap**
+  1. get
+  2. put
+  3. putVal
+  4. hash -->
+### Answer
+1. `equals()` compares objects for equality, it checks if two objects are the same in memory (same address) by default.  
+   `hashCode()` gives a number used to find the object in hash-based collections.
+
+2. Hash-based collections like HashMap and HashSet use `hashCode()` first to find the bucket, then use `equals()` to compare keys.  
+  If you override `equals()` but not `hashCode()`, two equal objects may have different hash codes — causing **duplicates** in the map or set.

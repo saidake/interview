@@ -1,23 +1,31 @@
 # Table of Contents
 [Back to Main Project README](../README.md)
 - [Table of Contents](#table-of-contents)
-- [Simi Docs 1.6.4](#simi-docs-164)
+- [Simi Docs 1.6.5](#simi-docs-165)
+    - [DatabaseAndMiddleware\_v1.0.1.pdf](#databaseandmiddleware_v101pdf)
     - [CPlusPlus\_v1.0.2.pdf](#cplusplus_v102pdf)
     - [Golang\_v1.0.0.pdf](#golang_v100pdf)
-- [Simi Docs 1.6.3](#simi-docs-163)
+    - [HTMLAndCSS\_v1.0.1.pdf](#htmlandcss_v101pdf)
+    - [Python\_v1.2.3.pdf](#python_v123pdf)
+- [Simi Interview 1.6.4](#simi-interview-164)
     - [Global Updates](#global-updates)
+    - [Algorithms.md (v1.0.4)](#algorithmsmd-v104)
+    - [InterviewQuestions.md (v1.0.2)](#interviewquestionsmd-v102)
+    - [SystemDesign.md (v1.0.0)](#systemdesignmd-v100)
+- [Simi Docs 1.6.3](#simi-docs-163)
+    - [Global Updates](#global-updates-1)
     - [Algorithms.md (v1.0.3)](#algorithmsmd-v103)
     - [Configuration (v1.0.2)](#configuration-v102)
     - [Java\_v1.4.2.pdf](#java_v142pdf)
     - [Python\_v1.2.2.pdf](#python_v122pdf)
 - [Simi Docs 1.6.2](#simi-docs-162)
-    - [Global Updates](#global-updates-1)
+    - [Global Updates](#global-updates-2)
     - [Algorithms.md (v1.0.2)](#algorithmsmd-v102)
     - [Config\_v1.4.1.pdf](#config_v141pdf)
     - [CPlusPlus\_v1.0.1.pdf](#cplusplus_v101pdf)
     - [Python\_v1.2.1.pdf](#python_v121pdf)
 - [Simi Docs 1.6.1 - Version Control for Markdown files](#simi-docs-161---version-control-for-markdown-files)
-    - [Global Updates](#global-updates-2)
+    - [Global Updates](#global-updates-3)
     - [Configuration.md (v1.0.1)](#configurationmd-v101)
     - [InterviewQuestions.md (v\_1.0.1)](#interviewquestionsmd-v_101)
     - [Algorithms.md (v1.0.1)](#algorithmsmd-v101)
@@ -30,17 +38,17 @@
     - [Java\_v1.4.1.pdf](#java_v141pdf)
     - [Math\_v1.2.1.pdf](#math_v121pdf)
 - [Simi Docs 1.5.1 - Remove all algorithm problem descriptions](#simi-docs-151---remove-all-algorithm-problem-descriptions)
-    - [Global Updates](#global-updates-3)
+    - [Global Updates](#global-updates-4)
     - [Algorithms.md](#algorithmsmd)
 - [Simi Docs 1.5.0 - Major Update to `Japanese_v1.2.0.pdf`](#simi-docs-150---major-update-to-japanese_v120pdf)
-    - [Global Updates](#global-updates-4)
+    - [Global Updates](#global-updates-5)
     - [Python\_v1.2.0.pdf](#python_v120pdf)
     - [Config\_v1.3.0.pdf](#config_v130pdf)
     - [Japanese\_v1.2.0.pdf](#japanese_v120pdf)
     - [Java\_v1.4.0.pdf](#java_v140pdf)
     - [DatabaseAndMiddleware\_v1.1.0.pdf](#databaseandmiddleware_v110pdf)
 - [Simi Docs 1.4.0 - Major Update to `Python_v1.1.0.pdf`](#simi-docs-140---major-update-to-python_v110pdf)
-    - [Global Updates](#global-updates-5)
+    - [Global Updates](#global-updates-6)
     - [Python\_v1.1.0.pdf](#python_v110pdf)
     - [Java\_v1.3.0.pdf](#java_v130pdf)
     - [SpringBoot\_v1.3.0.pdf](#springboot_v130pdf)
@@ -48,7 +56,7 @@
     - [WebFrameworks\_v1.2.0.pdf](#webframeworks_v120pdf)
     - [Internet\_v1.1.0.pdf](#internet_v110pdf)
 - [Simi Docs 1.3.0 - Document Migration](#simi-docs-130---document-migration)
-    - [Global Updates](#global-updates-6)
+    - [Global Updates](#global-updates-7)
     - [Linux\_v1.1.0.pdf](#linux_v110pdf)
     - [SpringBoot\_v1.2.0.pdf](#springboot_v120pdf)
     - [Java\_v1.2.0.pdf](#java_v120pdf)
@@ -59,15 +67,32 @@
     - [Java\_v1.1.0.pdf](#java_v110pdf)
     - [Node\_v1.1.0.pdf](#node_v110pdf)
     - [Config\_v1.1.0.pdf](#config_v110pdf)
-# Simi Docs 1.6.4
+# Simi Docs 1.6.5
+### DatabaseAndMiddleware_v1.0.1.pdf
+* **DAM / Concept / Cache / Cache Strategies / Eventual Consistency with Reconciliation**
+  * Move this heading under 'DAM / Concept / Cache'.
 ### CPlusPlus_v1.0.2.pdf
+* **CPlusPlus / Core**
+  * Add a new section *Reflection and Type Introspection*
+* **CPlusPlus / Features**
+  * Add new sections:
+    * Exception Handling
+    * Function
+    * Class
+    * Header Files and Namespaces
+    * Templates
+    * Structs and Unions
+    * Enumerations
+    * Memory Allocation
+    * Preprocessor Directives
+    * Namespaces
 * **CPlusPlus / Concept**
   * Add new sections:
     * *Simple Example*
     * *Compilation Process*
     * *Identifiers*
 * **CPlusPlus / Core / Constants and Variables**
-  * Replace **Heading 9** style with **Heading 8** style.
+  * Use blue style headings.
   * Simplify data type headings for clarity.
 * **CPlusPlus / Core / Data Type Conversion**
   * Introduce the data type conversion in C++.
@@ -79,6 +104,28 @@
   * Golang / Core
   * Golang / Features
   * Golang / Build-in Libraries
+### HTMLAndCSS_v1.0.1.pdf
+* **HAC / CSS / Location Style**
+  * Reorganize the content under this heading.
+### Python_v1.2.3.pdf
+* **Python / Core / Type Hints (introduced in Python 3.5)**
+  * Use blue style headings.
+* **Python / Core / Operators / for**
+  * Add two new sections:
+    * Value Assignment
+    * Action Execution
+# Simi Interview 1.6.4
+### Global Updates
+* Rename the github project from `simi-docs` to `interview`.
+### Algorithms.md (v1.0.4)
+  * Add a new algorithm problem:
+    * *55. Maximum Balanced Subsequence Sum*
+### InterviewQuestions.md (v1.0.2)
+  * Add a new **Java** interview question:
+    * *4. Why must you override `hashCode()` if you override `equals()`?*
+### SystemDesign.md (v1.0.0)
+  * Add a new system design solution:
+    * *1. Shopping Cart*
 # Simi Docs 1.6.3
 ### Global Updates
 * Remove all PDFs from the `temppdf` folder, except for the Java and Python PDFs, due to accuracy and formatting issues. These will return in future releases once verified.
