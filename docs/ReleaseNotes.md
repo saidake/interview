@@ -1,12 +1,6 @@
 # Table of Contents
 [Back to Main Project README](../README.md)
 - [Table of Contents](#table-of-contents)
-- [Simi Docs 1.6.5](#simi-docs-165)
-    - [DatabaseAndMiddleware\_v1.0.1.pdf](#databaseandmiddleware_v101pdf)
-    - [CPlusPlus\_v1.0.2.pdf](#cplusplus_v102pdf)
-    - [Golang\_v1.0.0.pdf](#golang_v100pdf)
-    - [HTMLAndCSS\_v1.0.1.pdf](#htmlandcss_v101pdf)
-    - [Python\_v1.2.3.pdf](#python_v123pdf)
 - [Simi Interview 1.6.4](#simi-interview-164)
     - [Global Updates](#global-updates)
     - [Algorithms.md (v1.0.4)](#algorithmsmd-v104)
@@ -67,53 +61,6 @@
     - [Java\_v1.1.0.pdf](#java_v110pdf)
     - [Node\_v1.1.0.pdf](#node_v110pdf)
     - [Config\_v1.1.0.pdf](#config_v110pdf)
-# Simi Docs 1.6.5
-### DatabaseAndMiddleware_v1.0.1.pdf
-* **DAM / Concept / Cache / Cache Strategies / Eventual Consistency with Reconciliation**
-  * Move this heading under 'DAM / Concept / Cache'.
-### CPlusPlus_v1.0.2.pdf
-* **CPlusPlus / Core**
-  * Add a new section *Reflection and Type Introspection*
-* **CPlusPlus / Features**
-  * Add new sections:
-    * Exception Handling
-    * Function
-    * Class
-    * Header Files and Namespaces
-    * Templates
-    * Structs and Unions
-    * Enumerations
-    * Memory Allocation
-    * Preprocessor Directives
-    * Namespaces
-* **CPlusPlus / Concept**
-  * Add new sections:
-    * *Simple Example*
-    * *Compilation Process*
-    * *Identifiers*
-* **CPlusPlus / Core / Constants and Variables**
-  * Use blue style headings.
-  * Simplify data type headings for clarity.
-* **CPlusPlus / Core / Data Type Conversion**
-  * Introduce the data type conversion in C++.
-* **CPlusPlus / Features / Scope Levels**
-  * Add a new section introducing scope levels in C++.
-### Golang_v1.0.0.pdf
-* Add new sections with rich and detailed content:
-  * Golang / Concept
-  * Golang / Core
-  * Golang / Features
-  * Golang / Build-in Libraries
-### HTMLAndCSS_v1.0.1.pdf
-* **HAC / CSS / Location Style**
-  * Reorganize the content under this heading.
-### Python_v1.2.3.pdf
-* **Python / Core / Type Hints (introduced in Python 3.5)**
-  * Use blue style headings.
-* **Python / Core / Operators / for**
-  * Add two new sections:
-    * Value Assignment
-    * Action Execution
 # Simi Interview 1.6.4
 ### Global Updates
 * Rename the github project from `simi-docs` to `interview`.
