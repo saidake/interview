@@ -1,39 +1,38 @@
 <!-----------------------------------------------------------
 Author:  Craig Brown
-Version: 1.0.3
+Version: 1.0.4
 Date:    May 13, 2025
-Source:  https://github.com/saidake/simi-docs
+Source:  https://github.com/saidake/interview
 ------------------------------------------------------------->
 # Table of Contents
-[Back to Main Project README](../README.md)
 - [Algorithm Problems](#algorithm-problems)
-  - <a id="h-array">Array</a>
-    - <a id="h-array-standard">Standard</a>
+  - Array
+    - Standard
       - [1. Array Partition](#1-array-partition)
       - [31. Minimum Number Game](#31-minimum-number-game)
-    - <a id="h-array-meaningful-index">Meaningful Index</a> (`Automatic Sorting`)
+    - Meaningful Index (`Automatic Sorting`)
       - [34. Sort Array by Increasing Frequency](#34-sort-array-by-increasing-frequency)
       - [52. Maximum Number of Pairs in Array](#52-maximum-number-of-pairs-in-array)
-  - <a id="h-backtracking">Backtracking</a>
+  - Backtracking
     - [3. Amount of Time for Binary Tree to Be Infected](#3-amount-of-time-for-binary-tree-to-be-infected)
     - [29. Power Set LCCI](#29-power-set-lcci)
     - [50. Merge Sort](#50-merge-sort)
-  - <a id="h-binarysearch">Binary Search</a>
+  - Binary Search
     - [32. My Calendar II](#32-my-calendar-ii)
-  - <a id="h-conditionallogic">Conditional Logic</a>
+  - Conditional Logic
     - [2. Add Edges to Make Degrees of All Nodes Even](#2-add-edges-to-make-degrees-of-all-nodes-even)
-  - <a id="h-dfs">Depth-first Search</a>
+  - Depth-first Search
     - [29. Power Set LCCI](#29-power-set-lcci)
     - [46. Number of Paths with Max Score](#46-number-of-paths-with-max-score)
     - [51. Quick Sort](#51-quick-sort)
     - [53. Can I Win](#53-can-i-win)
-  - <a id="h-dichotomy">Dichotomy</a>
+  - Dichotomy
     - [4. Search in Rotated Sorted Array](#4-search-in-rotated-sorted-array)
-  - <a id="h-difference-array">Difference Array</a>
+  - Difference Array
     - [5. Jump Game VII](#5-jump-game-vii)
     - [37. Zero Array Transformation II](#37-zero-array-transformation-ii)
-  - <a id="h-dynamic-programming">Dynamic Programming</a>
-    - <a id="h-dynamic-programming-standard">Standard</a>
+  - Dynamic Programming
+    - Standard
       - [6. Climbing Stairs](#6-climbing-stairs)
       - [7. Count All Valid Pickup and Delivery Options](#7-count-all-valid-pickup-and-delivery-options)
       - [8. Decode Ways II](#8-decode-ways-ii)
@@ -42,52 +41,53 @@ Source:  https://github.com/saidake/simi-docs
       - [11. Minimum Deletions to Make String Balanced](#11-minimum-deletions-to-make-string-balanced)
       - [12. Stone Game](#12-stone-game)
       - [13. Target Sum](#13-target-sum)
-    - <a id="h-dynamic-programming-problem-breakdown">Problem Breakdown</a>
+    - Problem Breakdown
       - [35. Maximum Multiplication Score](#35-maximum-multiplication-score)
-  - <a id="h-hashmap">HashMap</a>
+  - HashMap
     - [30. Count Common Words With One Occurrence](#30-count-common-words-with-one-occurrence)
     - [45. Intersection of Two Arrays II](#45-intersection-of-two-arrays-ii)
-  - <a id="h-heap">Heap</a>
+  - Heap
     - [39. Trapping Rain Water II](#39-trapping-rain-water-ii)
     - [43. Total Cost to Hire K Workers](#43-total-cost-to-hire-k-workers)
-  - <a id="h-fenwick-tree">Fenwick Tree</a>
+  - Fenwick Tree
     - [14. Distribute Elements Into Two Arrays II](#14-distribute-elements-into-two-arrays-ii)
-  - <a id="h-graph">Graph</a>
-    - <a id="h-graph-dijkstra">Dijkstra</a>
+    - [55. Maximum Balanced Subsequence Sum](#55-maximum-balanced-subsequence-sum)
+  - Graph
+    - Dijkstra
       - [41. Path with Maximum Probability](#41-path-with-maximum-probability)
-    - <a id="h-graph-bellman-ford">Bellman-Ford</a>
+    - Bellman-Ford
       - [41. Path with Maximum Probability](#41-path-with-maximum-probability)
-  - <a id="h-greedy">Greedy</a>
+  - Greedy
     - [15. Max Difference You Can Get From Changing an Integer](#15-max-difference-you-can-get-from-changing-an-integer)
     - [16. Maximum Length of Subarray With Positive Product](#16-maximum-length-of-subarray-with-positive-product)
-  - <a id="h-math">Math</a>
+  - Math
     - [17. Construct the Minimum Bitwise Array II](#17-construct-the-minimum-bitwise-array-ii)
     - [18. Egg Drop With 2 Eggs and N Floors](#18-egg-drop-with-2-eggs-and-n-floors)
     - [19. Find Number of Ways to Reach the K-th Stair](#19-find-number-of-ways-to-reach-the-k-th-stair)
     - [20. Minimum Moves to Capture The Queen](#20-minimum-moves-to-capture-the-queen)
-  - <a id="h-pattern-rule">Pattern Rule</a>
+  - Pattern Rule
     - [38. Transform to Chessboard](#38-transform-to-chessboard)
-  - <a id="h-precomputation">Precomputation</a>
+  - Precomputation
     - [21. Range Product Queries of Powers](#21-range-product-queries-of-powers)
-  - <a id="h-segment-tree">Segment Tree</a>
+  - Segment Tree
     - [32. My Calendar II](#32-my-calendar-ii)
-  - <a id="h-sliding-window">Sliding Window</a>
-    - <a id="h-sliding-window-standard">Standard</a>
+  - Sliding Window
+    - Standard
       - [22. Find the Longest Equal Subarray](#22-find-the-longest-equal-subarray)
-    - <a id="h-sliding-window-subset-concatenation">Subset Concatenation</a>
+    - Subset Concatenation
       - [40. Count Subarrays Where Max Element Appears at Least K Times](#40-count-subarrays-where-max-element-appears-at-least-k-times)
-    - <a id="h-sliding-window-fixed-size-window">Fixed-size Window</a>
+    - Fixed-size Window
       - [44. Find Indices With Index and Value Difference I](#44-find-indices-with-index-and-value-difference-i) 
-  - <a id="h-sorting">Sorting</a>
+  - Sorting
     - [49. Bubble Sort](#49-bubble-sort)
     - [50. Merge Sort](#50-merge-sort)
     - [51. Quick Sort](#51-quick-sort)
-  - <a id="h-stack">Stack</a>
-    - <a id="h-stack-monotonic-stack">Monotonic Stack</a>
+  - Stack
+    - Monotonic Stack
       - [47. Beautiful Towers II](#47-beautiful-towers-ii)
-  - <a id="h-string">String</a>
+  - String
     - [23. License Key Formatting](#23-license-key-formatting)
-  - <a id="h-traversal">Traversal</a>
+  - Traversal
     - [24. Find the Number of Ways to Place People I](#24-find-the-number-of-ways-to-place-people-i)
     - [25. Maximum Number of Operations With the Same Score I](#25-maximum-number-of-operations-with-the-same-score-i)
     - [29. Power Set LCCI](#29-power-set-lcci)
@@ -95,19 +95,19 @@ Source:  https://github.com/saidake/simi-docs
     - [42. Count Prefix and Suffix Pairs I](#42-count-prefix-and-suffix-pairs-i)
     - [48. Longest Common Prefix](#48-longest-common-prefix)
     - [49. Bubble Sort](#49-bubble-sort)
-  - <a id="h-two-pointer">Two Pointer</a>
+  - Two Pointer
     - [26. Boats to Save People](#26-boats-to-save-people)
     - [27. Find the Lexicographically Largest String From the Box I](#27-find-the-lexicographically-largest-string-from-the-box-i)
     - [28. Merge Sorted Array](#28-merge-sorted-array)
     - [54. 3Sum Closest](#54-3sum-closest)
-  - <a id="h-union-find">Union-Find</a>
+  - Union-Find
     - [33. Graph Connectivity With Threshold](#33-graph-connectivity-with-threshold)
-- <a id="h-sql-problems">SQL Problems</a>
+- SQL Problems
     - [1. Odd and Even Transactions](#1-odd-and-even-transactions)
     - [2. Find Customer Referee](#2-find-customer-referee)
 # Algorithm Problems
 ## 1. Array Partition
-[Back to `Array / Standard`](#h-array-standard)  
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/array-partition/
 ### Array Solution
@@ -121,7 +121,7 @@ To achieve this, we can sort the array and group every two elements into pairs, 
 /**
  * Author: Craig Brown
  * Date:   May 11, 2025
- * Source: https://github.com/saidake/simi-docs
+ * Source: https://github.com/saidake/interview
  */ 
 class Solution {
     public int arrayPairSum(int[] nums) {
@@ -141,7 +141,7 @@ class Solution {
 """
 Author: Craig Brown
 Date:   May 11, 2025
-Source: https://github.com/saidake/simi-docs
+Source: https://github.com/saidake/interview
 """
 class Solution:
     def arrayPairSum(self, nums: List[int]) -> int:
@@ -158,7 +158,7 @@ class Solution:
 /**
  * Author: Craig Brown
  * Date:   May 11, 2025
- * Source: https://github.com/saidake/simi-docs
+ * Source: https://github.com/saidake/interview
  */ 
 class Solution {
 public:
@@ -174,75 +174,41 @@ public:
     }
 };
 ```
-#### Build-in Method Complexity Analysis
-##### Java Implementation
-* `Arrays.sort(nums)`
-  * For primitive types (e.g., int[], double[])   
-  
-    Algorithm: Dual-Pivot Quicksort  
-  
-    Time Complexity:
-    * Average case: $O(n \log n)$
-    * Worst-case case: $O(n²)$ (rare due to optimized pivot selection).  
-  
-    Space Complexity:
-    * $O(\log n)$ (due to recursion stack, in-place sorting)
-  
-  * For Object Types (e.g., Integer[], String[])    
-  
-    Algorithm: TimSort (hybrid of MergeSort and InsertionSort)  
-  
-    Time Complexity:  
-    * Average and worst case: $O(n \log n)$
-  
-    Space Complexity:  
-    * $O(n)$ (requires temporary storage for merging)
-
-##### Python3 Implementation
-* `nums.sort()`
-  * Algorithm: TimSort (same as Java's for objects)  
-  * Time Complexity:  
-    * Average and worst case: $O(n \log n)$  
-  * Space Complexity:  
-    * $O(n)$ (stable sort with extra space for merges)
-
-##### C++ Implementation
-* `std::sort(nums.begin(), nums.end())`
-  * Algorithm: IntroSort (hybrid of Quicksort, Heapsort, and InsertionSort)  
-  * Time Complexity:  
-    * Average case: $O(n \log n)$  
-    * Worst case: $O(n \log n)$ (Heapsort fallback prevents $O(n^2)$)  
-  * Space Complexity:  
-    * $O(\log n)$ (due to recursion stack, in-place)
+#### Golang Implementation
+```golang
+/**
+ * Author: Craig Brown
+ * Date:   May 13, 2025
+ * Source: https://github.com/saidake/interview
+ */ 
+func arrayPairSum(nums []int) int {
+    // Sort `nums`
+    sort.Ints(nums)
+    // Compute the result sum
+    sum :=0
+    for i:=0; i<len(nums); i+=2 {
+        sum+=nums[i]
+    } 
+    return sum
+}
+```
 #### Complexity Analysis
-* Time Complexity
+* Time Complexity: $O(n \log n)$
   * Sort `nums`
-    - Java: $O(n \log n)$ for `int` type. 
-    - Python: $O(n \log n)$  
-    - C++: $O(n \log n)$  
+    - The build-in sorting method takes $O(n \log n)$. 
   * Compute the result sum
-  
+
     The loop iterates through the array with a step of 2, so it runs $n/2$ times, resulting a time complexity of $O(n)$.  
 
-  Total Time Complexity:
+  * Total Time Complexity:
   
-    - Java: $O(n \log n)$
-    - Python: $O(n \log n)$  
-    - C++: $O(n \log n)$  
-* Space Complexity
-  * Sort `nums`
-    - Java: $O(\log n)$ for `int` type.  
-    - Python: $O(n)$  
-    - C++: $O(\log n)$  
-
-  Total Space Complexity:
-
-  * Java: $O(\log n)$
-  * Python: $O(n)$
-  * C++: $O(\log n)$
+    $O(n \log n)$ (dominates over $O(n)$)
+* Space Complexity: $O(1)$
+  * All operations use constant extra space. 
+    (Note: While the built-in sorting method may require additional space depending on the language, this variation is omitted for simplicity.)
 
 ## 2. Add Edges to Make Degrees of All Nodes Even
-[Back to `Conditional Logic`](#h-conditionallogic)
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/add-edges-to-make-degrees-of-all-nodes-even/
 ### Conditional Logic Solution
@@ -250,7 +216,7 @@ To make all node degrees in the graph even by adding only two edges, the followi
 * The number of nodes with odd degrees must be even and cannot exceed 4.
     * If there are 4 such nodes, two distinct pairs must exist that can be connected.
     * If there are 2 such nodes, they must either be unconnected, or a third node must exist that can connect to both.
-#### Implementation
+#### Java Implementation
 ```java
 class Solution {
     public boolean isPossible(int n, List<List<Integer>> edges) {
@@ -322,7 +288,7 @@ class Solution {
     Thus, the total space complexity is $O(m+n)$.
 
 ## 3. Amount of Time for Binary Tree to Be Infected  <!-- 3 -->
-[Back to `Backtracking`](#h-backtracking)
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/amount-of-time-for-binary-tree-to-be-infected/
 ### Backtracking Solution
@@ -343,7 +309,7 @@ Approach:
 /**
  * Author: Craig Brown
  * Date:   April 25, 2025
- * Source: https://github.com/saidake/simi-docs
+ * Source: https://github.com/saidake/interview
  */ 
 /**
  * Definition for a binary tree node.
@@ -404,7 +370,7 @@ class Solution {
 """
 Author: Craig Brown
 Date:   April 25, 2025
-Source: https://github.com/saidake/simi-docs
+Source: https://github.com/saidake/interview
 """
 # Definition for a binary tree node.
 # class TreeNode:
@@ -471,7 +437,7 @@ class Solution:
   In this problem, we use a single return value but distinguish between two scenarios by using negative and positive values.
 
 ## 4. Search in Rotated Sorted Array
-[Back to `Dichotomy`](#h-dichotomy)
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/search-in-rotated-sorted-array/
 ### Analysis
@@ -489,7 +455,7 @@ In each division, the approach is as follows:
 
 The key is leveraging the guaranteed existence of an ordered segment in each division.
 
-#### Implementation
+#### Java Implementation
 ```java
 class Solution {
     public int search(int[] nums, int target) {
@@ -528,7 +494,7 @@ class Solution {
     Each recursive call adds a frame to the recursion stack, with a maximum depth of $O(\log n)$, leading to a space complexity of $O(\log n)$.
 
 ## 5. Jump Game VII
-[Back to `Difference Array`](#h-difference-array)  
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/jump-game-vii/
 
@@ -559,7 +525,7 @@ acc:        +     -
                 +     -
 ```
 In both cases, the `diff` array enables distinguishing whether current index is within a reachable range, even when multiple ranges overlap.
-#### Implementation
+#### Java Implementation
 ```java
 class Solution {
 
@@ -662,7 +628,7 @@ Step n:
                        R     i
     Return dp[9]
 ```
-#### Implementation
+#### Java Implementation
 ```java
 class Solution {
     public boolean canReach(String s, int minJump, int maxJump) {
@@ -708,7 +674,7 @@ class Solution {
     The `dp` array has a size of len, contributing $O(n)$ to the space complexity.
 
 ## 6. Climbing Stairs
-[Back to `Dynamic Programming / Standard`](#h-dynamic-programming-standard)  
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/climbing-stairs/
 ### Analysis
@@ -728,7 +694,7 @@ The number of ways to reach stair `1` is `1` and stair `2` is `2`, so:
 $$F(1) = 1,  F(2) = 2$$
 #### Filling the DP Table
 Since this process only depends on the previous two stairs, we can just define two variables to store the number of ways for the previous two stairs.
-#### Implementation
+#### Java Implementation
 ```java
 class Solution {
     public int climbStairs(int n) {
@@ -754,7 +720,7 @@ class Solution {
     The `for` loop iterate over the stairs starting from `3`, yielding a time complexity of $O(n)$.
 * Space Complexity: $O(1)$
 ## 7. Count All Valid Pickup and Delivery Options
-[Back to `Dynamic Programming / Standard`](#h-dynamic-programming-standard)  
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/count-all-valid-pickup-and-delivery-options/
 ### Analysis
@@ -799,7 +765,7 @@ $$F(n)=F(n-1) \times ( 2n^2-n )$$
 The initial condition is: 
 $$F(1)=1$$
 
-#### Implementation
+#### Java Implementation
 ```java
 class Solution {
     private int MOD=1_000_000_007;
@@ -821,7 +787,7 @@ class Solution {
 
 
 ## 8. Decode Ways II
-[Back to `Dynamic Programming / Standard`](#h-dynamic-programming-standard)  
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/decode-ways-ii/
 ### Analysis
@@ -883,7 +849,7 @@ dp[i] = d1 + d2
 #### Result
 The `dp[len]` is the number of ways to decode the string `s`.
 
-#### Implementation
+#### Java Implementation
 ```java
 class Solution {
     static final int MOD = 1000000007;
@@ -948,7 +914,7 @@ class Solution {
 * Using `Character.getNumericValue()` to obtain the numeric value of `'*'` in string `s` will return `'-1'` and using the `-1` for checking purposes can lead to misleading readability.
 
 ## 9. Make the XOR of All Segments Equal to Zero
-[Back to `Dynamic Programming / Standard`](#h-dynamic-programming-standard)  
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/make-the-xor-of-all-segments-equal-to-zero/
 ### Dynamic Programming Solution
@@ -1048,7 +1014,7 @@ Assuming the approach of retaining the element with the highest frequency in eac
 The maximum number of elements retained in the array `nums` to satisfy the problem's requirements is:
 $$nums.length - Math.max(rnum, dp[k - 1][0])$$
 
-#### Implementation
+#### Java Implementation
 ```java
 class Solution {
     public int minChanges(int[] nums, int k) {
@@ -1143,7 +1109,7 @@ class Solution {
         Includes variables like sum, min, and loop variables. These require $O(1)$ space.
 
 ## 10. Maximize Value of Function in a Ball Passing Game
-[Back to `Dynamic Programming / Standard`](#h-dynamic-programming-standard)  
+[Back to Main Project README](../README.md)  
  
 ### Source
 https://leetcode.com/problems/maximize-value-of-function-in-a-ball-passing-game/
@@ -1248,7 +1214,7 @@ Using bitwise operations can significantly improve the efficiency of the passing
 
     Count the trailing zeros of `k`, which corresponds to the exponent of the number $2^n$  subtracted from `k` after the operations `k &= k-1`.
 
-#### Implementation
+#### Java Implementation
 ```java
 class Solution {
     public long getMaxFunctionValue(List<Integer> receiver, long K) {
@@ -1314,7 +1280,7 @@ class Solution {
         
         The other variables, such as `len`, `passCount`, `i`, `x`, `k`, `ctz`, `s`, and `ans`, require constant extra space.
 ## 11. Minimum Deletions to Make String Balanced
-[Back to `Dynamic Programming / Standard`](#h-dynamic-programming-standard)  
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/minimum-deletions-to-make-string-balanced/
 
@@ -1333,7 +1299,7 @@ f[i] =
     f[i-1],                   if the current character is 'b'
     min(f[i-1] + 1, countB),  if the current character is 'a'
 ```
-#### Implementation
+#### Java Implementation
 ```java
 class Solution {
     public int minimumDeletions(String s) {
@@ -1355,7 +1321,7 @@ class Solution {
 * Space Complexity: $O(1)$
 
 ## 12. Stone Game
-[Back to `Dynamic Programming / Standard`](#h-dynamic-programming-standard)  
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/stone-game/
 ### Depth-first Search Solution
@@ -1521,7 +1487,7 @@ class Solution {
     The space requried for this array is $O(n)$.
 
 ## 13. Target Sum
-[Back to `Dynamic Programming / Standard`](#h-dynamic-programming-standard)  
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/target-sum/
 ### Depth-first Search Solution
@@ -1578,7 +1544,7 @@ target =  67 + (- 8 - 4 -5 - 1 - 2 - 7)*2 = 13
 neg = (- 8 - 4 -5 - 1 - 2 - 7) = 27
 ```
 The initial solution can be optimized as follows:
-#### Implementation
+#### Java Implementation
 ```java
 public class Solution {
     public int findTargetSumWays(int[] nums, int target) {
@@ -1832,10 +1798,10 @@ public class Solution {
 
 
 ## 14. Distribute Elements Into Two Arrays II
-[Back to `Fenwick Tree`](#h-fenwick-tree) 
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/distribute-elements-into-two-arrays-ii/
-### Analysis
+### Fenwick Tree Solution
 Follow the problem description, the key point is to find the number of elements in array `nums` that are strictly greater than val.
 
 
@@ -1876,7 +1842,7 @@ This `tree` corresponds to a sorted version of the array `nums`, called `sortedA
 When inserting a new element at index `i` into the Binary Indexed Tree, increment the value at index `i` of array `tree` by `1`.  
 This update allows the tree to maintain a count of elements before index `i` in the array `tree`, which represents the number of elements in `nums` that are less than `sortedArr[i]`.
 
-#### Implementation
+#### Java Implementation
 ```java
 class FenwickTree {
     private final int[] tree;
@@ -1885,15 +1851,20 @@ class FenwickTree {
         tree = new int[len];
     }
 
-    public void add(int i) {
+    public void update(int i) {
+        // [i, tree.length)
+        // Update all relevant positions starting from `i`.
         while (i < tree.length) {
             tree[i]++;
             i += i & -i;
+            // 0000 0001 (1) -> 0000 0010 (2) -> 0000 0100 (4) -> 0000 1000 (8)
         }
     }
 
     public int prefixSum(int i) {
         int res = 0;
+        // (0, i]
+        // Sum positions at or before `i`.
         while (i > 0) {
             res += tree[i];
             i &= i - 1;
@@ -1915,8 +1886,8 @@ class Solution {
 
         FenwickTree ft1 = new FenwickTree(len + 1);
         FenwickTree ft2 = new FenwickTree(len + 1);
-        ft1.add(Arrays.binarySearch(sortedArr, nums[0]) + 1);
-        ft2.add(Arrays.binarySearch(sortedArr, nums[1]) + 1);
+        ft1.update(Arrays.binarySearch(sortedArr, nums[0]) + 1);
+        ft2.update(Arrays.binarySearch(sortedArr, nums[1]) + 1);
         // Traverse array 'nums'
         for (int i = 2; i < nums.length; i++) {
             int cu = nums[i];
@@ -1926,10 +1897,10 @@ class Solution {
             int gc2 = list2.size() - ft2.prefixSum(sInd); 
             if (gc1 > gc2 || gc1 == gc2 && list1.size() <= list2.size()) {
                 list1.add(cu);
-                ft1.add(sInd);
+                ft1.update(sInd);
             } else {
                 list2.add(cu);
-                ft2.add(sInd);
+                ft2.update(sInd);
             }
         }
         // Concatenate the two lists
@@ -1963,7 +1934,7 @@ class Solution {
     Therefore, the total space complexity is $O(n)$.
 
 ## 15. Max Difference You Can Get From Changing an Integer
-[Back to `Greedy`](#h-greedy)  
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/max-difference-you-can-get-from-changing-an-integer/
 
@@ -2004,7 +1975,7 @@ class Solution {
 * Space Complexity: $O(1)$
 
 ## 16. Maximum Length of Subarray With Positive Product
-[Back to `Greedy`](#h-greedy)  
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/maximum-length-of-subarray-with-positive-product/
 
@@ -2109,7 +2080,7 @@ class Solution {
 
 
 ## 17. Construct the Minimum Bitwise Array II
-[Back to `Math`](#h-math)  
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/construct-the-minimum-bitwise-array-ii/
 ### Analysis
@@ -2182,7 +2153,7 @@ class Solution {
     The array `ans` takes $O(n)$ space.
 
 ## 18. Egg Drop With 2 Eggs and N Floors
-[Back to `Math`](#h-math)  
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/egg-drop-with-2-eggs-and-n-floors/
 ### Analysis
@@ -2234,7 +2205,7 @@ Because we expect a positive number, the formula will be:
 $$j=\frac{-1 + \sqrt{1+8n}}{2}$$ 
 This gives the smallest integer $j$, where the fractional part is treated as a full drop.
 
-#### Implementation
+#### Java Implementation
 ```java
 class Solution {
     public int twoEggDrop(int n) {
@@ -2249,7 +2220,7 @@ class Solution {
 * Space Complexity: $O(1)$
 
 ## 19. Find Number of Ways to Reach the K-th Stair
-[Back to `Math`](#h-math)
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/find-number-of-ways-to-reach-the-k-th-stair/
 
@@ -2296,7 +2267,7 @@ Given the constraint $0 <= k <= 10^9$,
 even though an additional upward jump may need to be considered,
 The combination probability result remains less than $2^{ex+1}$, which is equivalent to `2k`.  
 Since integer value range is $-2,147,483,648$ to $2,147,483,647$,the result within $0 \sim 2\times10^9$ can be safely represented as an `int`.
-#### Implementation
+#### Java Implementation
 ```java
 class Solution {
     private static final int MX = 31;
@@ -2332,7 +2303,7 @@ class Solution {
     The time and space used during the precomputation process are not factored into the solution.
 * Space Complexity: $O(1)$
 ## 20. Minimum Moves to Capture The Queen
-[Back to `Math`](#h-math)
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/minimum-moves-to-capture-the-queen/
 
@@ -2379,7 +2350,7 @@ In such situations, the maximum steps required are 2.
 * If the rook or bishop cannot directly capture the queen, they can move an additional step to do so.
 The maximum steps required are also 2.
 
-#### Implementation
+#### Java Implementation
 ```java
 class Solution {
     private int moves=0;
@@ -2410,7 +2381,7 @@ class Solution {
 * Time Complexity: $O(1)$
 * Space Complexity: $O(1)$
 ## 21. Range Product Queries of Powers
-[Back to `Precomputation`](#h-precomputation)  
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/range-product-queries-of-powers/
 
@@ -2426,7 +2397,7 @@ with each set bit's value added to the array `powers`.
 Using a mask value of `0001` and shift it left to isolate the set bits.
 
 Since the array `powers` is small (<32), precomputing all products for possible query ranges ensures efficiency with small time complexity.
-#### Implementation
+#### Java Implementation
 ```java
 class Solution {
     int MOD=1_000_000_007;
@@ -2491,7 +2462,7 @@ class Solution {
     Because $O(q)$ grows slower than $O(bc^2)$ and can be omitted, the total space complexity is $O(bc^2)$.
 
 ## 22. Find the Longest Equal Subarray
-[Back to `Sliding Window / Standard`](#h-sliding-window-standard)  
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/find-the-longest-equal-subarray/
 ### Analysis
@@ -2538,7 +2509,7 @@ There are several different choices next:
   By counting the occurrences of each value in the current range, we can ensure each number to be excluded is properly checked.  
 
 Here, choose the second one as it uses less space.
-#### Implementation
+#### Java Implementation
 ```java
 class Solution {
   public int longestEqualSubarray(List<Integer> nums, int k) {
@@ -2601,7 +2572,7 @@ class Solution {
    Since the primary space usage comes from the `valCount` array, the space complexity is $O(n)$
 
 ## 23. License Key Formatting
-[Back to `String`](#h-string)  
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/license-key-formatting/
 ### Analysis
@@ -2638,7 +2609,7 @@ class Solution {
     `StringBuilder sb` stores the result string, which can also be of size $O(n)$.  
     Therefore, the total space complexity is $O(n)$
 ## 24. Find the Number of Ways to Place People I
-[Back to `Traversal`](#h-traversal)  
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/find-the-number-of-ways-to-place-people-i/
 
@@ -2691,14 +2662,14 @@ Note that the space complexity of `Arrays.sort` is:
 
 
 ## 25. Maximum Number of Operations With the Same Score I
-[Back to `Traversal`](#h-traversal)
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/maximum-number-of-operations-with-the-same-score-i/
 
 ### Analysis
 Since `2 <= nums.length <= 100`, the operation score can be determined using the first two elements of the array nums.   
 Traverse the array `nums` to evaluate the maximum number of operations you can perform sequentially.
-#### Implementation
+#### Java Implementation
 ```java
 class Solution {
     public int maxOperations(int[] nums) {
@@ -2723,7 +2694,7 @@ class Solution {
 
     Only a constant amount of additional space is used.
 ## 26. Boats to Save People
-[Back to `Two Pointer`](#h-two-pointer)  
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/boats-to-save-people/
 
@@ -2768,7 +2739,7 @@ Note that the space complexity of `Arrays.sort` is:
 * $O(logn)$ for sorting primitive arrays.
 * $O(n)$ for sorting object arrays.
 ## 27. Find the Lexicographically Largest String From the Box I
-[Back to `Two Pointer`](#h-two-pointer)
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/find-the-lexicographically-largest-string-from-the-box-i/
 
@@ -2819,7 +2790,7 @@ Comparison and Updates:
 Note:
 * `len - numFriends + 1` represents the maximum length of the lexicographically smallest substring after splitting into `numFriends` parts.
 
-#### Implementation
+#### Java Implementation
 ```java
 class Solution {
     public String answerString(String s, int numFriends) {
@@ -2856,7 +2827,7 @@ class Solution {
 * Space Complexity: $O(1)$
 
 ## 28. Merge Sorted Array
-[Back to `Two Pointer`](#h-two-pointer)
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/merge-sorted-array/
 
@@ -2896,9 +2867,7 @@ class Solution {
     The array `nums1Cp` occupies $O(m)$ space where `m` is the first `m` integers in array `nums1`.
 
 ## 29. Power Set LCCI
-[Back to `Backtracking`](#h-backtracking)  
-[Back to `Depth-first Search`](#h-dfs)  
-[Back to `Traversal`](#h-traversal)
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/power-set-lcci/
 ### Backtracking Solution
@@ -2982,7 +2951,7 @@ After the first recursive call completes and adds the current element to the `pa
 the second call follows the same process to generate all subsets.   
 Finally, it removes the current element and backtracks to the previous index.
 
-#### Implementation
+#### Java Implementation
 ```java
 class Solution {
     private final List<List<Integer>> ans = new ArrayList<>();
@@ -3069,7 +3038,7 @@ Recursion:
 
 ```
 The right arrays represent the subset added in the current recursive call.
-#### Implementation
+#### Java Implementation
 ```java
 class Solution {
     private final List<List<Integer>> ans = new ArrayList<>();
@@ -3134,7 +3103,7 @@ Binary Representation:
     ..., 
     1111. (`1`,`2`,`3` and `4` are selected) 
 ```
-#### Implementation
+#### Java Implementation
 ```java
 class Solution {
     public List<List<Integer>> subsets(int[] nums) {
@@ -3171,14 +3140,106 @@ class Solution {
 
     Thus, the overall space complexity is $O(n\times2^n)$.
 
+## 1. Odd and Even Transactions
+[Back to Main Project README](../README.md)  
+### Source
+https://leetcode.com/problems/odd-and-even-transactions/
+### Analysis
+Group the data by the `transaction_date` field (using `GROUP BY` or `PARTITION BY`), and calculate the total amounts for odd and even transactions on each transaction_date.
+
+Oracle Functions:
+* NVL(expression, replacement_value)
+
+    The NVL function is used to replace NULL values with a specified replacement value.   
+    If the first argument is NULL, it returns the second argument. Otherwise, it returns the first argument.
+* BITAND(x, y)				
+
+    The BITAND function performs a bitwise AND operation between two integer values. 
+
+#### MySQL Implementation
+```sql
+SELECT DISTINCT transaction_date, 
+SUM(CASE WHEN amount % 2=0 THEN 0 ELSE amount END) OVER( PARTITION BY transaction_date  ) AS odd_sum,
+SUM(CASE WHEN amount % 2=0 THEN amount ELSE 0 END) OVER( PARTITION BY transaction_date  ) AS even_sum
+FROM transactions;
+```
+#### Oracle Implementation
+```sql
+SELECT TO_CHAR(transaction_date,'yyyy-MM-dd') AS transaction_date,
+       NVL(SUM(CASE WHEN BITAND(amount,1)=1 THEN amount END),0) AS odd_sum,
+       NVL(SUM(CASE WHEN BITAND(amount,1)=0 THEN amount END),0) AS even_sum
+FROM transactions
+GROUP BY transaction_date
+ORDER BY transaction_date ASC;
+```
+
+## 2. Find Customer Referee
+[Back to Main Project README](../README.md)  
+### Source
+https://leetcode.com/problems/find-customer-referee/
+
+### Analysis
+1. Use of Common Table Expressions (CTEs)
+
+    Define two CTEs: one for storing the salary categories and another for counting the number of employees in each category.
+
+2. Direct Query with `UNION ALL`
+
+    Directly select and combine the results for each salary category in a single query using `UNION ALL`. 
+
+#### MySQL Implementation
+```sql
+WITH category AS(
+    SELECT 'Low Salary' AS category
+    union
+    SELECT 'Average Salary'
+    union 
+    SELECT 'High Salary'
+), cnt AS (
+    SELECT
+        CASE 
+        WHEN income<20000 THEN 'Low Salary'
+        WHEN income>=20000 AND income<=50000 THEN 'Average Salary'
+        WHEN income>50000 THEN 'High Salary '
+        END AS category,
+        count(1) AS accounts_count
+    FROM
+        accounts
+    GROUP BY 1
+) 
+
+SELECT
+    category.category,
+    IFNULL(accounts_count,0) AS accounts_count
+FROM category
+LEFT JOIN cnt
+ON category.category=cnt.category;
+```
+
+#### Oracle Implementation
+```sql
+SELECT  'Low Salary' AS category, NVL(count(account_id),0) accounts_count 
+    FROM accounts  
+    WHERE income <20000
+UNION ALL 
+    SELECT  'Average Salary' AS category, NVL(count(account_id),0) ct 
+        FROM accounts  
+        WHERE income  between  20000 and 50000 
+UNION ALL 
+    SELECT 'High Salary'  AS category, NVL( count(account_id),0) ct
+        FROM accounts 
+        WHERE income > 50000; 
+```
+
+
 ## 30. Count Common Words With One Occurrence
-[Back to `HashMap`](#h-hashmap)  
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/count-common-words-with-one-occurrence/
 
 ### HashMap Solution
 Use two Hashmaps to count the word occurrences in both arrays and identify strings that appear exactly once in each.
-#### Implementation
+#### Java Implementation
 ```java
 class Solution {
     public int countWords(String[] words1, String[] words2) {
@@ -3218,13 +3279,13 @@ class Solution {
     The maps `wordCount1` and `wordCount1` store keys from `words1` and `words2` respectively, with fixed-size values, resulting in a total space complexity of $O(m+n)$.
 
 ## 31. Minimum Number Game
-[Back to `Array / Standard`](#h-array-standard)  
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/minimum-number-game/
 
 ### Array Solution
 Sort the `nums` array, and swap every two elements.
-#### Implementation
+#### Java Implementation
 ```java
 class Solution {
     public int[] numberGame(int[] nums) {
@@ -3250,8 +3311,7 @@ class Solution {
     Therefore, the total space complexity is $O(\log n)$.
 
 ## 32. My Calendar II
-[Back to `Binary Search`](#h-binarysearch)  
-[Back to `Segment Tree`](#h-segment-tree)
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/my-calendar-ii/
 
@@ -3800,7 +3860,7 @@ class MyCalendarTwo {
     Thus, the overall space complexity is $O(\log n)$ (Best Case) or $O(n)$ (Worst Case).
 
 ## 33. Graph Connectivity With Threshold
-[Back to `Union Find`](#h-union-find)  
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/graph-connectivity-with-threshold/
 
@@ -3860,7 +3920,7 @@ x = 8, y = 4
     Common divisor = 4  
 ```
 For each query, determine if `x` and `y` share the same smallest valid divisor.
-#### Implementation
+#### Java Implementation
 ```java
 import java.util.*;
 
@@ -3953,7 +4013,7 @@ class Solution {
     Thus the overall space complexity is $O(n+m)$.
 
 ## 34. Sort Array by Increasing Frequency
-[Back to `Array / Meaningful Index`](#h-array-meaningful-index)  
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/sort-array-by-increasing-frequency/
 
@@ -3972,7 +4032,7 @@ indices:  100 101 102 103 104 105 ...
 
 Filter out elements with `frequency>0` into `arr` and sort them by frequency.
 Repeat each element in `arr` based on its frequency to form the final result.
-#### Implementation
+#### Java Implementation
 ```java
 class Solution {
     public int[] frequencySort(int[] nums) {
@@ -4051,7 +4111,7 @@ class Solution {
     Manually copying values into a new list offers better performance compared to using Java Streams.
 
 ## 35. Maximum Multiplication Score
-[Back to `Dynamic Programming / Problem Breakdown`](#h-dynamic-programming-problem-breakdown)  
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/maximum-multiplication-score/
 ### Dynamic Programming Solution
@@ -4146,7 +4206,7 @@ Step 3:
 
 ...
 ```
-#### Implementation
+#### Java Implementation
 ```java
 class Solution {
     public long maxScore(int[] a, int[] b) {
@@ -4170,7 +4230,7 @@ class Solution {
   The variables `dp1`, `dp2`, `dp3`, `dp4` each take constant time $O(1)$.
 
 ## 36. Find Triangular Sum of an Array
-[Back to `Traversal`](#h-traversal) 
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/find-triangular-sum-of-an-array/
 
@@ -4180,7 +4240,7 @@ Since `nums` is no longer needed in next steps, reuse it as `newNums`.
 
 Return the result when only one element remains.
 
-#### Implementation
+#### Java Implementation
 ```java
 class Solution {
     public int triangularSum(int[] nums) {
@@ -4206,7 +4266,7 @@ class Solution {
  * Reusing `nums` is more efficient since its original elements are no longer required in the following steps.
 
 ## 37. Zero Array Transformation II
-[Back to `Difference Array`](#h-difference-array)   
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/zero-array-transformation-ii/
 
@@ -4218,7 +4278,7 @@ Since only used queires are counted and must be rechecked for the next index, th
 
 1. Traverse `nums`, and at each index `i`, iterate through all queries to reduct `nums[i]` to `0` within the first `k` queries, determining minimum required queries.
 2. Using the `diff` array to track the previously traversed query ranges, allowing the decrement amount to be efficiently retrieved at index `i`.
-#### Implementation
+#### Java Implementation
 ```java
 class Solution {
     public int minZeroArray(int[] nums, int[][] queries) {
@@ -4259,7 +4319,7 @@ class Solution {
   * The `diff` array requires $O(n)$ space, where `n` is the length of `nums`.
 
 ## 38. Transform to Chessboard
-[Back to `Pattern Rule`](#h-pattern-rule)  
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/transform-to-chessboard/
 ### Pattern Rule Solution 
@@ -4283,7 +4343,7 @@ So if there are $diff$ different digits, $\frac{diff}{2}$ swaps are required.
 If the number of digit `0` and `1` are equal, and additional same case must be considered.
 
 Following this pattern, the minimum swaps for both rows and columns can be calculated.
-#### Implementation
+#### Java Implementation
 ```java
 class Solution {
     public int movesToChessboard(int[][] board) {
@@ -4357,7 +4417,7 @@ class Solution {
     Thus, the overall space complexity is $O(n)$.
 
 ## 39. Trapping Rain Water II
-[Back to `Heap`](#h-heap)  
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/trapping-rain-water-ii/
 
@@ -4457,7 +4517,7 @@ Step 9:
 Total volume of trapped water: 5
 ```
 
-#### Implementation
+#### Java Implementation
 ```java
 class Solution {
     
@@ -4556,7 +4616,7 @@ class Solution {
   Thus, the total space complexity is $O(m\times n)$.
 
 ## 40. Count Subarrays Where Max Element Appears at Least K Times
-[Back to `Sliding Window / Subset Concatenation`](#h-sliding-window-subset-concatenation)  
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/count-subarrays-where-max-element-appears-at-least-k-times/
 
@@ -4619,7 +4679,7 @@ Step 6:
 ```
 In the last step, each added `L` indicates that the four previous added subsets `[3,3]`, `[2,3,3]`, `[3,2,3,3]` and `[1,3,2,3,3]` concatenate the current `C` to form four new valid subsets.
 
-#### Implementation
+#### Java Implementation
 ```java
 class Solution {
     public long countSubarrays(int[] nums, int k) {
@@ -4664,8 +4724,7 @@ class Solution {
     `max`, `ans`, `cntMax` and `left` each take constant time $O(1)$.
 
 ## 41. Path with Maximum Probability
-[Back to `Graph / Dijkstra`](#h-graph-dijkstra)  
-[Back to `Bellman-Ford`](#h-graph-bellman-ford)  
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/path-with-maximum-probability/
 
@@ -4823,7 +4882,7 @@ Edge [2,3]:
     
 ...
 ```
-#### Implementation
+#### Java Implementation
 ```java
 class Solution {
     public double maxProbability(int n, int[][] edges, double[] succProb, int start_node, int end_node) {
@@ -4862,12 +4921,12 @@ class Solution {
   * `pathProb` has a space complexity of $O(n)$.
 
 ## 42. Count Prefix and Suffix Pairs I
-[Back to `Traversal`](#h-traversal)
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/count-prefix-and-suffix-pairs-i/
 ### Traversal Solution
 Iterate through all possible pairs in the `words` array and check `isPrefixAndSuffix(words[i], words[j])` for each.
-#### Implementation
+#### Java Implementation
 ```java
 class Solution {
     public int countPrefixSuffixPairs(String[] words) {
@@ -4890,7 +4949,7 @@ class Solution {
 * Space Complexity: $O(1)$
 
 ## 43. Total Cost to Hire K Workers
-[Back to `Heap`](#h-heap)  
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/total-cost-to-hire-k-workers/
 
@@ -4899,7 +4958,7 @@ Use two min-heaps, `leftQue` and `rightQue`, to store candidates from the left a
 
 Since the heap maintains automatic sorting, each poll retrieves the lowest-cost candidate corresponding to each selection.
 
-#### Implementation
+#### Java Implementation
 ```java
 class Solution {
     public long totalCost(int[] costs, int k, int candidates) {
@@ -4963,7 +5022,7 @@ class Solution {
     The `leftQue` and `rightQue` each take $O(m)$ space where `m` is the number of candidates.
 
 ## 44. Find Indices With Index and Value Difference I
-[Back to `Fixed-size Window`](#h-sliding-window-fixed-size-window)
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/find-indices-with-index-and-value-difference-i/
 
@@ -4973,7 +5032,7 @@ To satisfy `abs(i - j) >= indexDifference`, use a fixed-size sliding window of `
 To meet the condition `abs(nums[i] - nums[j]) >= valueDifference`, compute the largest difference between `nums[j]` and `nums[0 ~ i]` at each step.  
 This is equivalent to the absolute difference between `nums[j]` and either the **maximum value** or the **minimum value** in the range `nums[0 ~ i]`.
 
-#### Implementation
+#### Java Implementation
 ```java
 class Solution {
   public int[] findIndices(int[] nums, int indexDifference, int valueDifference) {
@@ -5006,7 +5065,7 @@ class Solution {
 * Space Complexity: $O(1)$
 
 ## 45. Intersection of Two Arrays II
-[Back to `HashMap`](#h-hashmap)  
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/intersection-of-two-arrays-ii/
 
@@ -5096,7 +5155,7 @@ class Solution {
   Thus, the overall space complexity is $O(n)$.
 
 ## 46. Number of Paths with Max Score
-[Back to `Depth-first Search`](#h-dfs)
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/number-of-paths-with-max-score/
 
@@ -5237,7 +5296,7 @@ class Solution {
    Therefore, the total space complexity is $O(rLen\times cLen)$.
 
 ## 47. Beautiful Towers II
-[Back to `Monotonic Stack`](#h-stack-monotonic-stack)  
+[Back to Main Project README](../README.md)  
 
 ### Source
 https://leetcode.cn/problems/beautiful-towers-ii/
@@ -5341,7 +5400,7 @@ class Solution {
 
 
 ## 48. Longest Common Prefix
-[Back to `Traversal`](#h-traversal)  
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/longest-common-prefix/
 ### Traversal Solution
@@ -5392,8 +5451,7 @@ class Solution {
   * All variables occupy constant space.
 
 ## 49. Bubble Sort
-[Back to `Sorting`](#h-sorting)  
-[Back to `Traversal`](#h-traversal)  
+[Back to Main Project README](../README.md)  
 ### Description
 Given an integer array `arr`, sort it in ascending order.
 
@@ -5494,8 +5552,7 @@ public class BubbleSort {
     * All variables occupy constant space.
 
 ## 50. Merge Sort
-[Back to `Backtracking`](#h-backtracking)  
-[Back to `Sorting`](#h-sorting)  
+[Back to Main Project README](../README.md)  
 ### Description
 Given an integer array `arr`, sort it in ascending order.
 
@@ -5521,7 +5578,7 @@ Step-by-step Splits:
           /     \            /     \             /     \
        [38]   [27]        [43]   [3]         [9]     [82]
 ```
-### Java Implementation
+#### Java Implementation
 ```java
 /**
  * @author Craig Brown
@@ -5605,8 +5662,7 @@ public class MergeSort {
   Each recursive call focuses on merging two already sorted partitions into a larger sorted array.
 
 ## 51. Quick Sort
-[Back to `Depth-first Search`](#h-dfs)  
-[Back to `Sorting`](#h-sorting)  
+[Back to Main Project README](../README.md)  
 ### Description
 Given an integer array `arr`, sort it in ascending order.
 
@@ -5693,7 +5749,7 @@ public class QuickSort {
 #### Consideration
 * The `if (left < right)` check ensures no out-of-bounds access, even if the indices exceed valid ranges.
 ## 52. Maximum Number of Pairs in Array
-[Back to `Array / Meaningful Index`](#h-array-meaningful-index)  
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/maximum-number-of-pairs-in-array/
 ### Array Solution
@@ -5751,7 +5807,7 @@ class Solution:
 * Consideration
   * Using `freqArr[i]/2` is more efficient for counting pairs than checking `freqArr[i]>0 && freqArr[i]%2==0`.
 ## 53. Can I Win
-[Back to `Depth-first Search`](#h-dfs)  
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/can-i-win/
 ### Depth-first Search Solution
@@ -5772,7 +5828,7 @@ Try all available integers during each player's turn:
 /**
  * Author: Craig Brown
  * Date:   May 3, 2025
- * Source: https://github.com/saidake/simi-docs
+ * Source: https://github.com/saidake/interview
  */ 
 class Solution {
     public boolean canIWin(int maxChoosableInteger, int desiredTotal) {
@@ -5807,7 +5863,7 @@ class Solution {
 """
 Author: Craig Brown
 Date:   May 4, 2025
-Source: https://github.com/saidake/simi-docs
+Source: https://github.com/saidake/interview
 """
 class Solution:
     def canIWin(self, maxChoosableInteger: int, desiredTotal: int) -> bool:
@@ -5845,7 +5901,7 @@ class Solution:
 #### Consideration
 * To analyze the time complexity of the depth-first algorithm, focus on **the total number of recursive calls** and **all possible combinations traversed**, rather than just the recursion depth.
 ## 54. 3Sum Closest
-[Back to `Two Pointer`](#h-two-pointer)
+[Back to Main Project README](../README.md)  
 ### Source
 https://leetcode.com/problems/3sum-closest/
 ### Two-Pointer Solution
@@ -5863,7 +5919,7 @@ Approach:
 /**
  * Author: Craig Brown
  * Date:   May 6, 2025
- * Source: https://github.com/saidake/simi-docs
+ * Source: https://github.com/saidake/interview
  */ 
 class Solution {
     public int threeSumClosest(int[] nums, int target) {
@@ -5902,7 +5958,7 @@ class Solution {
 """
 Author: Craig Brown
 Date:   May 8, 2025
-Source: https://github.com/saidake/simi-docs
+Source: https://github.com/saidake/interview
 """
 class Solution:
     def threeSumClosest(self, nums: List[int], target: int) -> int:
@@ -5955,94 +6011,340 @@ class Solution:
       `list.sort()` uses a non-recursive algorithm and requires linear space $O(n)$ for temporary storage.
 #### Consideration
 * All relevant combinations should be carefully considered by iterating through `nums`.
-# SQL Problems
-## 1. Odd and Even Transactions
-[Back to `Sql Problems`](#h-sql-problems)  
+
+## 55. Maximum Balanced Subsequence Sum
+[Back to Main Project README](../README.md)  
 ### Source
-https://leetcode.com/problems/odd-and-even-transactions/
-### Analysis
-Group the data by the `transaction_date` field (using `GROUP BY` or `PARTITION BY`), and calculate the total amounts for odd and even transactions on each transaction_date.
+https://leetcode.com/problems/maximum-balanced-subsequence-sum/
+### Fenwick Tree Solution
+For any balanced subsequence with indices $i₀ < i₁ < ... < i_{k-1}$, the condition  
+$$nums[i_j] - nums[i_{j-1}] ≥ i_j - i_{j-1}$$  
+is **equivalent to**:  
+$$nums[i_j] - i_j ≥ nums[i_{j-1}] - i_{j-1}$$
 
-Oracle Functions:
-* NVL(expression, replacement_value)
+This transforms the problem into **finding a subsequence with non-decreasing `nums[i] - i` values**, where we want to **maximize the sum**.
 
-    The NVL function is used to replace NULL values with a specified replacement value.   
-    If the first argument is NULL, it returns the second argument. Otherwise, it returns the first argument.
-* BITAND(x, y)				
+Approach:
+1. Extract distinct values of `nums[i] - i` for positive `nums[i]`.
 
-    The BITAND function performs a bitwise AND operation between two integer values. 
+   Store these in a sorted set `keySet`. Also, track the maximum negative value to handle edge cases with no positives.
 
-### MySQL Implementation
-```sql
-SELECT DISTINCT transaction_date, 
-SUM(CASE WHEN amount % 2=0 THEN 0 ELSE amount END) OVER( PARTITION BY transaction_date  ) AS odd_sum,
-SUM(CASE WHEN amount % 2=0 THEN amount ELSE 0 END) OVER( PARTITION BY transaction_date  ) AS even_sum
-FROM transactions;
+2. Map each key in `keySet` to an index in the Fenwick Tree.
+   
+   This enables efficient range queries and updates.
+4. Iterate through `nums` in order.
+   * For each `nums[i]`, find the prefix sum at the index mapped from `nums[i] - i`.
+   * Compute the new sum as `tree.prefixSum(curIdx) + nums[i]`, and update the tree.
+   * Keep track of the maximum sum encountered.
+
+**Example:**  
+![](./assets/Algorithms/55.%20Maximum%20Balanced%20Subsequence%20Sum.png)
+
+In the image above:
+
+- The **red number** represents the value to be updated into the Fenwick Tree.  
+  It is computed as:  
+  `tree.prefixSum(curIdx) + nums[i]`  
+  This ensures we extend the best possible balanced subsequence ending **at or before** `curIdx`, or start a new one if no valid prefix exists.
+
+- The **green number** indicates where the red value is propagated in the tree.  
+    Update all relevant positions starting from `curIdx`, enabling efficient reuse of previously computed optimal subsequences.
+#### Consideration
+* `i += i & -i`
+
+    When `i=3`, `i & -i = 1`.
+* The subsequence must maintain the original order of elements.
+
+#### Java Implementation
+```java
+/**
+ * Author: Craig Brown
+ * Date:   May 15, 2025
+ * Source: https://github.com/saidake/interview
+ */ 
+class Solution {
+    public long maxBalancedSubsequenceSum(int[] nums) {
+        // Extract distinct values of `nums[i] - i` for positive `nums[i]`
+        Set<Integer> keySet = new TreeSet<>();
+        long maxNegVal = Long.MIN_VALUE;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] > 0) {
+                keySet.add(nums[i] - i);
+            } else {
+                maxNegVal = Math.max(maxNegVal, nums[i]);
+            }
+        }
+
+        if (keySet.isEmpty()) return maxNegVal;
+
+        // Map each key in `keySet` to an index in the Fenwick Tree.
+        Map<Integer, Integer> idxMap = new HashMap<>();
+        int idx = 1;
+        for (int key : keySet) {
+            idxMap.put(key, idx++);
+        }
+
+        FenwickTree tree = new FenwickTree(idx+1);
+        long ans=maxNegVal;
+        // Iterate through `nums` in order
+        for(int i=0; i<nums.length; i++){
+            if(nums[i]<=0) continue;
+            // Update the tree with the new prefix sum
+            int curIdx = idxMap.get(nums[i]-i);
+            long curSum = tree.prefixSum(curIdx) + nums[i]; 
+            tree.update(curIdx, curSum);
+            // Update the maximum sum
+            ans = Math.max(ans, curSum);
+        }
+        return ans;
+    }
+
+    class FenwickTree {
+        private long[] tree;
+
+        public FenwickTree(int size){
+            this.tree = new long[size];
+        }
+
+        public void update(int i, long val){
+            // [i, tree.length)
+            // Update all relevant positions starting from `i`.
+            while (i < tree.length){
+                tree[i]= Math.max(tree[i], val);
+                i += i & -i;
+            }
+        }
+
+        public long prefixSum(int i){
+            long res = 0;
+            // (0, i]
+            while(i > 0){
+                res = Math.max(tree[i], res);
+                i &= i-1;
+            }
+            return res;
+        }
+    }
+}
 ```
-### Oracle Implementation
-```sql
-SELECT TO_CHAR(transaction_date,'yyyy-MM-dd') AS transaction_date,
-       NVL(SUM(CASE WHEN BITAND(amount,1)=1 THEN amount END),0) AS odd_sum,
-       NVL(SUM(CASE WHEN BITAND(amount,1)=0 THEN amount END),0) AS even_sum
-FROM transactions
-GROUP BY transaction_date
-ORDER BY transaction_date ASC;
+#### Python3 Implementation
+```python
+"""
+Author: Craig Brown
+Date:   May 15, 2025
+Source: https://github.com/saidake/interview
+"""
+class Solution:
+    def maxBalancedSubsequenceSum(self, nums: List[int]) -> int:
+        # Extract distinct values of `nums[i] - i` for positive `nums[i]`
+        key_set = sorted(set(val - i for i, 
+        val in enumerate(nums) if val > 0))
+        max_neg_val = max(nums)
+        
+        if not key_set:
+            return max_neg_val
+        
+        # Map each key in `keySet` to an index in the Fenwick Tree.
+        idx_map = {key: idx + 1 for idx, key in enumerate(key_set)}
+        tree = FenwickTree(len(idx_map) + 1)
+        res = max_neg_val
+        
+        # Iterate through `nums` in order
+        for i, val in enumerate(nums):
+            if val <= 0:
+                continue
+            # Update the tree with the new prefix sum
+            cur_idx = idx_map[val - i]
+            cur_sum = tree.prefixSum(cur_idx) + val
+            tree.update(cur_idx, cur_sum)
+            # Update the maximum sum
+            res = max(res, cur_sum)
+        
+        return res
+
+
+class FenwickTree:
+    def __init__(self, size):
+        self.tree = [0] * size 
+
+    def update(self, i, val):
+        # [i, tree.length)
+        # Update all relevant positions starting from `i`.
+        while i < len(self.tree):
+            self.tree[i] = max(self.tree[i], val)
+            i += i & -i
+
+    def prefixSum(self, i):
+        res = 0
+        #  (0, i]
+        while i > 0:
+            res = max(self.tree[i], res)
+            i &= i - 1
+        return res
 ```
+#### C++ Implementation
+```c++
+/**
+ * Author: Craig Brown
+ * Date:   May 19, 2025
+ * Source: https://github.com/saidake/interview
+ */ 
+class FenwickTree {
+public:
+    FenwickTree(int size) : tree(size, 0) {}
 
-## 2. Find Customer Referee
-[Back to `Sql Problems`](#h-sql-problems) 
-### Source
-https://leetcode.com/problems/find-customer-referee/
+    void update(int i, long long val) {
+        // [i, tree.length)
+        // Update all relevant positions starting from `i`.
+        while (i < tree.size()) {
+            tree[i] = max(tree[i], val);
+            i += i & -i;
+        }
+    }
 
-### Analysis
-1. Use of Common Table Expressions (CTEs)
+    long long prefixSum(int i) {
+        long long res = 0;
+        // (0, i]
+        while (i > 0) {
+            res = max(res, tree[i]);
+            i &= i - 1;
+        }
+        return res;
+    }
 
-    Define two CTEs: one for storing the salary categories and another for counting the number of employees in each category.
+private:
+    vector<long long> tree;
+};
 
-2. Direct Query with `UNION ALL`
+class Solution {
+public:
+    long long maxBalancedSubsequenceSum(vector<int>& nums) {
+        // Extract distinct values of `nums[i] - i` for positive `nums[i]`
+        set<int> keySet;
+        long long maxNegVal = LLONG_MIN;
 
-    Directly select and combine the results for each salary category in a single query using `UNION ALL`. 
+        for (int i = 0; i < nums.size(); ++i) {
+            if (nums[i] > 0) {
+                keySet.insert(nums[i] - i);
+            } else {
+                maxNegVal = max(maxNegVal, (long long)nums[i]);
+            }
+        }
 
-### MySQL Implementation
-```sql
-WITH category AS(
-    SELECT 'Low Salary' AS category
-    union
-    SELECT 'Average Salary'
-    union 
-    SELECT 'High Salary'
-), cnt AS (
-    SELECT
-        CASE 
-        WHEN income<20000 THEN 'Low Salary'
-        WHEN income>=20000 AND income<=50000 THEN 'Average Salary'
-        WHEN income>50000 THEN 'High Salary '
-        END AS category,
-        count(1) AS accounts_count
-    FROM
-        accounts
-    GROUP BY 1
-) 
+        if (keySet.empty()) return maxNegVal;
 
-SELECT
-    category.category,
-    IFNULL(accounts_count,0) AS accounts_count
-FROM category
-LEFT JOIN cnt
-ON category.category=cnt.category;
+        // Map each key in `keySet` to an index in the Fenwick Tree.
+        map<int, int> idxMap;
+        int idx = 1;
+        for (int key : keySet) {
+            idxMap[key] = idx++;
+        }
+
+        FenwickTree tree(idx + 2);
+        long long ans = maxNegVal;
+
+        // Iterate through `nums` in order
+        for (int i = 0; i < nums.size(); ++i) {
+            if (nums[i] <= 0) continue;
+            // Update the tree with the new prefix sum
+            int curIdx = idxMap[nums[i] - i];
+            long long curSum = tree.prefixSum(curIdx) + nums[i];
+            tree.update(curIdx, curSum);
+            // Update the maximum sum
+            ans = max(ans, curSum);
+        }
+
+        return ans;
+    }
+};
+
 ```
+#### Golang Implementation
+```golang
+/**
+ * Author: Craig Brown
+ * Date:   May 19, 2025
+ * Source: https://github.com/saidake/interview
+ */ 
+func maxBalancedSubsequenceSum(nums []int) int64 {
+	// Extract distinct values of `nums[i] - i` for positive `nums[i]`
+    keySet := make(map[int]struct{})
+	maxNegVal := int64(math.MinInt64)
+	for i := 0; i < len(nums); i++ {
+		if nums[i] > 0 {
+			keySet[nums[i]-i] = struct{}{}
+		} else {
+			maxNegVal = maxInt64(maxNegVal, int64(nums[i]))
+		}
+	}
 
-### Oracle Implementation
-```sql
-SELECT  'Low Salary' AS category, NVL(count(account_id),0) accounts_count 
-    FROM accounts  
-    WHERE income <20000
-UNION ALL 
-    SELECT  'Average Salary' AS category, NVL(count(account_id),0) ct 
-        FROM accounts  
-        WHERE income  between  20000 and 50000 
-UNION ALL 
-    SELECT 'High Salary'  AS category, NVL( count(account_id),0) ct
-        FROM accounts 
-        WHERE income > 50000; 
+	if len(keySet) == 0 {
+		return maxNegVal
+	}
+
+	keys := make([]int, 0, len(keySet))
+	for k := range keySet {
+		keys = append(keys, k)
+	}
+	sort.Ints(keys)
+
+    // Map each key in `keySet` to an index in the Fenwick Tree.
+	idxMap := make(map[int]int)
+	for i, k := range keys {
+		idxMap[k] = i + 1
+	}
+
+	tree := NewFenwickTree(len(keys) + 2)
+	ans := maxNegVal
+
+    // Iterate through `nums` in order
+	for i := 0; i < len(nums); i++ {
+		if nums[i] <= 0 {
+			continue
+		}
+		key := nums[i] - i
+        // Update the tree with the new prefix sum
+		curIdx := idxMap[key]
+		curSum := tree.PrefixSum(curIdx) + int64(nums[i])
+		tree.Update(curIdx, curSum)
+        // Update the maximum sum
+		ans = maxInt64(ans, curSum)
+	}
+
+	return ans
+}
+
+type FenwickTree struct {
+	tree []int64
+}
+
+func NewFenwickTree(size int) *FenwickTree {
+	return &FenwickTree{tree: make([]int64, size)}
+}
+
+func (f *FenwickTree) Update(i int, val int64) {
+    // [i, tree.length)
+    // Update all relevant positions starting from `i`.
+	for i < len(f.tree) {
+		f.tree[i] = maxInt64(f.tree[i], val)
+		i += i & -i
+	}
+}
+
+func (f *FenwickTree) PrefixSum(i int) int64 {
+	res := int64(0)
+    // (0, i]
+	for i > 0 {
+		res = maxInt64(res, f.tree[i])
+		i &= i - 1
+	}
+	return res
+}
+
+func maxInt64(a, b int64) int64 {
+	if a > b {
+		return a
+	}
+	return b
+}
 ```
