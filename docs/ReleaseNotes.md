@@ -1,7 +1,7 @@
 # Table of Contents
 [Back to Main Project README](../README.md)
 - [Table of Contents](#table-of-contents)
-- [Simi Interview 1.6.4](#simi-interview-164)
+- [Simi Docs 1.6.4](#simi-interview-164)
     - [Global Updates](#global-updates)
     - [Algorithms.md (v1.0.4)](#algorithmsmd-v104)
     - [InterviewQuestions.md (v1.0.2)](#interviewquestionsmd-v102)
@@ -61,7 +61,7 @@
     - [Java\_v1.1.0.pdf](#java_v110pdf)
     - [Node\_v1.1.0.pdf](#node_v110pdf)
     - [Config\_v1.1.0.pdf](#config_v110pdf)
-# Simi Interview 1.6.4
+# Simi Docs 1.6.4
 ### Global Updates
 * Rename the github project from `simi-docs` to `interview`.
 ### Algorithms.md (v1.0.4)
