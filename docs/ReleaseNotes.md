@@ -111,9 +111,13 @@
 * **Python / Core / Type Hints (introduced in Python 3.5)**
   * Use blue style headings.
 * **Python / Core / Operators / for**
-  * Add two new sections:
+  * Add new sections:
     * Value Assignment
     * Action Execution
+    * Safe Traversal
+* **Python / Core / Operators**
+  * Introduce a operator `del`.
+
 # Simi Interview 1.6.4
 ### Global Updates
 * Rename the github project from `simi-docs` to `interview`.
