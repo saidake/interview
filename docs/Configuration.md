@@ -14,6 +14,8 @@ Source:  https://github.com/saidake/simi-docs
 - [Database](#database)
   - [Oracle 23ai](#oracle-23ai)
   - [SAP Hana Database](#sap-hana-database)
+  - [MYSQL](#mysql)
+    - [Linux Installation](#linux-installation)
 - [Server](#server)
   - [Temporal](#temporal)
   - [Jenkins](#jenkins)
@@ -104,6 +106,70 @@ Installation:
 2. Install the Linux image into you VMware
 ![](./assets/Configuration/sap-hana-database1.png)
 <!-- 3.  -->
+## MYSQL
+### Linux Installation
+1. Update your system
+    ```bash
+    sudo apt update
+    sudo apt upgrade -y
+    ```
+2. Install MySQL Server
+    ```bash
+    sudo apt install mysql-server -y
+    ```
+    (Optional) Set MySQL to start on boot 
+    ```
+    sudo systemctl enable mysql
+    ```
+3. Secure the MySQL installation
+    ```bash
+    sudo mysql_secure_installation
+    ```
+    You’ll be guided through steps like:
+    * Setting a root password
+    * Removing anonymous users
+    * Disabling remote root login
+    * Removing test databases
+    * Reloading privilege tables
+4. Log in mysql terminal
+    ```bash
+    sudo mysql
+    ```
+    This logs you in as the root user using Unix socket authentication (default on Ubuntu).
+
+5. Create a Remote-Accessible User
+    ```sql
+    CREATE USER 'youruser'@'%' IDENTIFIED BY 'yourpassword';
+
+    GRANT ALL PRIVILEGES ON *.* TO 'youruser'@'%' WITH GRANT     OPTION;
+
+    FLUSH PRIVILEGES;
+    ```
+6. Change the mysql default connection port.
+    ```bash
+    sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+    ```
+    Change it to your desired port:
+    ```
+    port = 4406
+    ```
+    Restart MySQL Service
+    ```bash
+    sudo systemctl restart mysql
+    ```
+7. Update the Firewall Rules
+
+    If you modified the default port, make sure your firewall allows the new port
+    ```
+    sudo ufw allow 3306
+    ```
+8. Connect from Client
+   Or configure it in MySQL Workbench / DBeaver under "Port".
+   ```
+   mysql -h <server_ip> -P 4406 -u your_user -p
+   ```
+
+
 
 # Server
 ## Temporal
