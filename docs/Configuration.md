@@ -145,13 +145,14 @@ Installation:
 
     FLUSH PRIVILEGES;
     ```
-6. Change the mysql default connection port.
+6. Change the mysql default connection port and binding rule.
     ```bash
     sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
     ```
-    Change it to your desired port:
+    Change port and binding address:
     ```
     port = 4406
+    bind-address = 0.0.0.0
     ```
     Restart MySQL Service
     ```bash
@@ -163,6 +164,7 @@ Installation:
     ```
     sudo ufw allow 3306
     ```
+    Note that if your are using cloud server, you should also update your firewall rule in the cooresponding cloud platform for the new port.
 8. Connect from Client
    Or configure it in MySQL Workbench / DBeaver under "Port".
    ```
