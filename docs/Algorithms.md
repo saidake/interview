@@ -5078,7 +5078,7 @@ https://leetcode.com/problems/intersection-of-two-arrays-ii/
 ```python
 class Solution:
     def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        # Retrieve a frequency map of `nums1`
+        # Build the frequency map
         freq1 = Counter(nums1)
         ans = []
         # Iterate through `nums2`
@@ -5088,29 +5088,12 @@ class Solution:
                 ans.append(x)
         return ans
 ```
-#### Complexity Analysis
-* Time Complexity: $O(n+m)$
-  * Retrieve a frequency map of `nums1`
-    
-    The `Counter` method has $O(n)$ time complexity where `n` is the length of `nums1`.
-  * Iterate through `nums2`
-
-    This loop traverses all elements of `nums2`, yielding in a time complexity of $O(m)$, where `m` is the length of `nums2`.
-* Space Complexity: $O(n)$
-  * The `cnt` stores element frequencies in `nums1`, requiring $O(n)$ space in the worst case when all elements are unique.
-
-  * The size of `ans` depends on the smaller of `nums1` and `nums2`, leading to a space complexity of $O(min(m,n))$.
-
-  If $m \le n$, the $min(m,n)=m$, so $n+min(m,n)=n+m$, which is still $O(n)$ since $m\le n$.  
-  If $n<m$, then $min(m,n)=n$, so $n+min(m,n)=n+n=2n$, which is O(n).  
-  Thus, the overall space complexity is $O(n)$.
-
 #### Java Implementation
 ```java
 class Solution {
     public int[] intersect(int[] nums1, int[] nums2) {
         Map<Integer, Integer> freq1 = new HashMap<>();
-        // Traverse `nums1` to build the frequency map
+        // Build the frequency map
         for(int num : nums1) {
             freq1.put(num, freq1.getOrDefault(num, 0) + 1);
         }
@@ -5130,10 +5113,12 @@ class Solution {
 ```
 #### Complexity Analysis
 * Time Complexity: $O(m+n)$
-  * Traverse `nums1` to build the frequency map
+  * Build the frequency map
     
     The method `put` and `getOrDefault` of Map run in $O(1)$ time.
     Iterating through `nums1` resuls in an total time complexity of $O(n)$, where `n` is its length.
+
+    * The `Counter` method has $O(n)$ time complexity where `n` is the length of `nums1`.
 
   * Iterate over `nums2`
 
