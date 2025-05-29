@@ -111,6 +111,7 @@
 * **Python / Core / Type Hints (introduced in Python 3.5)**
   * Use blue style headings.
 * **Python / Core / Operators / for**
+  * Add string traversal examples.
   * Add new sections:
     * Value Assignment
     * Action Execution

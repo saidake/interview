@@ -2487,20 +2487,20 @@ There are several different choices next:
 
   Below is an example for the exclusion process when the occurrences of unequal integer exceed the restriction `k`: 
   ```text
-  nums: 1,3,4,1,2,9,6,7,2,3
-  k: 3
+  nums: 1,3,4,1,2,9,6,7,2,3  
+  k: 3  
 
-  Step 1: 
-  1,3,4,1,2,9,6,7,2,3
-  L         R
+  Step 1:   
+  1,3,4,1,2,9,6,7,2,3  
+  L         R  
 
-  Step 2:
-  1,3,4,1,2,9,6,7,2,3
-    L       R
+  Step 2:  
+  1,3,4,1,2,9,6,7,2,3  
+    L       R  
   
-  Step 3: 
-  1,3,4,1,2,9,6,7,2,3
-      L     R
+  Step 3:   
+  1,3,4,1,2,9,6,7,2,3  
+      L     R  
   ```
   Since there are 4 unequal integers in the range `L` to `R` for integer `1` at the left boundary, the execlusion process starts.
   
@@ -5551,18 +5551,18 @@ Sort each pair of elements based on backtracking paths, then repeatedly double t
 Note that the comparison process begins at the bottom of the tree when the recursive calls reach their base case and the backtracking starts.
 
 Example:
-```
+```txt
 arr:
     38, 27, 43, 3, 9, 82, 10
 
 Step-by-step Splits:
-                            [38, 27, 43, 3, 9, 82, 10]
-                         /                              \
-                [38, 27, 43, 3]                        [9, 82, 10]
-               /               \                     /           \
-          [38, 27]           [43, 3]              [9, 82]         [10]
-          /     \            /     \             /     \
-       [38]   [27]        [43]   [3]         [9]     [82]
+                      [38, 27, 43, 3, 9, 82, 10]     
+                   /                              \     
+          [38, 27, 43, 3]                        [9, 82, 10]      
+         /               \                     /           \            
+    [38, 27]           [43, 3]              [9, 82]         [10]      
+    /     \            /     \             /     \                   
+ [38]   [27]        [43]   [3]         [9]     [82]              
 ```
 #### Java Implementation
 ```java
@@ -5666,12 +5666,11 @@ arr:
     38, 27, 43, 3, 9, 82, 10
 
 Step-by-step partitions:
-                            [38, 27, 43, 3, 9, 82, 10] 
-                           /             |            \ 
-                    [27, 3, 9]          10        [43, 82, 38] 
-                   /    |     \                   /    |     \
-                [3]     9    [27]              [38]    43     [82]
-
+            [38, 27, 43, 3, 9, 82, 10] 
+           /             |            \ 
+    [27, 3, 9]          10        [43, 82, 38] 
+   /    |     \                   /    |     \ 
+[3]     9    [27]              [38]    43     [82]
 ```
 #### Java Implementation
 ```java
